@@ -1,0 +1,52 @@
+/* FLEX GRID */
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    min-width: min-content;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.col {
+    flex: 1;
+}
+
+.full-span  {
+    width: 100%;
+    flex: 1 0 100%;
+    padding: 1.4rem;
+}
+
+.flex-sixth, .flex-half, .flex-third, .flex-quarter, .flex-three-quarters {
+    width: 100%;
+    flex-basis: 100%;
+    padding: 1.4rem;
+}
+
+@media (min-width: 787px) {
+    .flex-quarter {
+        width: 22%;
+        flex: 1 1 24%
+    }
+    .flex-third {
+        width: 32%;
+        flex: 1 1 32%;
+    }
+    .flex-half {
+        flex: 1 1 40%;
+    }
+    .flex-sixth {
+        width: 65%;
+        flex: 1 1 65%;
+    }
+}
+
+@media (min-width:1366px) {
+    .flex-three-quarters {
+        width: 74%;
+        flex: 1 1 74%;
+    }
+}
