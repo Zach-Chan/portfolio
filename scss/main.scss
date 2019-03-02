@@ -353,7 +353,7 @@ body {
 
 /* TEXT ELEMENTS */
 h1, #h1Demo {
-    font-family: 'Montserrat:bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 2.2rem;
     margin: 0;
@@ -369,7 +369,7 @@ h1, #h1Demo {
 }
   
 h2, #h2Demo {
-    font-family: 'Montserrat:semi-bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     font-weight: 600;
     margin-top: 1rem;
@@ -957,7 +957,8 @@ a.chip {
     width: 100%;
     h1 {
         align-self: center;
-        font-family: 'Montserrat:bold', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
         text-transform: lowercase;
         text-align: center;
         font-size: 4.5rem;
