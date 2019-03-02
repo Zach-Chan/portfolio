@@ -151,6 +151,12 @@ body {
     }
 }
 
+#process_analysis {
+    .process-header.full-span {
+        padding-bottom: 0;
+    }
+}
+
 .side-nav {
     width: 100%;
     height: auto;
@@ -769,6 +775,11 @@ a.chip {
         letter-spacing: 0.05em;
         border-bottom: 0;
         color: #FFF;
+    }
+
+    .uiImage {
+        min-width: 60px;
+        height: auto;
     }
 
     // Image enlarge and embedded Youtube video styling
