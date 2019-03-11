@@ -830,6 +830,7 @@ a.chip {
 /* sourced from:https://webdesign.tutsplus.com/articles/super-simple-lightbox-with-css-and-jquery--webdesign-3528 */
 #lightbox { 
     position:fixed; /* keeps the lightbox window in the current viewport */
+    z-index: 3;
     top:0; 
     left:0; 
     width:100%; 
