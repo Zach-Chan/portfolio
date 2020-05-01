@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zach Chan</title>
+
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <!-- <link href="css/main.css" rel="stylesheet"> -->
+    <link href="css/base.css" rel="stylesheet">
+    <!-- Load fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
+
+    <!-- Set tab icon -->
+    <link rel="icon" href="images/logo.png">
+</head>
+
+<body id="top" class="test">
+
+    <div class="nav-container bg-colDark">
+        <nav id="navList" class="nav-container drop-shadow">
+            <ul id="navLinks" class="nav-list">
+                <li class="li-navItem"><a class="nav-btn" href="index.html#work">Work</a></li>
+                <li class="li-navItem"><a class="nav-btn" href="index.html#projects">School Projects</a></li>
+                <li class="li-navItem"><a class="nav-btn" href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content-container col">
+        <div id="styleguideTitle" class="title-wrapper">
+            <h1>Style Guide</h1>
+        </div>
+        <div class="padding-left-right">
+
+            <!-- BRAND ELEMENTS SECTION // -->
+            <section id="brandElements">
+                <div class="content-wrapper">
+                    <h2>Brand Elements</h2>
+                </div>
+
+                <!-- COLOUR PALETTE -->
+                <section class="content-wrapper styleguide-grouping">
+                    <div class="flex-container full-span col bg-colDark">
+                        <h3 class="full-span">Colours</h3>
+                        <div class="flex-quarter swatch bg-colPrimary">
+                            <h4>#006A72</h4>
+                        </div>
+                        <div class="flex-quarter swatch bg-colSecondary">
+                            <h4>#F6844E</h4>
+                        </div>
+                        <div class="flex-quarter swatch bg-colTertiary">
+                            <h4>#A6E5A0</h4>
+                        </div>
+                        <div class="flex-quarter swatch bg-colLight">
+                            <h4>#E3E2DF</h4>
+                        </div>
+                        <div class="flex-quarter swatch bg-colGrey">
+                            <h4>#232323</h4>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FONTS -->
+                <section id="fonts" class="content-wrapper flex-container styleguide-grouping">
+                    <div class="full-span col bg-colDark">
+                        <h3>Fonts</h3>
+                    </div>
+                    <div class="flex-half col bg-colLight">
+                        <h3>Montserrat</h3>
+                        <p>Montserrat is to be used for h1 to h3 headings.</p>
+                    </div>
+                    <div class="flex-half col bg-colLight">
+                        <h4>Lato</h4>
+                        <p>Lato is used for the h4-h6 tags, paragraphs, anchor tags, and
+                            button text.</p>
+                    </div>
+
+                </section>
+            </section>
+
+            <!-- TEXT ELEMENTS SECTION // -->
+            <section id="textElements">
+                <div class="content-wrapper">
+                    <h2>Text Elements</h2>
+                </div>
+
+                <!-- HEADINGS -->
+                <section class="content-wrapper flex-container styleguide-grouping">
+                    <div class="full-span bg-colDark">
+                        <h3>Headings</h3>
+                    </div>
+                    <div class="flex-half col bg-colLight">
+
+                        <h4>CSS Selectors</h4>
+                        <p>None</p>
+
+                        <h4>Sample code:</h4>
+                        <code>
+                            &lt;h1&gt;Top level heading&lt;/h1&gt;<br>
+                            &lt;h2&gt;Second level heading&lt;/h2&gt;<br>
+                            &lt;h3&gt;Third level heading&lt;/h3&gt;<br>
+                            &lt;h4&gt;Fourth level heading&lt;/h4&gt;<br>
+                        </code>
+                    </div>
+                    <div class="flex-half col bg-colLight">
+                        <h4>Rendered element:</h4>
+                        <h1>Top level heading</h1>
+                        <h2>Second level heading</h2>
+                        <h3>Third level heading</h3>
+                        <h4>Fourth level heading</h4>
+                    </div>
+                </section>
+
+                <!-- PARAGRAPHS -->
+                <section class="content-wrapper flex-container styleguide-grouping">
+                    <div class="full-span bg-colDark">
+                        <h3>Paragraph</h3>
+                    </div>
+                    <div class="flex-half col bg-colLight">
+                        <h4>CSS Selectors</h4>
+                        <p>None</p>
+                        <h4>Sample code:</h4>
+                        <code>
+                            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit non neque non malesuada.
+                            Donec sollicitudin ornare nunc, a sodales massa efficitur eget. Proin congue tristique augue, vel
+                            blandit elit. Donec orci est, fermentum tempor dapibus ac, porta id diam. Quisque malesuada congue
+                            augue, eget pharetra felis tincidunt ut. Suspendisse ac pulvinar nulla. Nulla ultrices dui purus,
+                            sed vulputate erat semper ac. &lt;p4&gt;<br>
+                        </code>
+                    </div>
+                    <div class="flex-half col bg-colLight">
+                        <h4>Rendered element</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit non neque
+                            non
+                            malesuada.
+                            Donec sollicitudin ornare nunc, a sodales massa efficitur eget. Proin congue
+                            tristique
+                            augue, vel
+                            blandit elit. Donec orci est, fermentum tempor dapibus ac, porta id diam. Quisque
+                            malesuada congue
+                            augue, eget pharetra felis tincidunt ut. Suspendisse ac pulvinar nulla. Nulla
+                            ultrices
+                            dui purus,
+                            sed vulputate erat semper ac. </p>
+                    </div>
+                </section>
+            </section>
+            <!-- // END TEXT ELEMENTS SECTION -->
+
+            <!-- INTERACTIVE ELEMENTS SECTION // -->
+            <section id="interactiveElements">
+                <div class="content-wrapper">
+                    <h2>Interactive Elements</h2>
+                </div>
+
+                <!-- Default In-text Link styling section -->
+                <section class="content-wrapper flex-container styleguide-grouping">
+                    <div class="full-span bg-colDark">
+                        <h3>In-text link</h3>
+                    </div>
+                    <div class="flex-half col bg-colPrimary">
+
+                        <h4>CSS selector:</h4>
+                        <p>.link-inText</p>
+
+                        <h4>Sample code:</h4>
+                        <code>&lt;a href="#" class="link-inText"&gt;In-text Link&lt;/a&gt;</code>
+                    </div>
+
+                    <div class="flex-half col bg-colLight">
+                        <h4>Rendered element:</h4>
+                        <a class="link-inText" href="#">In-text Link</a>
+                    </div>
+                </section>
+
+                <!-- Nav Button -->
+                <section class="content-wrapper flex-container styleguide-grouping">
+                    <div class="full-span bg-colDark">
+                        <h3>Navigation</h3>
+                    </div>
+                    <div class="flex-half col bg-colPrimary">
+
+                        <h4>CSS selector:</h4>
+                        <p>.link-inText</p>
+
+                        <h4>Sample code:</h4>
+                        <code>
+                        &lt;nav id="navList" class="nav-container"&gt;
+                            &lt;div class="icon-container"&gt;
+                                &lt;a href="index.html"&gt;
+                                    &lt;img class="logo" src="images/Logo-light.png" alt="Z in a circle personal logo of Zach Chan"&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;ul id="navLinks" class="nav-list"&gt;
+                                &lt;li class="li-navItem"&gt;&lt;a class="nav-btn" href="index.html#work""&gt;Work&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class="li-navItem"&gt;&lt;a class="nav-btn" href="index.html#projects"&gt;Personal Projects&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class="li-navItem"&gt;&lt;a class="nav-btn" href="index.html#asbout"&gt;About&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/nav&gt;
+                    </code>
+                    </div>
+
+                    <div class="flex-half col bg-colLight styleguide-grouping">
+                        <h4>Rendered element:</h4>
+                        <div class="nav-container bg-colDark">
+                            <nav id="navList" class="nav-container drop-shadow">
+                                <a class="icon-container" href="index.html">
+                                    <img class="logo" src="images/logo-light.png"
+                                        alt="Z in a circle personal logo of Zach Chan">
+                                </a>
+                                <ul id="navLinks" class="nav-list">
+                                    <li class="li-navItem"><a class="nav-btn" href="index.html#work">Work</a></li>
+                                    <li class="li-navItem"><a class="nav-btn" href="index.html#projects">Personal
+                                            Projects</a></li>
+                                    <li class="li-navItem"><a class="nav-btn" href="index.html#asbout">About</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Image container -->
+                <section class="content-wrapper flex-container styleguide-grouping">
+                    <div class="full-span bg-colDark">
+                        <h3>Image container and lightbox</h3>
+                    </div>
+                    <div class="flex-half col bg-colPrimary">
+
+                        <h4>CSS selector:</h4>
+                        <p>.img-container, img.lightbox-trigger</p>
+
+                        <h4>Sourced from</h4>
+                        <p>Jim Nielson at <a class="link-inText"
+                                href="https://webdesign.tutsplus.com/articles/super-simple-lightbox-with-css-and-jquery--webdesign-3528">webdesign.tutsplus.com</a>
+                        </p>
+
+                        <h4>Sample code:</h4>
+                        <code>
+                        &lt;div class="img-container flex-half"&gt;
+                            &lt;img class="lightbox-trigger drop-shadow" src="images/project-fss/final-search-interface-cropped.jpg"
+                                alt="Image of final school search interface"&gt;
+                            &lt;p class="img-caption"&gt;The final implementation of the school search interface.&lt;/p&gt;
+                        &lt;/div&gt;
+                    </code>
+                    </div>
+
+                    <div class="img-container flex-half">
+                        <h4 class="img-enlarge">View larger</h4>
+                        <img class="lightbox-trigger drop-shadow" src="images/corgi-cantaloupe-wallpaper.jpg"
+                            alt="Image of a sketch of a corgi on a cantaloupe">
+                        <p class="img-caption">Corgi on a cantaloupe. Credit to Nickelodeon artist /u/thewondercat on
+                            Reddit from <a
+                                href="https://www.reddit.com/r/IAmA/comments/xtu5a/iama_nickelodeon_storyboard_artist_im_back_ama/">here</a>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Proficiency Chip -->
+                <section class="content-wrapper flex-container styleguide-grouping">
+                    <div class="full-span bg-colDark">
+                        <h3>Proficiency chip</h3>
+                    </div>
+                    <div class="flex-half col bg-colPrimary">
+
+                        <h4>CSS selector:</h4>
+                        <p>.chip, .highlight-skill</p>
+
+                        <h4>Sample code:</h4>
+                        <code>
+                            &lt;a href="#wireframing" class="chip"&gt;Wireframing&lt;/a&gt;
+                        </code>
+                    </div>
+
+                    <div class="flex-half bg-colLight">
+                        <a href="#wireframing" class="chip">Wireframing</a>
+                        <p><span id="wireframing" class="highlight-skill">I sketched user-flows and
+                                rough mock-ups in the prototyping tool Axure</span></p>
+                    </div>
+                </section>
+
+                <!-- Project Card -->
+                <section class="content-wrapper flex-container styleguide-grouping">
+                    <div class="full-span bg-colDark">
+                        <h3>Project Card</h3>
+                    </div>
+                    <div class="full-span col bg-colLight">
+
+                        <h4>CSS selector:</h4>
+                        <p>.project-card</p>
+
+                        <h4>Sample code:</h4>
+                        <code>
+                        &lt;a id="projectFF" href="project-run-kiosk.html" class="project-card drop-shadow flex-half"&gt;
+                            &lt;h3&gt;Run Tracker Kiosk&lt;/h3&gt;
+                        &lt;/a&gt;
+                    </code>
+                    </div>
+
+                    <div class="full-span col projects-container">
+                        <a id="projectFSS" href="project-fss.html" class="project-card drop-shadow flex-half">
+                            <h3>FSS Web form & Database Interface</h3>
+                            <!-- <h4>Web Design and Development</h4> -->
+                        </a>
+                        <a id="projectFSS" href="project-fss.html" class="project-card drop-shadow flex-half">
+                            <h3>FSS Web form & Database Interface</h3>
+                            <!-- <h4>Web Design and Development</h4> -->
+                        </a>
+                        <a id="projectFSS" href="project-fss.html" class="project-card drop-shadow flex-half">
+                            <h3>FSS Web form & Database Interface</h3>
+                            <!-- <h4>Web Design and Development</h4> -->
+                        </a>
+                    </div>
+
+                </section>
+
+            </section>
+            <!-- // END INTERACTIVE ELEMENTS SECTION -->
+        </div>
+        <footer>
+            <div class="full-span flex-container center-content">
+                <a href="#styleguideTitle" class="footer-btn">back to top</a>
+                <a href="zach-chan-resume-public.pdf" class="footer-btn">resum&eacute;</a>
+                <a href="citations.html" class="footer-btn">citations</a>
+                <a href="https://github.com/Zach-Chan/portfolio" class="footer-btn">git repository</a>
+            </div>
+        </footer>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+</body>
+
+</html>

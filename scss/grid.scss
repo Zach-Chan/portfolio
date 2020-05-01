@@ -1,17 +1,14 @@
+// COLUMN GRID
+
+
 /* FLEX GRID */
 .flex-container {
     display: flex;
     flex-flow: row wrap;
     min-width: min-content;
-}
-
-.flex-container-column {
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.col {
-    flex: 1;
+    &.column {
+        flex-flow: column wrap;
+    }
 }
 
 .full-span  {
@@ -29,7 +26,7 @@
 @media (min-width: 787px) {
     .flex-quarter {
         width: 22%;
-        flex: 1 1 24%
+        flex: 1 1 24%;
     }
     .flex-third {
         width: 32%;
@@ -54,3 +51,4 @@
         flex: 1 1 74%;
     }
 }
+

@@ -1,0 +1,53 @@
+.content-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px; }
+
+.projects-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: scroll;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+
+body.test {
+  background-color: #F8F8F8;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  margin: 0px;
+  padding: 0; }
+
+.project-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 12rem;
+  height: 6rem;
+  border: 6px solid #006A72;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform: rotateY(40deg);
+  transform: rotateY(40deg);
+  -webkit-transition: -webkit-transform ease .3s;
+  transition: -webkit-transform ease .3s;
+  -o-transition: transform ease .3s;
+  transition: transform ease .3s;
+  transition: transform ease .3s, -webkit-transform ease .3s;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #006A72;
+  text-decoration: none; }
+  .project-card:hover, .project-card:focus {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  .project-card h3 {
+    margin: auto; }
