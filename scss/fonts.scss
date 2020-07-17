@@ -1,0 +1,22 @@
+body {
+    color: $darkGrey;
+    font-family: "Lato", sans-serif;
+	font-size: 1rem;
+    margin: 0px; 
+    padding: 0;
+}
+
+h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    color: $primaryCol;
+}
+
+.site-nav, .site-nav a {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $darkGrey;
+    text-decoration: none;
+}

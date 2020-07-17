@@ -1,10 +1,91 @@
-body.test {
+body {
     background-color: $bgColor;
     font-family: "Lato", sans-serif;
 	font-size: 1rem;
     margin: 0px; 
     padding: 0;
-    //position: relative;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.static-content-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    // background-color: red;
+
+    @include breakpoint(phablet) {
+        width: 50%;
+    }
+}
+
+.site-nav-container {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left:0;
+}
+
+.site-nav {
+    ul {
+        list-style: none;
+    }
+}
+
+.home-feature-container {
+    position: absolute;
+    z-index: 100;
+    left: 3rem;
+    bottom: 3rem;
+    min-width: 150px;
+    min-height: 100px
+}
+
+.home-feature {
+    p {
+        word-wrap: normal;
+    }
+}
+
+.sub-nav {
+    color: $darkGreyTrans;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+    height: 6rem;
+    
+    ul {
+        list-style-type: none;
+        display: inline;
+        overflow: hidden;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+footer {
+    height: 10vh;
+    width: 100%;
+    top: 100%;
+    justify-self: flex-end;
+    background-color: $accentCol;
+}
+
+.scrolling-content-container {
+    min-height: 90vh;
+    width: 100%;
+    position: relative;
+    background-color: red;
+}
+
+.scrolling-content {
+    background-color: $lightGrey;
+    min-height: 60vh;
+    margin: 0 6rem 0 auto;
 }
 
 .project-card {
