@@ -17,77 +17,137 @@
     <link rel="icon" href="images/logo.png">
 </head>
 
-<body class="grid grid-nogutter">
-    <div class="static-content-container">
-        <!-- NAVIGATION -->
-        <div class="site-nav-container">
-            <nav id="navList" class="site-nav">
-                <ul id="navLinks" class="nav-list">
-                    <li class="li-navItem"><a class="nav-btn" href="#work">Work</a></li>
-                    <li class="li-navItem"><a class="nav-btn" href="#projects">School Projects</a></li>
-                    <li class="li-navItem"><a class="nav-btn" href="#about">About</a></li>
-                </ul>
-            </nav>
-        </div>
+<body class="site-body grid grid-nogutter">
+    <!-- FIXED CONTENT -->
+    <div class="fixed-content-container site-body">
+        <div class="col col-6">
+            <!-- NAVIGATION -->
+            <div class="site-nav-container">
+                <nav id="navList" class="site-nav">
+                    <ul id="navLinks" class="nav-list">
+                        <li class="li-navItem"><a class="nav-btn" href="#work">Work</a></li>
+                        <li class="li-navItem"><a class="nav-btn" href="#projects">School Projects</a></li>
+                        <li class="li-navItem"><a class="nav-btn" href="#about">About</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-        <!-- HOME FEATURE -->
-        <div class="home-feature-container">
-            <div class="home-feature">
-                <h1>Zach Chan</h1>
-                <h2>I am a: <span id="I-Am-Text">UX Designer</span></h2>
-                <p>Blah blah current position, availability. 
-                    Some mission statement?
-                    two more lines.....
-                    probably......</p>
+            <!-- HOME FEATURE -->
+            <div class="home-feature-container">
+                <div class="home-feature">
+                    <h1>Zach Chan</h1>
+                    <h2>I am a: <span id="I-am-text">UX Designer</span></h2>
+                    <p>Blah blah current position, availability. 
+                        Some mission statement?
+                        two more lines.....
+                        probably......</p>
+                </div>
             </div>
         </div>
+        <div class="col col-6"></div>
     </div>
 
+    <!-- SCROLLING CONTENT -->
     <div class="static-content-buffer col col-6"></div>
 
     <div class="scrolling-content-container col cool-6">
         <div class="scrolling-content grid grid-end">
             <div class="sub-nav">
-                <ul class="grid">
-                    <li class="col"><a href="#projects-section"></a>Projects</li>
-                    <li class="col"><a href="#experience-section"></a>Experience</li>
-                    <li class="col"><a href="#other-section"></a>Other Work</li>
-                    <li class="col"><a href="#contact-section"></a>Contact</li>
+                <ul class="grid grid-around">
+                    <li class="col col-fixed"><a href="#projects-section"></a>Projects</li>
+                    <li class="col col-fixed"><a href="#experience-section"></a>Experience</li>
+                    <li class="col col-fixed"><a href="#other-section"></a>Other Work</li>
+                    <li class="col col-fixed"><a href="#contact-section"></a>Contact</li>
                 </ul>
             </div>
             <!-- PROJECTS -->
-            <!-- <section id="work" class="card-wrapper content-wrapper flex-container">
-                <div class="full-span">
-                    <h2>Work</h2>
+            <section id="projects" class="grid grid-nogutter">
+                <div class="col col-12">
+                    <h2>Projects</h2>
                 </div>
-                <a id="projectBB" href="project-bb.html" class="project-card drop-shadow flex-half">
-                    <p>BlackBerry</p>
-                    <h3>Mobility Solutions</h3>
-                    <h4>UX Design Intern</h4>
+                <a id="project-concussion" href="project-concussion.html" class="work-card drop-shadow">
+                    <span class="project-label">responsive website</span>
+                    <h3>VCH Concussion Guide</h3>
+                    <span class="role">role:</span>
+                    <h4>ux designer</h4>
+                    <h4>web developer</h4>
                 </a>
-                <a id="projectFSS" href="project-fss.html" class="project-card drop-shadow flex-half">
-                    <p>FSS</p>
-                    <h3>Web form & Database Interface</h3>
-                    <h4>Web Design and Development</h4>
+                <a id="project-reddit" href="project-reddit.html" class="work-card drop-shadow">
+                    <span class="project-label">site evaluation + feature design</span>
+                    <h3>Reddit Ethical Evaluation</h3>
+                    <span class="role">role:</span>
+                    <h4>user researcher</h4>
+                    <h4>ux designer</h4>
                 </a>
-            </section> -->
+                <a id="project-pcaat" href="project-pcaat.html" class="work-card drop-shadow">
+                    <span class="project-label">web app</span>
+                    <h3>VCH PCAAT</h3>
+                    <span class="role">role:</span>
+                    <h4>ux designer</h4>
+                    <h4>front-end developer</h4>
+                </a>
+                <a id="project-track-it" href="project-track-it.html" class="work-card drop-shadow">
+                    <span class="project-label">digital store interaction</span>
+                    <h3>Track It</h3>
+                    <span class="role">role:</span>
+                    <h4>user researcher</h4>
+                    <h4>ux designer</h4>
+                </a>
+            </section>
 
             <!-- EXPERIENCE -->
-            <!-- <section id="projects" class="card-wrapper content-wrapper flex-container">
-                <div class="full-span">
-                    <h2>School Projects</h2>
+            <section id="experience" class="grid grid-nogutter">
+                <div class="col col-12">
+                    <h2>Experience</h2>
                 </div>
-                <a id="projectFF" href="project-run-kiosk.html" class="project-card drop-shadow flex-half">
-                    <p>Fit First</p>
-                    <h3>Group Goal Tracker</h3>
-                    <h4>User Research and Videography</h4>
+                <a id="exp-vch" href="exp-vch.html" class="work-card drop-shadow">
+                    <span class="project-label">health authority</span>
+                    <h3>VCH</h3>
+                    <span class="role">role:</span>
+                    <h4>ux designer</h4>
+                    <h4>web developer</h4>
                 </a>
-                <a id="projectDiscovered" href="project-discovered.html" class="project-card drop-shadow flex-half">
-                    <p>Dis&sdot;covered</p>
-                    <h3>Mobile App</h3>
-                    <h4>User Research and Interface Design</h4>
+                <a id="exp-bb" href="exp-bb.html" class="work-card drop-shadow">
+                    <span class="project-label">mobile technologies company</span>
+                    <h3>BlackBerry Ltd.</h3>
+                    <span class="role">role:</span>
+                    <h4>ux design intern</h4>
                 </a>
-            </section> -->
+                <a id="exp-fss" href="exp-fss.html" class="work-card drop-shadow">
+                    <span class="project-label">international school consultancy</span>
+                    <h3>FSS Canada</h3>
+                    <span class="role">role:</span>
+                    <h4>ux designer</h4>
+                    <h4>web developer</h4>
+                </a>
+            </section>
+
+            <!-- OTHER WORK -->
+            <section id="other-work" class="grid grid-nogutter">
+                <div class="col col-12">
+                    <h2>Other Work</h2>
+                </div>
+                <a id="ow-characters" href="#" class="work-card drop-shadow">
+                    <span class="project-label">health authority</span>
+                    <h3>Character Design</h3>
+                    <span class="role">role:</span>
+                    <h4>ux designer</h4>
+                    <h4>web developer</h4>
+                </a>
+                <a id="ow-dnd" href="#" class="work-card drop-shadow">
+                    <span class="project-label">mobile technologies company</span>
+                    <h3>Dungeons and Dragons Art</h3>
+                    <span class="role">role:</span>
+                    <h4>ux design intern</h4>
+                </a>
+                <a id="ow-writing" href="#" class="work-card drop-shadow">
+                    <span class="project-label">international school consultancy</span>
+                    <h3>Short Story Writing</h3>
+                    <span class="role">role:</span>
+                    <h4>ux designer</h4>
+                    <h4>web developer</h4>
+                </a>
+            </section>
 
             <!-- ABOUT/CONTACT -->
             <!-- <section id="about" class="card-wrapper content-wrapper flex-container">

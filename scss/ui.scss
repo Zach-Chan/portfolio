@@ -1,24 +1,23 @@
 body {
     background-color: $bgColor;
     font-family: "Lato", sans-serif;
-	font-size: 1rem;
-    margin: 0px; 
-    padding: 0;
+	font-size: 1rem; 
     position: relative;
     box-sizing: border-box;
 }
 
-.static-content-container {
+.site-body {
+    margin: 0 auto !important; 
+    padding: 0;
+    max-width: 1500px;
+}
+
+.fixed-content-container {
     position: fixed;
     top: 0;
-    left: 0;
+    // left: 0;
     height: 100vh;
     width: 100%;
-    // background-color: red;
-
-    @include breakpoint(phablet) {
-        width: 50%;
-    }
 }
 
 .site-nav-container {
@@ -44,7 +43,22 @@ body {
 }
 
 .home-feature {
+    h1 {
+        margin-bottom: 0.5rem;
+    }
+    h2 {
+        color: $darkGrey;
+        font-family: "Lato", sans-serif;
+        font-size: 24px;
+        margin: 0 0 0.5rem 0;
+    }
+    #I-am-text {
+        color: $bgColor;
+        background-color: $darkGrey;
+        padding: 0.25rem 0.5rem;
+    }
     p {
+        display: block;
         word-wrap: normal;
     }
 }
@@ -55,12 +69,21 @@ body {
     font-size: 24px;
     font-weight: 600;
     width: 100%;
-    height: 6rem;
+    height: 10rem;
+    background-image: linear-gradient($bgColor, $bgColor, rgba(0,0,0,0) 100%);
     
     ul {
         list-style-type: none;
-        display: inline;
         overflow: hidden;
+        margin: 0;
+        padding: 2rem 0 1rem 0;
+    }
+    li {
+        display: inline-block;
+        overflow: hidden;
+        word-break: keep-all;
+        margin: 0;
+        padding: 0;
     }
     a {
         text-decoration: none;
@@ -79,13 +102,13 @@ footer {
     min-height: 90vh;
     width: 100%;
     position: relative;
-    background-color: red;
+    // background-color: red;
 }
 
 .scrolling-content {
-    background-color: $lightGrey;
+    // background-color: red;
     min-height: 60vh;
-    margin: 0 6rem 0 auto;
+    margin: 0;
 }
 
 .project-card {
