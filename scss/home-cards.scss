@@ -1,23 +1,50 @@
 .work-card {
     display: block;
+    position: relative;
     height: 16.25rem;
     margin: 0.5rem;
-    border: solid $primaryCol 2px;
+    border: solid $primaryCol 3px;
     border-radius: 6px;
     text-decoration: none;
+    transition: all linear 0.2s;
+    padding: 14px;
+    overflow: hidden;
 
-    h3 {
-        font-weight: 700;
+    .card-title, .project-label, .role-block {
+        transition: all linear 0.2s;
+    }
+
+    .card-title {
+        font-weight: 600;
         font-size: 18px;
         color: $darkGrey;
+        opacity: 1;
+
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 1rem;
     }
 
     .project-label {
         font-weight: 400;
         font-size: 12px;
         color: $bgColor;
-        padding: 0.25rem;
+        padding: 0.5rem;
         background-color: $darkGreyTrans;
+        position: absolute;
+        white-space: nowrap;
+        left: 100%;
+    }
+
+    .role-block {
+        opacity: 0;
+        visibility: hidden;
+        transition: all linear 0.2s;
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
     }
 
     .role {
@@ -28,13 +55,64 @@
 
     h4 {
         font-weight: 700;
-        font-size: 14px;
+        font-size: 18px;
         color: $bgColor;
         padding: 0;
         margin: 0;
     }
 
-    &:hover, &:focus {
-        background-color: $primaryCol;
+    &:hover,
+    &:focus {
+        border: solid $primaryCol 6px;
+        padding: 11px;
+
+        .card-title {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .project-label {
+            transform: translateX(-100%);
+        }
+
+        .role-block {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .background-image {
+            background-color: rgba($color: $primaryCol, $alpha: 0.56);
+        }
+    }
+
+    .background-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all ease 0.6s;
+
+    }
+
+    &#project-concussion {
+        .background-image {
+            background-image: url(/images/project-concussion/concussion-mockup-landing-simple.jpg);
+        }
+
+        &:hover {
+            border-color: #0f78af;
+            background-color: rgba($color: #0f78af, $alpha: 0.56);
+            .background-image {
+                width: 300%;
+                height: 300%;
+                left: -95%;
+                top: -95%;
+            }
+        }
     }
 }

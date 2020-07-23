@@ -112,8 +112,8 @@ body {
 .fade-top, .fade-bottom {
     position: fixed;
     bottom: 100vh;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 70%;
     height: 6rem;
     z-index: 100;
 }
@@ -136,8 +136,8 @@ body {
 .dots-primary, .dots-secondary {
     display: block;
     position: fixed;
-    z-index: -1;
-    background-color: red;
+    z-index: -100;
+    // background-color: red;
 }
 
 .dots-primary {
@@ -145,6 +145,8 @@ body {
     right: 0;
     width: 60vw;
     height: 60vh;
+    background-image: url("/images/general/dot-grid-texture-200.png");
+    background-repeat: repeat;
 }
 
 .dots-secondary {
@@ -152,6 +154,8 @@ body {
     left: 0;
     width: 25vw;
     height: 30vh;
+    background-image: url("/images/general/dot-grid-texture-100.png");
+    background-repeat: repeat;
 }
 
 // ---------------------
