@@ -319,6 +319,20 @@ a.nav-btn {
   a.nav-btn.selected {
     color: #006A72; }
 
+.about-container h2 {
+  font-family: "Proza Libre", sans-serif;
+  font-size: 96px;
+  font-weight: 500;
+  color: #E3E2DF; }
+
+.about-container p {
+  color: #E3E2DF; }
+
+#about-back-btn {
+  font-size: 16px;
+  font-weight: 600;
+  color: #E3E2DF; }
+
 .content-container {
   margin-left: auto;
   margin-right: auto;
@@ -336,6 +350,11 @@ a.nav-btn {
   -webkit-box-direction: normal;
   -ms-flex-flow: column;
   flex-flow: column; }
+
+.about-content {
+  max-width: 900px;
+  height: 100%;
+  margin: auto; }
 
 body {
   background-color: #F8F8F8;
@@ -425,7 +444,8 @@ body {
   .sub-nav a {
     text-decoration: none; }
 
-.fade-top, .fade-bottom {
+.fade-top,
+.fade-bottom {
   position: fixed;
   bottom: 100vh;
   right: 0;
@@ -447,7 +467,8 @@ body {
   background-image: -o-linear-gradient(bottom, #F8F8F8 60%, rgba(0, 0, 0, 0));
   background-image: linear-gradient(0deg, #F8F8F8 60%, rgba(0, 0, 0, 0)); }
 
-.dots-primary, .dots-secondary {
+.dots-primary,
+.dots-secondary {
   display: block;
   position: fixed;
   z-index: -100; }
@@ -467,6 +488,49 @@ body {
   height: 30vh;
   background-image: url("/images/general/dot-grid-texture-100.png");
   background-repeat: repeat; }
+
+.about-container {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #006A72;
+  z-index: 300; }
+
+.about-content {
+  max-width: 900px;
+  height: 100%;
+  margin: auto; }
+  .about-content h2 {
+    margin-bottom: 0; }
+  .about-content .img-container {
+    display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #C4C4C4;
+    margin: 0 1rem 0 auto; }
+
+.bio-img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#about-back-btn {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: fixed;
+  top: 3rem;
+  left: 3rem; }
 
 footer {
   height: 10vh;
@@ -498,11 +562,11 @@ footer {
   transform-origin: 100% 50%;
   -webkit-transform: rotateY(40deg);
   transform: rotateY(40deg);
-  -webkit-transition: -webkit-transform ease .3s;
-  transition: -webkit-transform ease .3s;
-  -o-transition: transform ease .3s;
-  transition: transform ease .3s;
-  transition: transform ease .3s, -webkit-transform ease .3s;
+  -webkit-transition: -webkit-transform ease 0.3s;
+  transition: -webkit-transform ease 0.3s;
+  -o-transition: transform ease 0.3s;
+  transition: transform ease 0.3s;
+  transition: transform ease 0.3s, -webkit-transform ease 0.3s;
   font-size: 2rem;
   font-weight: 800;
   color: #006A72;
@@ -535,6 +599,8 @@ footer {
   transition: all linear 0.2s;
   padding: 14px;
   overflow: hidden; }
+  .work-carda {
+    background-color: white; }
   .work-card .card-title, .work-card .project-label, .work-card .role-block {
     -webkit-transition: all linear 0.2s;
     -o-transition: all linear 0.2s;
@@ -577,6 +643,21 @@ footer {
     color: #F8F8F8;
     padding: 0;
     margin: 0; }
+  .work-card .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    background-color: #006A72;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all ease 0.6s;
+    -o-transition: all ease 0.6s;
+    transition: all ease 0.6s; }
   .work-card:hover, .work-card:focus {
     border: solid #006A72 6px;
     padding: 11px; }
@@ -592,19 +673,6 @@ footer {
       visibility: visible; }
     .work-card:hover .background-image, .work-card:focus .background-image {
       background-color: rgba(0, 106, 114, 0.56); }
-  .work-card .background-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-transition: all ease 0.6s;
-    -o-transition: all ease 0.6s;
-    transition: all ease 0.6s; }
   .work-card#project-concussion .background-image {
     background-image: url(/images/project-concussion/concussion-mockup-landing-simple.jpg); }
   .work-card#project-concussion:hover {
@@ -615,3 +683,33 @@ footer {
       height: 300%;
       left: -95%;
       top: -95%; }
+  .work-card#exp-vch .background-image {
+    background-image: url(/images/general/vch-logo.jpg); }
+  .work-card#exp-vch:hover {
+    border-color: #0f78af;
+    background-color: rgba(15, 120, 175, 0.56); }
+    .work-card#exp-vch:hover .background-image {
+      width: 120%;
+      height: 120%;
+      left: -10%;
+      top: -20%; }
+  .work-card#exp-bb .background-image {
+    background-image: url(/images/general/vch-logo.jpg); }
+  .work-card#exp-bb:hover {
+    border-color: #0f78af;
+    background-color: rgba(15, 120, 175, 0.56); }
+    .work-card#exp-bb:hover .background-image {
+      width: 120%;
+      height: 120%;
+      left: -10%;
+      top: -20%; }
+  .work-card#exp-fss .background-image {
+    background-image: url(/images/general/vch-logo.jpg); }
+  .work-card#exp-fss:hover {
+    border-color: #0f78af;
+    background-color: rgba(15, 120, 175, 0.56); }
+    .work-card#exp-fss:hover .background-image {
+      width: 120%;
+      height: 120%;
+      left: -10%;
+      top: -20%; }

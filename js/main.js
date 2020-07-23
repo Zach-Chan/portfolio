@@ -1,6 +1,6 @@
 console.log("Javascript running");
 
-//smooth scrolling to anchorpoints
+//SMOOTH SCROLLING TO ANCHOR POINTS
 //sourced from Joseph Silber: https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -12,11 +12,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-//Nav Collapse Function
+//NAV COLLAPSE FUNCTION
 var menu = document.querySelector("#navLinks");
 //   menu.classList.add("hidden");
 
-//Create menu button if Js is available
+//CREATE MENU BUTTON IF JS IS LOADED
 var menuToggle = document.createElement("button");
 menuToggle.classList.add("menu-button");
 // menuToggle.classList.add("hidden");
@@ -37,3 +37,14 @@ menuToggle.addEventListener("click",
     }
   }
 );
+
+// ----------------------------
+// OPEN AND CLOSE ABOUT SECTION
+// ----------------------------
+var aboutBtn = document.querySelector("#about-btn");
+var closeAboutBtn = document.querySelector("#about-back-btn");
+var aboutSection = document.querySelector("#about-container");
+
+aboutBtn.addEventListener("click", () => {
+
+})
