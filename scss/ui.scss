@@ -63,16 +63,24 @@ body {
         color: $darkGrey;
         font-family: "Lato", sans-serif;
         font-size: 24px;
-        margin: 0 0 0.5rem 0;
-    }
-    #I-am-text {
-        color: $bgColor;
-        background-color: $darkGrey;
-        padding: 0.25rem 0.5rem;
+        display: inline-flex;
+        height: 2rem;
+        // margin: 0 0 0.5rem 0;
     }
     p {
         display: block;
         word-wrap: normal;
+    }
+    .not-typewriter {
+        padding: 0.25rem 0;
+    }
+    .typewriter-container {
+        background-color: $darkGrey;
+        padding: 0.25rem 0.25rem;
+        margin-left: 0.5rem;
+        display: inline-flex;
+        height: 2rem;
+
     }
 }
 
@@ -138,7 +146,6 @@ body {
     display: block;
     position: fixed;
     z-index: -100;
-    // background-color: red;
 }
 
 .dots-primary {
@@ -166,10 +173,26 @@ body {
 .about-container {
     display: block;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: $primaryCol;
     z-index: 300;
+    visibility: visible;
+    opacity: 1;
+    clip-path: circle(100% at 50% 50%);
+    transition: clip-path 1s;
+    // transition: all linear 0.2s;
+
+    &.hidden {
+        opacity: 0;
+        transition: all linear 0.2s;
+    }
+
+    &.clipped {
+        clip-path: circle(0% at 3.5rem 170px);
+    }
 }
 
 .about-content {
@@ -188,7 +211,7 @@ body {
         border-radius: 0.5rem;
         overflow: hidden;
         background-color: $grey;
-        margin: 0 1rem 0 auto;;
+        margin: 0 1rem 0 auto;
     }
 }
 
@@ -201,8 +224,9 @@ body {
 }
 
 #about-back-btn {
-    display: inline-block;
-    border: none;
+    display: inline-flex;
+    align-items: center;
+    border: solid $lightGrey 2px;
     margin: 0;
     text-decoration: none;
     background: none;
@@ -212,6 +236,32 @@ body {
     position: fixed;
     top: 3rem;
     left: 3rem;
+    cursor: pointer;
+
+    padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+    border-radius: 0.5rem;
+    transition: all linear 0.2s;
+
+    img {
+        height: 2.25rem;
+    }
+
+    .btn-text {
+        text-align: center;
+        padding: 0.25rem 0;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $accentCol;
+        opacity: 1;
+    }
+
+    &:active {
+        border-color: $lightGrey;
+        // transition: all linear 0.2s;
+        // opacity: 0;
+    }
 }
 
 // ---------------------
@@ -276,9 +326,13 @@ footer {
     }
 }
 
-// ---------------------
+// -----------------------------
 // MULTI-USE UI ELEMENTS STYLING
-// ---------------------
+// -----------------------------
+
+.hidden {
+    visibility: hidden;
+}
 
 .inline-cta {
     color: $accentCol;

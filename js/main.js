@@ -2,15 +2,15 @@ console.log("Javascript running");
 
 //SMOOTH SCROLLING TO ANCHOR POINTS
 //sourced from Joseph Silber: https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault();
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
+//     document.querySelector(this.getAttribute('href')).scrollIntoView({
+//       behavior: 'smooth'
+//     });
+//   });
+// });
 
 //NAV COLLAPSE FUNCTION
 var menu = document.querySelector("#navLinks");
@@ -41,10 +41,20 @@ menuToggle.addEventListener("click",
 // ----------------------------
 // OPEN AND CLOSE ABOUT SECTION
 // ----------------------------
-var aboutBtn = document.querySelector("#about-btn");
-var closeAboutBtn = document.querySelector("#about-back-btn");
-var aboutSection = document.querySelector("#about-container");
+var aboutBtn = document.getElementById("about-btn");
+var closeAboutBtn = document.getElementById("about-back-btn");
+var aboutSection = document.getElementById("about-container");
 
 aboutBtn.addEventListener("click", () => {
+  console.log(aboutSection);
+  aboutSection.classList.remove("clipped");
+  // aboutSection.classList.remove("clipped-inactive");
+  // aboutSection.classList.add("clipped-active");
+})
 
+closeAboutBtn.addEventListener("click", () => {
+  console.log(aboutSection);
+  aboutSection.classList.add("clipped");
+  // aboutSection.classList.remove("clipped-active");
+  // aboutSection.classList.add("clipped-inactive");
 })

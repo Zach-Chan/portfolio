@@ -33,8 +33,8 @@
                 <nav id="navList" class="site-nav">
                     <ul id="navLinks" class="nav-list">
                         <li class="li-navItem"><a class="nav-btn selected" href="#work">Work</a></li>
-                        <li class="li-navItem"><a class="nav-btn" href="#projects">About</a></li>
-                        <li class="li-navItem"><a class="nav-btn" href="#about">Resumé</a></li>
+                        <li class="li-navItem"><a id="about-btn" class="nav-btn" href="#">About</a></li>
+                        <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
                     </ul>
                 </nav>
             </div>
@@ -43,7 +43,7 @@
             <div class="home-feature-container">
                 <div class="home-feature">
                     <h1>zach chan</h1>
-                    <h2>I am a: <span id="I-am-text">UX Designer</span></h2>
+                    <h2><span class="not-typewriter">I am a: </span><span class="typewriter-container"><span id="typewriter-text"></span></span></h2>
                     <p>Currently I’m a web developer at the Vancouver Coastal Health.
                         On the side I’m always exploring new ideas through personal projects related to health,
                         technology, and storytelling. </p>
@@ -189,7 +189,7 @@
         </div>
     </div>
 
-    <div class="about-container">
+    <div id="about-container" class="about-container clipped">
         <div class="about-content grid">
             <div class="col col-middle col-5">
                 <div class="img-container">
@@ -199,13 +199,14 @@
             <div class="col col-middle col-7">
                 <h2>hi!</h2>
                 <p>
-                    I’m a UX designer specializing in web, mobile, and 3D environments. My background is in user research and front-end web development but I love to continuously learn and find inspiration in new technologies. I’m a visual thinker who loves collaborating and using my empathy to understand and succeed in new situations.
+                    I’m a UX designer specializing in <span class="text-standout">web</span>, <span class="text-standout">mobile</span>, and <span class="text-standout">3D environments</span>. My background is in <span class="text-standout">user research</span> and <span class="text-standout">front-end web development</span> but I love to continuously learn and find inspiration in new technologies. I’m a visual thinker who loves collaborating and using my empathy to understand and succeed in new situations.
                 </p>
             </div>
         </div>
 
         <button id="about-back-btn">
-            BACK
+            <img alt="Close about section" src="/images/icons/close-lightgrey.svg">
+            <span class="btn-text">CLOSE</span> 
         </button>
     </div>
 
@@ -225,6 +226,7 @@
 
     <!--SCRIPTS-->
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/typewriter.js"></script>
 
 </body>
 

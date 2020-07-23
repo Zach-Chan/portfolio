@@ -34,15 +34,23 @@ a.nav-btn {
     color: $darkGrey;
     text-decoration: none;
     transition: color ease 0.1s;
+    cursor: pointer;
 
-    &:hover {
-        cursor: pointer;
+    &:hover, &:focus {
         color: $accentCol;
+    }
+
+    &:active {
+        color: $primaryCol;
     }
 
     &.selected {
         color: $primaryCol;
     }
+}
+
+#typewriter-text {
+    color: $bgColor;
 }
 // -------------------
 // ABOUT SECTION FONTS
@@ -65,4 +73,8 @@ a.nav-btn {
     font-size: 16px;
     font-weight: 600;
     color: $lightGrey;
+}
+
+.text-standout {
+    color: $accentCol;
 }

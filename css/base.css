@@ -312,12 +312,17 @@ a.nav-btn {
   text-decoration: none;
   -webkit-transition: color ease 0.1s;
   -o-transition: color ease 0.1s;
-  transition: color ease 0.1s; }
-  a.nav-btn:hover {
-    cursor: pointer;
+  transition: color ease 0.1s;
+  cursor: pointer; }
+  a.nav-btn:hover, a.nav-btn:focus {
     color: #F6844E; }
+  a.nav-btn:active {
+    color: #006A72; }
   a.nav-btn.selected {
     color: #006A72; }
+
+#typewriter-text {
+  color: #F8F8F8; }
 
 .about-container h2 {
   font-family: "Proza Libre", sans-serif;
@@ -332,6 +337,9 @@ a.nav-btn {
   font-size: 16px;
   font-weight: 600;
   color: #E3E2DF; }
+
+.text-standout {
+  color: #F6844E; }
 
 .content-container {
   margin-left: auto;
@@ -405,16 +413,26 @@ body {
   color: #272727;
   font-family: "Lato", sans-serif;
   font-size: 24px;
-  margin: 0 0 0.5rem 0; }
-
-.home-feature #I-am-text {
-  color: #F8F8F8;
-  background-color: #272727;
-  padding: 0.25rem 0.5rem; }
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2rem; }
 
 .home-feature p {
   display: block;
   word-wrap: normal; }
+
+.home-feature .not-typewriter {
+  padding: 0.25rem 0; }
+
+.home-feature .typewriter-container {
+  background-color: #272727;
+  padding: 0.25rem 0.25rem;
+  margin-left: 0.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2rem; }
 
 .sub-nav {
   position: fixed;
@@ -492,10 +510,29 @@ body {
 .about-container {
   display: block;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background-color: #006A72;
-  z-index: 300; }
+  z-index: 300;
+  visibility: visible;
+  opacity: 1;
+  -webkit-clip-path: circle(100% at 50% 50%);
+  clip-path: circle(100% at 50% 50%);
+  -webkit-transition: -webkit-clip-path 1s;
+  transition: -webkit-clip-path 1s;
+  -o-transition: clip-path 1s;
+  transition: clip-path 1s;
+  transition: clip-path 1s, -webkit-clip-path 1s; }
+  .about-container.hidden {
+    opacity: 0;
+    -webkit-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+    transition: all linear 0.2s; }
+  .about-container.clipped {
+    -webkit-clip-path: circle(0% at 3.5rem 170px);
+    clip-path: circle(0% at 3.5rem 170px); }
 
 .about-content {
   max-width: 900px;
@@ -520,8 +557,13 @@ body {
   background-repeat: no-repeat; }
 
 #about-back-btn {
-  display: inline-block;
-  border: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid #E3E2DF 2px;
   margin: 0;
   text-decoration: none;
   background: none;
@@ -530,7 +572,23 @@ body {
   -moz-appearance: none;
   position: fixed;
   top: 3rem;
-  left: 3rem; }
+  left: 3rem;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+  border-radius: 0.5rem;
+  -webkit-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s; }
+  #about-back-btn img {
+    height: 2.25rem; }
+  #about-back-btn .btn-text {
+    text-align: center;
+    padding: 0.25rem 0; }
+  #about-back-btn:hover, #about-back-btn:focus {
+    border-color: #F6844E;
+    opacity: 1; }
+  #about-back-btn:active {
+    border-color: #E3E2DF; }
 
 footer {
   height: 10vh;
@@ -576,6 +634,9 @@ footer {
     transform: rotateY(0deg); }
   .project-card h3 {
     margin: auto; }
+
+.hidden {
+  visibility: hidden; }
 
 .inline-cta {
   color: #F6844E;
@@ -632,7 +693,7 @@ footer {
     transition: all linear 0.2s;
     position: absolute;
     bottom: 2rem;
-    left: 2rem; }
+    left: 0rem; }
   .work-card .role {
     font-weight: 400;
     font-size: 12px;
@@ -663,21 +724,23 @@ footer {
     padding: 11px; }
     .work-card:hover .card-title, .work-card:focus .card-title {
       opacity: 0;
-      visibility: hidden; }
+      visibility: hidden;
+      bottom: 0; }
     .work-card:hover .project-label, .work-card:focus .project-label {
       -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
       transform: translateX(-100%); }
     .work-card:hover .role-block, .work-card:focus .role-block {
       opacity: 1;
-      visibility: visible; }
+      visibility: visible;
+      left: 1.5rem; }
     .work-card:hover .background-image, .work-card:focus .background-image {
       background-color: rgba(0, 106, 114, 0.56); }
   .work-card#project-concussion .background-image {
     background-image: url(/images/project-concussion/concussion-mockup-landing-simple.jpg); }
   .work-card#project-concussion:hover {
     border-color: #0f78af;
-    background-color: rgba(15, 120, 175, 0.56); }
+    background-color: rgba(15, 120, 175, 0.75); }
     .work-card#project-concussion:hover .background-image {
       width: 300%;
       height: 300%;
@@ -687,17 +750,17 @@ footer {
     background-image: url(/images/general/vch-logo.jpg); }
   .work-card#exp-vch:hover {
     border-color: #0f78af;
-    background-color: rgba(15, 120, 175, 0.56); }
+    background-color: rgba(15, 120, 175, 0.75); }
     .work-card#exp-vch:hover .background-image {
       width: 120%;
       height: 120%;
       left: -10%;
-      top: -20%; }
+      top: -15%; }
   .work-card#exp-bb .background-image {
     background-image: url(/images/general/vch-logo.jpg); }
   .work-card#exp-bb:hover {
     border-color: #0f78af;
-    background-color: rgba(15, 120, 175, 0.56); }
+    background-color: rgba(15, 120, 175, 0.75); }
     .work-card#exp-bb:hover .background-image {
       width: 120%;
       height: 120%;
@@ -707,7 +770,7 @@ footer {
     background-image: url(/images/general/vch-logo.jpg); }
   .work-card#exp-fss:hover {
     border-color: #0f78af;
-    background-color: rgba(15, 120, 175, 0.56); }
+    background-color: rgba(15, 120, 175, 0.75); }
     .work-card#exp-fss:hover .background-image {
       width: 120%;
       height: 120%;
