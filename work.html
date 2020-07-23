@@ -10,8 +10,15 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/base.css" rel="stylesheet">
     <!-- Load fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
 
     <!-- Set tab icon -->
     <link rel="icon" href="images/logo.png">
@@ -19,15 +26,15 @@
 
 <body class="site-body grid grid-nogutter">
     <!-- FIXED CONTENT -->
-    <div class="fixed-content-container site-body">
-        <div class="col col-6">
+    <div class="fixed-content-container site-body grid">
+        <div class="col col-5">
             <!-- NAVIGATION -->
             <div class="site-nav-container">
                 <nav id="navList" class="site-nav">
                     <ul id="navLinks" class="nav-list">
-                        <li class="li-navItem"><a class="nav-btn" href="#work">Work</a></li>
-                        <li class="li-navItem"><a class="nav-btn" href="#projects">School Projects</a></li>
-                        <li class="li-navItem"><a class="nav-btn" href="#about">About</a></li>
+                        <li class="li-navItem"><a class="nav-btn selected" href="#work">Work</a></li>
+                        <li class="li-navItem"><a class="nav-btn" href="#projects">About</a></li>
+                        <li class="li-navItem"><a class="nav-btn" href="#about">Resumé</a></li>
                     </ul>
                 </nav>
             </div>
@@ -35,64 +42,86 @@
             <!-- HOME FEATURE -->
             <div class="home-feature-container">
                 <div class="home-feature">
-                    <h1>Zach Chan</h1>
+                    <h1>zach chan</h1>
                     <h2>I am a: <span id="I-am-text">UX Designer</span></h2>
-                    <p>Blah blah current position, availability. 
-                        Some mission statement?
-                        two more lines.....
-                        probably......</p>
+                    <p>Currently I’m a web developer at the Vancouver Coastal Health.
+                        On the side I’m always exploring new ideas through personal projects related to health,
+                        technology, and storytelling. </p>
+                    <p>
+                        <a href="mailto:zachchan86@gmail.com" class="inline-cta">Drop me a line</a>
+                        to chat, grab a coffee, or collab!
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="col col-6"></div>
+
+        <div class="col col-7">
+
+        </div>
     </div>
 
     <!-- SCROLLING CONTENT -->
-    <div class="static-content-buffer col col-6"></div>
+    <div class="fixed-content-buffer col col-5"></div>
 
-    <div class="scrolling-content-container col cool-6">
-        <div class="scrolling-content grid grid-end">
-            <div class="sub-nav">
-                <ul class="grid grid-around">
-                    <li class="col col-fixed"><a href="#projects-section"></a>Projects</li>
-                    <li class="col col-fixed"><a href="#experience-section"></a>Experience</li>
-                    <li class="col col-fixed"><a href="#other-section"></a>Other Work</li>
-                    <li class="col col-fixed"><a href="#contact-section"></a>Contact</li>
-                </ul>
-            </div>
+    <div class="scrolling-content-container col col-7">
+
+        <!-- RIGHT SIDE FIXED ELEMENTS -->
+        <!-- <div class="sub-nav">
+            <ul class="grid grid-between">
+                <li class="col col-fixed"><a href="#projects-section"></a>Projects</li>
+                <li class="col col-fixed"><a href="#experience-section"></a>Experience</li>
+                <li class="col col-fixed"><a href="#other-section"></a>Other Work</li>
+                <li class="col col-fixed"><a href="#contact-section"></a>Contact</li>
+            </ul>
+        </div> -->
+        <div class="fade-top"></div>
+        <div class="fade-bottom"></div>
+
+        <div class="scrolling-content grid grid-nogutter grid-end">
             <!-- PROJECTS -->
             <section id="projects" class="grid grid-nogutter">
                 <div class="col col-12">
                     <h2>Projects</h2>
                 </div>
-                <a id="project-concussion" href="project-concussion.html" class="work-card drop-shadow">
-                    <span class="project-label">responsive website</span>
-                    <h3>VCH Concussion Guide</h3>
-                    <span class="role">role:</span>
-                    <h4>ux designer</h4>
-                    <h4>web developer</h4>
-                </a>
-                <a id="project-reddit" href="project-reddit.html" class="work-card drop-shadow">
-                    <span class="project-label">site evaluation + feature design</span>
-                    <h3>Reddit Ethical Evaluation</h3>
-                    <span class="role">role:</span>
-                    <h4>user researcher</h4>
-                    <h4>ux designer</h4>
-                </a>
-                <a id="project-pcaat" href="project-pcaat.html" class="work-card drop-shadow">
-                    <span class="project-label">web app</span>
-                    <h3>VCH PCAAT</h3>
-                    <span class="role">role:</span>
-                    <h4>ux designer</h4>
-                    <h4>front-end developer</h4>
-                </a>
-                <a id="project-track-it" href="project-track-it.html" class="work-card drop-shadow">
-                    <span class="project-label">digital store interaction</span>
-                    <h3>Track It</h3>
-                    <span class="role">role:</span>
-                    <h4>user researcher</h4>
-                    <h4>ux designer</h4>
-                </a>
+                <div class="col col-12 grid grid-nogutter">
+                    <div class="col col-6">
+                        <a id="project-concussion" href="project-concussion.html" class="work-card drop-shadow">
+                            <span class="project-label">responsive website</span>
+                            <h3>VCH Concussion Guide</h3>
+                            <span class="role">role:</span>
+                            <h4>ux designer</h4>
+                            <h4>web developer</h4>
+                        </a>
+                    </div>
+                    <div class="col col-6">
+                        <a id="project-reddit" href="project-reddit.html" class="work-card drop-shadow">
+                            <span class="project-label">site evaluation + feature design</span>
+                            <h3>Reddit Ethical Evaluation</h3>
+                            <span class="role">role:</span>
+                            <h4>user researcher</h4>
+                            <h4>ux designer</h4>
+                        </a>
+                    </div>
+                    <div class="col col-6">
+                        <a id="project-pcaat" href="project-pcaat.html" class="work-card drop-shadow">
+                            <span class="project-label">web app</span>
+                            <h3>VCH PCAAT</h3>
+                            <span class="role">role:</span>
+                            <h4>ux designer</h4>
+                            <h4>front-end developer</h4>
+                        </a>
+                    </div>
+                    <div class="col col-6">
+                        <a id="project-track-it" href="project-track-it.html" class="work-card drop-shadow">
+                            <span class="project-label">digital store interaction</span>
+                            <h3>Track It</h3>
+                            <span class="role">role:</span>
+                            <h4>user researcher</h4>
+                            <h4>ux designer</h4>
+                        </a>
+                    </div>
+                </div>
+                
             </section>
 
             <!-- EXPERIENCE -->
@@ -148,39 +177,22 @@
                     <h4>web developer</h4>
                 </a>
             </section>
-
-            <!-- ABOUT/CONTACT -->
-            <!-- <section id="about" class="card-wrapper content-wrapper flex-container">
-                <div class="full-span">
-                    <h2>Hello there!</h2>
-                </div>
-                <div id="selfPortrait" class="card drop-shadow flex-half bg-colLight">
-                    <p>Let's create something!</p>
-                    <h3>Contact me at: zachan@sfu.ca</h3>
-                </div>
-                <div class="bio card drop-shadow flex-half bg-colPrimary">
-                    <p>
-                        I'm an experience designer disciplined in UI design for web and mobile interfaces as well as front
-                        end web programming. I like to think through and share ideas using visual mediums like interactive
-                        prototypes and animations. When I work I take a user-centric approach to make sure problems are
-                        being solved and the purpose is never lost in my work.
-                    </p>
-                </div>
-            </section> -->
-
-            
         </div>
     </div>
 
     <footer class="col col-12 grid grid-nogutter">
-        <div class="col col-6"></div>
-        <div class="col col-6 col-align-middle">
+        <div class="col col-5"></div>
+        <div class="col col-7 col-align-middle">
             <a href="#homeBanner" class="footer-btn">back to top</a>
             <a href="zach-chan-resume-public.pdf" class="footer-btn">resum&eacute;</a>
             <a href="citations.html" class="footer-btn">citations</a>
             <a href="https://github.com/Zach-Chan/portfolio" class="footer-btn">git repository</a>
         </div>
     </footer>
+
+    <!-- BACKGROUND DOTS -->
+    <div class="dots-primary"></div>
+    <div class="dots-secondary"></div>
 
     <!--SCRIPTS-->
     <script type="text/javascript" src="js/main.js"></script>
