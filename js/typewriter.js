@@ -1,4 +1,6 @@
-// console.log("typewriter js loaded");
+//  code parts of code referenced from
+//  https://stackoverflow.com/questions/52600390/javascript-iterate-array-of-strings-and-add-typing-deleting-effect-to-each-comp
+
 var speed = 50; /* The speed/duration of the effect in milliseconds */
 var speed2 = 100;
 var pause = 2000;
@@ -16,7 +18,6 @@ var textList = [
 console.log(textList);
 
 function typeWriter() {
-    // console.log("running typewriter manager");
     if (deleting) {
         if (str.innerText.length > 0) {
             str.innerText = str.innerText.substr(0, str.innerHTML.length - 1);
@@ -33,7 +34,6 @@ function typeWriter() {
         setTimeout(typeWriter, speed);
         return;
     }
-    console.log("typing");
     var text = textList[i];
     str.innerText = text.substr(0, str.innerHTML.length + 1);
     if (str.innerText.length === text.length) {
