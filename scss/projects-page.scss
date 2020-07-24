@@ -22,6 +22,32 @@
             max-width: 80%;
         }
     }
+
+    &.scrolling-content {
+        @include breakpoint(flexgrid-lg){
+            padding-left: 0;
+        }
+    }
+
+    &.site-nav-container {
+        @include breakpoint(desktop){
+            left: 3rem;
+        }
+    
+        @include breakpoint(flexgrid-lg) {
+            left: 1rem;
+        }
+    }
+    
+    &.mobile-banner {
+        @include breakpoint(desktop) {
+            padding: 1rem 3rem;
+        }
+
+        @include breakpoint(flexgrid-lg) {
+            padding: 1rem;
+        }
+    }
 }
 
 .section-content {
@@ -42,11 +68,13 @@
     position: absolute;
     margin-top: 0;
     left: -2rem;
+    max-width: 10rem;
 
     @include breakpoint(flexgrid-lg) {
         font-size: 24px;
         left: 0;
         top: -2rem;
+        max-width: unset;
 
         &#overview-header{
             top: -2rem;
@@ -86,8 +114,8 @@
     flex-direction: column;
     transition: all linear 0.2s;
 
-    @include breakpoint(flexgrid-md){
-        left: 2rem;
+    @include breakpoint(flexgrid-lg){
+        left: 1rem;
     }
 
     @include breakpoint(phablet-transition){
