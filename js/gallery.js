@@ -1,3 +1,4 @@
+// Sourced from http://www.omardo.com/responsive-gallery/
 ;(function() {
   console.log("gallery function running");
   'use strict';
