@@ -1,17 +1,5 @@
 console.log("Javascript running");
 
-//SMOOTH SCROLLING TO ANCHOR POINTS
-//sourced from Joseph Silber: https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//   anchor.addEventListener('click', function (e) {
-//     e.preventDefault();
-
-//     document.querySelector(this.getAttribute('href')).scrollIntoView({
-//       behavior: 'smooth'
-//     });
-//   });
-// });
-
 //NAV COLLAPSE FUNCTION
 var menu = document.querySelector("#navLinks");
 //   menu.classList.add("hidden");

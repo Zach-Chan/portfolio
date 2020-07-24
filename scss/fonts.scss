@@ -13,14 +13,33 @@ h1 {
     color: $primaryCol;
     margin: 0;
     line-height: 66px;
+    transition: all linear 0.4s;
 
     @include breakpoint(flexgrid-lg){
         font-size: 36px;
         line-height: 36px;
     }
 
-    &.project-page {
+    &.small-site-title {
         font-size: 36px;
+        margin-left: 2rem;
+
+        @include breakpoint(flexgrid-md){
+            margin-left: 1rem;
+        }
+        @include breakpoint(phablet-transition){
+            margin-left: 0;
+        }
+    }
+
+    &.project-page {
+        font-size: 56px;
+        // margin-left: 11rem;
+        @include breakpoint(flexgrid-lg){
+            font-size: 36px;
+            line-height: 36px;
+            margin-left: 0;
+        }
     }
 }
 

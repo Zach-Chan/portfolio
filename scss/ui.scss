@@ -10,6 +10,7 @@ body {
     margin: 0 auto !important;
     padding: 0;
     max-width: 1500px;
+    min-width: 400px;
 }
 
 // ---------------------
@@ -78,6 +79,8 @@ body {
 .site-nav {
     ul {
         list-style: none;
+        margin: 0 0 0 3rem;
+        padding: 0;
     }
     li {
         padding: 0 0 1.5rem 0;
