@@ -290,7 +290,13 @@ h1 {
   font-family: "Manrope", sans-serif;
   font-size: 72px;
   font-weight: 800;
-  color: #006A72; }
+  color: #006A72;
+  margin: 0;
+  line-height: 66px; }
+  @media (max-width: 744px) {
+    h1 {
+      font-size: 36px;
+      line-height: 36px; } }
 
 h2 {
   font-family: "Proza Libre", sans-serif;
@@ -373,6 +379,25 @@ body {
   padding: 0;
   max-width: 1500px; }
 
+.mobile-only {
+  display: none; }
+  @media (max-width: 744px) {
+    .mobile-only {
+      display: block; } }
+
+.mobile-banner {
+  position: fixed;
+  z-index: 400;
+  padding: 1rem;
+  width: 100vw; }
+  .mobile-banner .site-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0.5rem; }
+  .mobile-banner .site-nav li {
+    display: inline;
+    padding: 0 1.5rem 0 0; }
+
 .fixed-content-container {
   position: fixed;
   top: 0;
@@ -383,11 +408,19 @@ body {
     position: relative; }
   .fixed-content-container .col-5 {
     z-index: 200; }
+  @media (max-width: 744px) {
+    .fixed-content-container {
+      display: none; } }
 
 .site-nav-container {
   position: absolute;
   top: 100px;
   left: 0; }
+  @media (max-width: 744px) {
+    .site-nav-container {
+      top: 1rem;
+      left: unset;
+      right: 0; } }
 
 .site-nav ul {
   list-style: none; }
@@ -401,9 +434,12 @@ body {
   bottom: 5rem;
   min-width: 150px;
   min-height: 100px; }
-
-.home-feature h1 {
-  margin-bottom: 0.5rem; }
+  @media (max-width: 744px) {
+    .home-feature-container {
+      left: 1rem;
+      bottom: unset;
+      top: 1rem;
+      z-index: 390; } }
 
 .home-feature h2 {
   color: #272727;
@@ -412,7 +448,8 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 2rem; }
+  height: 2rem;
+  margin: 0 0 0.5rem 0; }
 
 .home-feature p {
   display: block;
@@ -466,6 +503,10 @@ body {
   width: 70%;
   height: 6rem;
   z-index: 100; }
+  @media (max-width: 744px) {
+    .fade-top,
+    .fade-bottom {
+      width: 100vw; } }
 
 .fade-top {
   top: 0;
@@ -473,6 +514,9 @@ body {
   background-image: -webkit-linear-gradient(#F8F8F8 60%, rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(#F8F8F8 60%, rgba(0, 0, 0, 0));
   background-image: linear-gradient(#F8F8F8 60%, rgba(0, 0, 0, 0)); }
+  @media (max-width: 744px) {
+    .fade-top {
+      height: 10rem; } }
 
 .fade-bottom {
   bottom: 0vh;
@@ -511,7 +555,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #006A72;
-  z-index: 300;
+  z-index: 600;
   visibility: visible;
   opacity: 1;
   -webkit-clip-path: circle(100% at 50% 50%);
@@ -534,8 +578,14 @@ body {
   max-width: 900px;
   height: 100%;
   margin: auto; }
+  .about-content .col {
+    position: relative; }
   .about-content h2 {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    opacity: 1;
+    -webkit-transition: opacity ease 0.5s;
+    -o-transition: opacity ease 0.5s;
+    transition: opacity ease 0.5s; }
   .about-content .img-container {
     display: block;
     width: 300px;
@@ -544,6 +594,34 @@ body {
     overflow: hidden;
     background-color: #C4C4C4;
     margin: 0 1rem 0 auto; }
+  .about-content #text-block .grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  @media (max-width: 744px) {
+    .about-content #img-block {
+      -ms-flex-item-align: end;
+      align-self: flex-end; }
+    .about-content #text-block {
+      -ms-flex-item-align: start;
+      align-self: flex-start; }
+      .about-content #text-block .grid {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row; }
+    .about-content .img-container {
+      margin: 0 auto; }
+    .about-content h2 {
+      text-align: end;
+      margin: auto 0; }
+    .about-content p {
+      -ms-flex-preferred-size: 60%;
+      flex-basis: 60%; } }
+  @media (max-width: 540px) {
+    .about-content h2 {
+      opacity: 0.3; } }
 
 .bio-img {
   width: 100%;
@@ -561,6 +639,7 @@ body {
   align-items: center;
   border: solid #E3E2DF 2px;
   margin: 0;
+  width: 6.75rem;
   text-decoration: none;
   background: none;
   cursor: pointer;
@@ -575,6 +654,14 @@ body {
   -webkit-transition: all linear 0.2s;
   -o-transition: all linear 0.2s;
   transition: all linear 0.2s; }
+  @media (max-width: 550px) {
+    #about-back-btn {
+      top: unset;
+      bottom: 3rem;
+      left: 50vw;
+      -webkit-transform: translateX(-3.725rem);
+      -ms-transform: translateX(-3.725rem);
+      transform: translateX(-3.725rem); } }
   #about-back-btn img {
     height: 2.25rem; }
   #about-back-btn .btn-text {
@@ -590,7 +677,12 @@ footer {
   height: 10vh;
   width: 100%;
   top: 100%;
-  justify-self: flex-end; }
+  justify-self: flex-end;
+  z-index: 100;
+  color: #006A72; }
+  footer p {
+    text-align: center;
+    margin: 0 auto; }
 
 .scrolling-content-container {
   min-height: 90vh;
@@ -599,9 +691,14 @@ footer {
 
 .scrolling-content {
   min-height: 60vh;
-  padding-top: 10rem;
-  padding-right: 3rem;
+  padding: 10rem 3rem 0 0;
   margin: 8; }
+  @media (max-width: 1080px) {
+    .scrolling-content {
+      padding: 10rem 1rem 0 0; } }
+  @media (max-width: 744px) {
+    .scrolling-content {
+      padding: 7.75rem 1rem 0 1rem; } }
 
 .project-card {
   position: relative;
@@ -643,6 +740,9 @@ footer {
   .inline-cta:active {
     background-color: #F6844E;
     color: #272727; }
+
+#experience .work-card {
+  height: 11.25rem; }
 
 .work-card {
   display: block;
@@ -735,7 +835,7 @@ footer {
       opacity: 1;
       background-color: #006a72; }
   .work-card#project-concussion .background-image {
-    background-image: url(/images/project-concussion/concussion-mockup-landing-simple.jpg); }
+    background-image: url(/images/project-concussion/concussion-mockup-landing-desktop-mobile.jpg); }
   .work-card#project-concussion:hover {
     border-color: #0f78af;
     background-color: rgba(15, 120, 175, 0.75); }
@@ -754,6 +854,26 @@ footer {
       height: 310%;
       left: -72%;
       top: -82%; }
+  .work-card#project-track-it .background-image {
+    background-image: url(/images/project-fitfirst/fitfirst-hero-light.jpg); }
+  .work-card#project-track-it:hover {
+    border-color: #4ebb33;
+    background-color: rgba(78, 187, 51, 0.75); }
+    .work-card#project-track-it:hover .background-image {
+      width: 200%;
+      height: 200%;
+      left: -94%;
+      top: -14%; }
+  .work-card#project-discovered .background-image {
+    background-image: url(/images/project-discovered/discovered-banner-1x.png); }
+  .work-card#project-discovered:hover {
+    border-color: #5DD3AA;
+    background-color: rgba(93, 211, 170, 0.75); }
+    .work-card#project-discovered:hover .background-image {
+      width: 310%;
+      height: 310%;
+      left: -72%;
+      top: -82%; }
   .work-card#exp-vch .background-image {
     background-image: url(/images/general/vch-logo.jpg); }
   .work-card#exp-vch:hover {
@@ -765,7 +885,10 @@ footer {
       left: -10%;
       top: -15%; }
   .work-card#exp-bb .background-image {
-    background-image: url(/images/general/bb-logo.jpg); }
+    background-image: url(/images/general/bb-logo.jpg);
+    width: 85%;
+    height: 85%;
+    left: 10%; }
   .work-card#exp-bb:hover {
     border-color: #272727;
     background-color: rgba(39, 39, 39, 0.75); }
@@ -782,5 +905,5 @@ footer {
     .work-card#exp-fss:hover .background-image {
       width: 110%;
       height: 110%;
-      left: -3%;
+      left: -5%;
       top: -15%; }

@@ -1,3 +1,7 @@
+#experience .work-card {
+    height: 11.25rem;
+}
+
 .work-card {
     display: block;
     position: relative;
@@ -113,7 +117,7 @@
     // ------------------------
     &#project-concussion {
         .background-image {
-            background-image: url(/images/project-concussion/concussion-mockup-landing-simple.jpg);
+            background-image: url(/images/project-concussion/concussion-mockup-landing-desktop-mobile.jpg);
         }
 
         &:hover {
@@ -145,6 +149,40 @@
         }
     }
 
+    &#project-track-it {
+        .background-image {
+            background-image: url(/images/project-fitfirst/fitfirst-hero-light.jpg);
+        }
+
+        &:hover {
+            border-color: $trackitCol;
+            background-color: rgba($color: $trackitCol, $alpha: 0.75);
+            .background-image {
+                width: 200%;
+                height: 200%;
+                left: -94%;
+                top: -14%;
+            }
+        }
+    }
+
+    &#project-discovered {
+        .background-image {
+            background-image: url(/images/project-discovered/discovered-banner-1x.png);
+        }
+
+        &:hover {
+            border-color: $disCol;
+            background-color: rgba($color: $disCol, $alpha: 0.75);
+            .background-image {
+                width: 310%;
+                height: 310%;
+                left: -72%;
+                top: -82%;
+            }
+        }
+    }
+
     // ---------------------------
     // EXPERIENCE SPECIFIC STYLING
     // ---------------------------
@@ -167,6 +205,9 @@
     &#exp-bb {
         .background-image {
             background-image: url(/images/general/bb-logo.jpg);
+            width: 85%;
+            height: 85%;
+            left: 10%;
         }
 
         &:hover {
@@ -191,7 +232,7 @@
             .background-image {
                 width: 110%;
                 height: 110%;
-                left: -3%;
+                left: -5%;
                 top: -15%;
             }
         }

@@ -1,8 +1,10 @@
 $breakpoints: ( 
     phone: 400px, 
+    flexgrid-sm: 480px,
     phablet-transition: 540px,
     phablet: 550px, 
-    tablet-transition: 740px,
+    flexgrid-med: 624px,
+    flexgrid-lg: 744px,
     tablet: 750px, 
     desktop: 1080px, 
     desktophd: 1200px );
@@ -13,7 +15,7 @@ $breakpoints: (
         // Get the breakpoint value.
         $breakpoint-value: map-get($breakpoints, $breakpoint);
         // Write the media query.
-        @media (min-width: $breakpoint-value) {
+        @media (max-width: $breakpoint-value) {
             @content;
         }
         // If the breakpoint doesn't exist in the map.

@@ -11,6 +11,13 @@ h1 {
     font-size: 72px;
     font-weight: 800;
     color: $primaryCol;
+    margin: 0;
+    line-height: 66px;
+
+    @include breakpoint(flexgrid-lg){
+        font-size: 36px;
+        line-height: 36px;
+    }
 }
 
 h2 {

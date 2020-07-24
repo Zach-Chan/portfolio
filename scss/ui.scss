@@ -16,6 +16,33 @@ body {
 // FIXED CONTENT STYLING
 // ---------------------
 
+.mobile-only {
+    display: none;
+
+    @include breakpoint(flexgrid-lg) {
+        display: block;
+    }
+}
+
+.mobile-banner {
+    position: fixed;
+    z-index: 400;
+    padding: 1rem;
+    width: 100vw;
+
+    .site-nav {
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+        li {
+            display: inline;
+            padding: 0 1.5rem 0 0;
+        }
+    }
+}
+
 .fixed-content-container {
     position: fixed;
     top: 0;
@@ -30,12 +57,22 @@ body {
     .col-5 {
         z-index: 200;
     }
+
+    @include breakpoint(flexgrid-lg) {
+        display: none;
+    }
 }
 
 .site-nav-container {
     position: absolute;
     top: 100px;
     left: 0;
+
+    @include breakpoint(flexgrid-lg) {
+        top: 1rem;
+        left: unset;
+        right: 0;
+    }
 }
 
 .site-nav {
@@ -53,19 +90,23 @@ body {
     bottom: 5rem;
     min-width: 150px;
     min-height: 100px;
+
+    @include breakpoint(flexgrid-lg) {
+        left: 1rem;
+        bottom: unset;
+        top: 1rem;
+        z-index: 390;
+    }
 }
 
 .home-feature {
-    h1 {
-        margin-bottom: 0.5rem;
-    }
     h2 {
         color: $darkGrey;
         font-family: "Lato", sans-serif;
         font-size: 24px;
         display: inline-flex;
         height: 2rem;
-        // margin: 0 0 0.5rem 0;
+        margin: 0 0 0.5rem 0;
     }
     p {
         display: block;
@@ -80,7 +121,6 @@ body {
         margin-left: 0.5rem;
         display: inline-flex;
         height: 2rem;
-
     }
 }
 
@@ -125,11 +165,19 @@ body {
     width: 70%;
     height: 6rem;
     z-index: 100;
+
+    @include breakpoint(flexgrid-lg) {
+        width: 100vw;
+    }
 }
 
 .fade-top {
     top: 0;
     background-image: linear-gradient($bgColor 60%, rgba(0, 0, 0, 0));
+
+    @include breakpoint(flexgrid-lg) {
+        height: 10rem;
+    }
 }
 
 .fade-bottom {
@@ -178,7 +226,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: $primaryCol;
-    z-index: 300;
+    z-index: 600;
     visibility: visible;
     opacity: 1;
     clip-path: circle(100% at 50% 50%);
@@ -199,8 +247,14 @@ body {
     height: 100%;
     margin: auto;
 
+    .col {
+        position: relative;
+    }
+
     h2 {
         margin-bottom: 0;
+        opacity: 1;
+        transition: opacity ease 0.5s;
     }
 
     .img-container {
@@ -211,6 +265,40 @@ body {
         overflow: hidden;
         background-color: $grey;
         margin: 0 1rem 0 auto;
+    }
+
+    #text-block .grid {
+        flex-direction: column;
+    }
+
+    @include breakpoint(flexgrid-lg) {
+        #img-block {
+            align-self: flex-end;
+        }
+
+        #text-block {
+            align-self: flex-start;
+            
+            .grid {
+                flex-direction: row;
+            }
+        }
+
+        .img-container {
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: end;
+            margin: auto 0;
+        }
+        p {
+            flex-basis: 60%;
+        }
+    }
+    @include breakpoint(phablet-transition){
+        h2 {
+            opacity: 0.3;
+        }
     }
 }
 
@@ -227,6 +315,7 @@ body {
     align-items: center;
     border: solid $lightGrey 2px;
     margin: 0;
+    width: 6.75rem;
     text-decoration: none;
     background: none;
     cursor: pointer;
@@ -240,6 +329,13 @@ body {
     padding: 0.25rem 0.75rem 0.25rem 0.25rem;
     border-radius: 0.5rem;
     transition: all linear 0.2s;
+
+    @include breakpoint(phablet) {
+        top: unset;
+        bottom: 3rem;
+        left: 50vw;
+        transform: translateX(-3.725rem);
+    }
 
     img {
         height: 2.25rem;
@@ -272,6 +368,13 @@ footer {
     width: 100%;
     top: 100%;
     justify-self: flex-end;
+    z-index: 100;
+    color: $primaryCol;
+    
+    p {
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
 .fixed-content-buffer {
@@ -282,15 +385,21 @@ footer {
     min-height: 90vh;
     width: 100%;
     position: relative;
-    // background-color: $lightGrey;
 }
 
 .scrolling-content {
-    // background-color: red;
     min-height: 60vh;
-    padding-top: 10rem;
-    padding-right: 3rem;
+    padding: 10rem 3rem 0 0;
+
     margin: 8;
+
+    @include breakpoint(desktop) {
+        padding: 10rem 1rem 0 0;
+    }
+
+    @include breakpoint(flexgrid-lg) {
+        padding: 7.75rem 1rem 0 1rem;
+    }
 }
 
 // ---------------------

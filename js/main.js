@@ -38,23 +38,26 @@ menuToggle.addEventListener("click",
   }
 );
 
+// -----------------------
+// PLACE CURRENT DATE YEAR
+// -----------------------
+document.getElementById("year").innerHTML = new Date().getFullYear();;
+
 // ----------------------------
 // OPEN AND CLOSE ABOUT SECTION
 // ----------------------------
-var aboutBtn = document.getElementById("about-btn");
+var aboutBtns = document.querySelectorAll("a.about-btn");
 var closeAboutBtn = document.getElementById("about-back-btn");
 var aboutSection = document.getElementById("about-container");
 
-aboutBtn.addEventListener("click", () => {
-  console.log(aboutSection);
-  aboutSection.classList.remove("clipped");
-  // aboutSection.classList.remove("clipped-inactive");
-  // aboutSection.classList.add("clipped-active");
-})
+aboutBtns.forEach(el => {
+  el.addEventListener("click", () => {
+    console.log(aboutSection);
+    aboutSection.classList.remove("clipped");
+  })
+});
 
 closeAboutBtn.addEventListener("click", () => {
   console.log(aboutSection);
   aboutSection.classList.add("clipped");
-  // aboutSection.classList.remove("clipped-active");
-  // aboutSection.classList.add("clipped-inactive");
 })
