@@ -18,6 +18,10 @@ h1 {
         font-size: 36px;
         line-height: 36px;
     }
+
+    &.project-page {
+        font-size: 36px;
+    }
 }
 
 h2 {
@@ -55,6 +59,12 @@ a.nav-btn {
     &.selected {
         color: $primaryCol;
     }
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    color: $darkGrey;
 }
 
 #typewriter-text {

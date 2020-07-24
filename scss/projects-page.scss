@@ -1,0 +1,68 @@
+.project-page {
+    section {
+        position: relative;
+        margin: 3rem 0 0 0;
+    }
+
+    &.fixed-content-buffer {
+        flex-basis: 25%;
+        max-width: 25%;
+
+        @include breakpoint(flexgrid-lg) {
+            flex-basis: 20%;
+            max-width: 20%;
+        }
+    }
+    &.scrolling-content-container {
+        flex-basis: 75%;
+        max-width: 75%;
+
+        @include breakpoint(flexgrid-lg) {
+            flex-basis: 80%;
+            max-width: 80%;
+        }
+    }
+}
+
+.section-content {
+    margin-left: 10rem;
+    padding: 0.25rem 1rem 1rem 1rem;
+
+    @include breakpoint(flexgrid-lg){
+        margin-left: 0;
+    }
+
+    p {
+        margin-top: 0;
+    }
+}
+
+.project-header {
+    position: absolute;
+    margin-top: 0;
+    left: -2rem;
+
+    @include breakpoint(flexgrid-lg) {
+        font-size: 24px;
+        left: 0;
+        top: -1rem;
+
+        &#overview-header{
+            top: -2rem;
+        }
+    }
+}
+
+.overview-section {
+    border: solid $darkGrey 2px;
+    border-radius: 1rem;
+    background-color: $bgColor;
+
+    h3 {
+        margin-bottom: 0.25rem;
+    }
+    p {
+        margin: 0 0 0.25rem 0;
+        line-height: 1rem;
+    }
+}

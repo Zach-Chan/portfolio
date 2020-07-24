@@ -297,6 +297,8 @@ h1 {
     h1 {
       font-size: 36px;
       line-height: 36px; } }
+  h1.project-page {
+    font-size: 36px; }
 
 h2 {
   font-family: "Proza Libre", sans-serif;
@@ -327,6 +329,11 @@ a.nav-btn {
     color: #006A72; }
   a.nav-btn.selected {
     color: #006A72; }
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #272727; }
 
 #typewriter-text {
   color: #F8F8F8; }
@@ -426,7 +433,8 @@ body {
   list-style: none; }
 
 .site-nav li {
-  padding: 0 0 1.5rem 0; }
+  padding: 0 0 1.5rem 0;
+  cursor: pointer; }
 
 .home-feature-container {
   position: absolute;
@@ -503,6 +511,9 @@ body {
   width: 70%;
   height: 6rem;
   z-index: 100; }
+  .fade-top.full-span,
+  .fade-bottom.full-span {
+    width: 100vw; }
   @media (max-width: 744px) {
     .fade-top,
     .fade-bottom {
@@ -907,3 +918,58 @@ footer {
       height: 110%;
       left: -5%;
       top: -15%; }
+
+.project-page section {
+  position: relative;
+  margin: 3rem 0 0 0; }
+
+.project-page.fixed-content-buffer {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%; }
+  @media (max-width: 744px) {
+    .project-page.fixed-content-buffer {
+      -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+      max-width: 20%; } }
+
+.project-page.scrolling-content-container {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%; }
+  @media (max-width: 744px) {
+    .project-page.scrolling-content-container {
+      -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+      max-width: 80%; } }
+
+.section-content {
+  margin-left: 10rem;
+  padding: 0.25rem 1rem 1rem 1rem; }
+  @media (max-width: 744px) {
+    .section-content {
+      margin-left: 0; } }
+  .section-content p {
+    margin-top: 0; }
+
+.project-header {
+  position: absolute;
+  margin-top: 0;
+  left: -2rem; }
+  @media (max-width: 744px) {
+    .project-header {
+      font-size: 24px;
+      left: 0;
+      top: -1rem; }
+      .project-header#overview-header {
+        top: -2rem; } }
+
+.overview-section {
+  border: solid #272727 2px;
+  border-radius: 1rem;
+  background-color: #F8F8F8; }
+  .overview-section h3 {
+    margin-bottom: 0.25rem; }
+  .overview-section p {
+    margin: 0 0 0.25rem 0;
+    line-height: 1rem; }

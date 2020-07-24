@@ -81,6 +81,7 @@ body {
     }
     li {
         padding: 0 0 1.5rem 0;
+        cursor: pointer;
     }
 }
 
@@ -165,6 +166,10 @@ body {
     width: 70%;
     height: 6rem;
     z-index: 100;
+
+    &.full-span {
+        width: 100vw;
+    }
 
     @include breakpoint(flexgrid-lg) {
         width: 100vw;
@@ -390,7 +395,6 @@ footer {
 .scrolling-content {
     min-height: 60vh;
     padding: 10rem 3rem 0 0;
-
     margin: 8;
 
     @include breakpoint(desktop) {

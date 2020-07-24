@@ -8,203 +8,165 @@
 
     <!-- Load stylesheets -->
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
     <!-- Load fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
 
     <!-- Set tab icon -->
     <link rel="icon" href="images/logo.png">
 </head>
 
-<body id="top">
+<body class="site-body grid grid-nogutter">
 
-    <div class="nav-container bg-colDark">
-        <nav id="navList" class="nav-container drop-shadow">
-            <a class="icon-container" href="index.html">
-                <img class="logo" src="images/logo-light.png" alt="Z in a circle personal logo of Zach Chan">
-            </a>
+    <!-- FIXED CONTENT MOBILE -->
+    <div class="mobile-banner grid">
+        <h1 class="col project-page">zach chan</h1>
+        <div class="mobile-only site-nav col col-fixed">
             <ul id="navLinks" class="nav-list">
-                <li class="li-navItem"><a class="nav-btn" href="index.html#work">Work</a></li>
-                <li class="li-navItem"><a class="nav-btn" href="index.html#projects">School Projects</a></li>
-                <li class="li-navItem"><a class="nav-btn" href="index.html#about">About</a></li>
+                <li class="li-navItem"><a class="nav-btn" href="/work.html">Work</a></li>
+                <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
+                <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
             </ul>
-        </nav>
+        </div>
     </div>
 
-    <div class="all-content-wrapper col">
-        <!-- PROCESS ANALYSIS SECTION // -->
-        <div id="bannerDiscovered" class="banner-container drop-shadow">
-            <div class="title-wrapper">
-                <h1>VCH Learning Technologies <br>Concussion</h1>
+    <!-- FIXED CONTENT -->
+    <div class="fixed-content-container site-body grid">
+        <div class="col col-3 col-lg">
+            <!-- NAVIGATION -->
+            <div class="site-nav-container">
+                <nav id="navList" class="site-nav">
+                    <ul id="navLinks" class="nav-list">
+                        <li class="li-navItem"><a class="nav-btn" href="/work.html">Work</a></li>
+                        <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
+                        <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        <section>
-            <!-- EMPHATIC IN BRIEF -->
-            <div class="spotlight-block bg-colDark padding-left-right flex-container center-content full-span">
-                <div class="flex-container flex-sixth bg-colDark">
+
+        <div class="col col-9 col-lg">
+
+        </div>
+    </div>
+
+    <!-- SCROLLING CONTENT -->
+    <div class="project-page fixed-content-buffer col col-lg"></div>
+
+    <div class="project-page scrolling-content-container col col-lg">
+        <div class="fade-top full-span"></div>
+        <div class="fade-bottom full-span"></div>
+
+        <!-- PROCESS ANALYSIS SECTION // -->
+        <div class="scrolling-content project-page">
+            <h1>VCH Concussion Guide</h1>
+
+            <section id="overview">
+                <h2 id="overview-header" class="project-header">overview</h2>
+                <div class="section-content overview-section grid">
+                    <div class="col col-6">
+                        <h3>client & timeline</h3>
+                        <p>GF Strong Rehabilitation Centre</p>
+                        <p>2019.04-08</p>
+                    </div>
+                    <div class="col col-6">
+                        <h3>scope</h3>
+                        <p>Public-facing online concussion recovery guide and backend dashboard for client edits.</p>
+                    </div>
+                    <div class="col col-6">
+                        <h3>team</h3>
+                        <p>Myself - UX designer + web developer</p>
+                        <p>Sharon - instructional designer</p>
+                        <p>Michelle Chan - UX designer + multimedia designer</p>
+                    </div>
+                    <div class="col col-6">
+                        <h3>skills & tools</h3>
+                        <p>Wireframe sketching, research interviews, personas, use cases, Figma, Craft CMS, HTML5, CSS3, JS</p>
+                    </div>
+            </section>
+
+            <section id="problem">
+                <h2 class="project-header">problem</h2>
+                <div class="section-content">
                     <p>
-                        In a 4 month long project, I co-designed and developed a web tool that helps guide concussion
-                        patients and their loved ones with learning about MTBI (Mild Traumatic Brain Injury) and how to
-                        manage the recovery process.
+                        We designed initial iterations of the app interface with Adobe Illustrator but completed
+                        designing in the UX program Flinto so that we could capture the animated responses we had
+                        designed and conduct usability testing with an interactive prototype. <span
+                            id="usabilityTesting" class="highlight-skill">I conducted informal
+                            speak aloud tests to gain qualitative feedback and find problem areas of the UI.</span>
                     </p>
                 </div>
-            </div>
-        </section>
-        <section id="overview">
-            <div class="padding-left-right flex-container">
-                <div class="flex-half flex-container">
-                    <div class="in-brief-section flex-container full-span">
-                        <h2>Proficiencies</h2>
-                        <a href="#userResearch" class="chip">Front-end web development</a>
-                        <a href="#userResearch" class="chip">Interfacing with clients</a>
+            </section>
 
-                    </div>
-                    <div class="in-brief-section full-span">
-                        <h2>Tools</h2>
-                        <ul class="list-stylized">
-                            <li> Figma</li>
-                            <li>Craft CMS</li>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript jQuery</li>
-                        </ul>
-                    </div>
-
-                    <div class="in-brief-section full-span">
-                        <h2>Role</h2>
-                        <p>Web Developer + UX Designer
+            <section id="problem">
+                <h2 class="project-header">reflection</h2>
+                <div class="section-content">
+                    <div class="full-span">
+                        <p>
+                            Dis•Covered was a great opportunity for me to practice user-driven design through research
+                            and
+                            testing as well as experiment with unique, new designs but to also not become too attached
+                            to
+                            designs so that I can be more dynamic in my process and adapt to meet project requirements
+                            and
+                            real-world constraints.
                         </p>
                     </div>
-                    <div class="in-brief-section full-span">
-                        <h2>Team</h2>
-                        <ul class="list-stylized">
-                            <li>Sharon Hu</li>
-                            <li>Michelle Chan</li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-
-        </section>
-
-        <div class="back-to-top">
-            
+            </section>
         </div>
-
-        <section id="process_analysis">
-            <div class="flex-container content-wrapper padding-left-right">
-                <div class="full-span">
-                    <h2>Process</h2>
-                </div>
-                <div class="process-header full-span">
-                    <h3>The Client's Vision</h3>
-                </div>
-                <div class="full-span">
-                    <p>
-                        I was brought on board the project because of my multidisciplinary background as a designer and
-                        web developer. In such a small team, this was a huge advantage that helped us adapt to changes
-                        in client needs and pivots in direction. As a team, we met with our client: the clinical
-                        therapists at GF Strong Hospital in Vancouver BC. We discussed and sketched and created lots of
-                        ideas together to refine the direction of the project and get a stronger idea of what the
-                        problem area was and what avenues we had available for pursuing solutions.
-                    </p>
-                    <p>
-                        GF Strong provides workshops and personalized therapy for people diagnosed with MTBI and
-                        strokes. Many people experience MTBI in the form of concussions from recreational activities,
-                        car accidents, and work. However, GF Strong’s workshops for concussion are always booked months
-                        in advance which puts people who are in need of information and guidance on how to recover
-                        waiting unacceptable lengths of time. GF Strong’s services have a huge impact on helping
-                        patients get onto the road to recovery and being unable to offer enough services is the number
-                        one obstacle they want to overcome.
-                    </p>
-                </div>
-
-                <div class="process-header full-span">
-                    <h3>Defining Scope</h3>
-                </div>
-                <div class="full-span">
-                    <p>
-                        Making the app comfortable to use despite language barriers was a major area of focus for me.
-                        <span id="ideation" class="highlight-skill">I
-                            ideated through sketches to design an onboarding process to select a user's native language
-                            and
-                            providing clear interface elements to quickly swap between languages to use the app while
-                            also
-                            learning useful English words.</span>
-                    </p>
-                </div>               
-
-                <div class="full-span">
-                    <h3>Desgin Pillars</h3>
-                </div>
-                <div class="full-span">
-                    <p>
-                        We designed initial iterations of the app interface with Adobe Illustrator but completed
-                        designing in the UX program Flinto so that we could capture the animated responses we had
-                        designed and conduct usability testing with an interactive prototype. <span
-                            id="usabilityTesting" class="highlight-skill">I conducted informal
-                            speak aloud tests to gain qualitative feedback and find problem areas of the UI.</span>
-                    </p>
-                </div>
-
-                <div class="full-span">
-                    <h3>Reducing Information Overload</h3>
-                </div>
-                <div class="full-span">
-                    <p>
-                        We designed initial iterations of the app interface with Adobe Illustrator but completed
-                        designing in the UX program Flinto so that we could capture the animated responses we had
-                        designed and conduct usability testing with an interactive prototype. <span
-                            id="usabilityTesting" class="highlight-skill">I conducted informal
-                            speak aloud tests to gain qualitative feedback and find problem areas of the UI.</span>
-                    </p>
-                </div>
-
-                <div class="full-span">
-                    <h3>Easing Sensory Strain</h3>
-                </div>
-                <div class="full-span">
-                    <p>
-                        We designed initial iterations of the app interface with Adobe Illustrator but completed
-                        designing in the UX program Flinto so that we could capture the animated responses we had
-                        designed and conduct usability testing with an interactive prototype. <span
-                            id="usabilityTesting" class="highlight-skill">I conducted informal
-                            speak aloud tests to gain qualitative feedback and find problem areas of the UI.</span>
-                    </p>
-                </div>
-                
-                <div class="full-span">
-                    <h2>Reflection</h2>
-                    <p>
-                        Dis•Covered was a great opportunity for me to practice user-driven design through research and
-                        testing as well as experiment with unique, new designs but to also not become too attached to
-                        designs so that I can be more dynamic in my process and adapt to meet project requirements and
-                        real-world constraints.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <div id="topBtn">
-
-        </div>
-
-        <footer>
-            <div class="full-span flex-container center-content">
-                <a href="#bannerDiscovered" class="footer-btn">back to top</a>
-                <a href="zach-chan-resume-public.pdf" class="footer-btn">resum&eacute;</a>
-                <a href="citations.html" class="footer-btn">citations</a>
-                <a href="https://github.com/Zach-Chan/portfolio" class="footer-btn">git repository</a>
-            </div>
-        </footer>
     </div>
 
+    <!-- ABOUT SECTION  -->
+    <div id="about-container" class="about-container clipped">
+        <div class="about-content grid">
+            <div id="img-block" class="col col-middle col-5 col-lg">
+                <div class="img-container">
+                    <div class="bio-img"></div>
+                </div>
+            </div>
+            <div id="text-block" class="col col-middle col-7 col-lg">
+                <div class="grid">
+                    <h2 class="col">hi!</h2>
+                    <p class="col">
+                        I’m a UX designer specializing in <span class="text-standout">web</span>, <span
+                            class="text-standout">mobile</span>, and <span class="text-standout">3D environments</span>.
+                        My background is in <span class="text-standout">user research</span> and <span
+                            class="text-standout">front-end web development</span> but I love to continuously learn and
+                        find inspiration in new technologies. I’m a visual thinker who loves collaborating and using my
+                        empathy to understand and succeed in new situations.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <button id="about-back-btn">
+            <img alt="Close about section" src="/images/icons/close-lightgrey.svg">
+            <span class="btn-text">CLOSE</span>
+        </button>
+    </div>
+
+    <footer class="col col-12 grid grid-nogutter">
+        <div class="col col-5 col-lg"></div>
+        <div class="col col-7 col-middle col-align-middle col-lg">
+            <p>&#0169; Zachary Chan <span id="year"></span></p>
+        </div>
+    </footer>
+
+    <!-- BACKGROUND DOTS -->
+    <div class="dots-primary"></div>
+    <div class="dots-secondary"></div>
+
     <!--SCRIPTS-->
-    <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
 </body>
 
 </html>
