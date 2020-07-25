@@ -408,19 +408,20 @@ footer {
     min-height: 90vh;
     width: 100%;
     position: relative;
+    z-index: 50;
 }
 
 .scrolling-content {
     min-height: 60vh;
-    padding: 10rem 3rem 0 0;
+    padding: 10rem 3rem 40vh 0;
     margin: 8;
 
     @include breakpoint(desktop) {
-        padding: 10rem 1rem 0 0;
+        padding: 10rem 1rem 40vh 0;
     }
 
     @include breakpoint(flexgrid-lg) {
-        padding: 7.75rem 1rem 0 1rem;
+        padding: 7.75rem 1rem 40vh 1rem;
     }
 }
 
@@ -478,4 +479,18 @@ footer {
         background-color: $accentCol;
         color: $darkGrey;
     }
+}
+
+.gallery.custom-styled {
+    .images {
+        background-color: #FFF;
+        &>div {
+            background-size: contain;
+        }
+    }
+    .thumbs {
+        display: inline-flex;
+        justify-content: center;
+    }
+    
 }

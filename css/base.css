@@ -725,18 +725,19 @@ footer {
 .scrolling-content-container {
   min-height: 90vh;
   width: 100%;
-  position: relative; }
+  position: relative;
+  z-index: 50; }
 
 .scrolling-content {
   min-height: 60vh;
-  padding: 10rem 3rem 0 0;
+  padding: 10rem 3rem 40vh 0;
   margin: 8; }
   @media (max-width: 1080px) {
     .scrolling-content {
-      padding: 10rem 1rem 0 0; } }
+      padding: 10rem 1rem 40vh 0; } }
   @media (max-width: 744px) {
     .scrolling-content {
-      padding: 7.75rem 1rem 0 1rem; } }
+      padding: 7.75rem 1rem 40vh 1rem; } }
 
 .project-card {
   position: relative;
@@ -778,6 +779,19 @@ footer {
   .inline-cta:active {
     background-color: #F6844E;
     color: #272727; }
+
+.gallery.custom-styled .images {
+  background-color: #FFF; }
+  .gallery.custom-styled .images > div {
+    background-size: contain; }
+
+.gallery.custom-styled .thumbs {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 #experience .work-card {
   height: 11.25rem; }
@@ -998,7 +1012,8 @@ footer {
       margin-left: 0;
       padding: 0.25rem 0 1rem 0; } }
   .section-content p {
-    margin-top: 0; }
+    margin-top: 0;
+    line-height: 22px; }
 
 .project-header {
   position: absolute;
