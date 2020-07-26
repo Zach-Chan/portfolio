@@ -2,11 +2,11 @@
 //  https://stackoverflow.com/questions/52600390/javascript-iterate-array-of-strings-and-add-typing-deleting-effect-to-each-comp
 
 var speed = 50; /* The speed/duration of the effect in milliseconds */
-var speed2 = 100;
-var pause = 2000;
+var speed2 = 80;
+var pause = 1500;
 var str = document.getElementById("typewriter-text");
 var i = 0;
-var deleting = true;
+var deleting = false;
 
 var textList = [
     'UX designer', 
@@ -27,7 +27,7 @@ function typeWriter() {
         setTimeout(function() {
             deleting = false;
         }, pause);
-        i++;
+        i += 1;
         if (i >= textList.length) {
             i = 0;
         }
