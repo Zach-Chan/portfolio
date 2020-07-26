@@ -345,6 +345,14 @@ p {
   font-size: 14px;
   font-weight: 400;
   color: #272727; }
+  p a {
+    color: #272727;
+    text-decoration: underline;
+    -webkit-transition: color linear 0.2s;
+    -o-transition: color linear 0.2s;
+    transition: color linear 0.2s; }
+    p a:hover {
+      color: #F6844E; }
 
 #typewriter-text {
   color: #F8F8F8; }

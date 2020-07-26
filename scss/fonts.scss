@@ -76,6 +76,16 @@ p {
     font-size: 14px;
     font-weight: 400;
     color: $darkGrey;
+
+    a {
+        color: $darkGrey;
+        text-decoration: underline;
+        transition: color linear 0.2s;
+
+        &:hover {
+            color: $accentCol;
+        }
+    }
 }
 
 #typewriter-text {
