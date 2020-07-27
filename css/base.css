@@ -552,11 +552,11 @@ body {
   z-index: 100; }
   .fade-top.full-span,
   .fade-bottom.full-span {
-    width: 100vw; }
+    width: 100%; }
   @media (max-width: 744px) {
     .fade-top,
     .fade-bottom {
-      width: 100vw; } }
+      width: 100%; } }
 
 .fade-top {
   top: 0;
@@ -1149,6 +1149,10 @@ footer {
       left: 125%;
       opacity: 1;
       color: #006A72; }
+      @media (max-width: 540px) {
+        .progress-section.filled.active .progress-label {
+          left: 0%;
+          opacity: 0; } }
   .progress-section:hover {
     cursor: pointer;
     background-color: #F6844E; }

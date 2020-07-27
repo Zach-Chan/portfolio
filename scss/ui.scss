@@ -184,11 +184,11 @@ body {
     z-index: 100;
 
     &.full-span {
-        width: 100vw;
+        width: 100%;
     }
 
     @include breakpoint(flexgrid-lg) {
-        width: 100vw;
+        width: 100%;
     }
 }
 
