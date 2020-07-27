@@ -840,7 +840,18 @@ footer {
 
 .gallery iframe {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  position: absolute;
+  z-index: 225; }
+
+.left, .right {
+  z-index: 200; }
+
+.lightbox-button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200; }
 
 #experience .work-card {
   height: 11.25rem; }
