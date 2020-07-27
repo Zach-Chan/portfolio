@@ -286,10 +286,33 @@ body {
         overflow: hidden;
         background-color: $grey;
         margin: 0 1rem 0 auto;
+
+        &:hover, &:focus {
+            cursor: pointer;
+
+            .overlay {
+                opacity: 1;
+            }
+            .extra-zach{
+                opacity: 1;
+                top: 0;
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: all linear 0.4s;
+        }
     }
 
     #text-block .grid {
         flex-direction: column;
+
+        @include breakpoint(phablet) {
+            margin-bottom: 5rem;
+        }
     }
 
     @include breakpoint(flexgrid-lg) {
@@ -312,13 +335,14 @@ body {
             text-align: end;
             margin: auto 0;
         }
-        p {
+        .about-text {
             flex-basis: 60%;
         }
     }
     @include breakpoint(phablet-transition) {
         h2 {
             opacity: 0.3;
+            margin: 1rem 0 auto 0;
         }
     }
 }
@@ -330,6 +354,27 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(/images/self-portrait-lego-cropped-1x.png);
+}
+
+.extra-zach {
+    position: absolute;
+    display: block;
+    color: $bgColor;
+    // background-color: rgba(0,0,0,0.8);
+    top: -3rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    opacity: 0;
+    transition: all linear 0.4s;
+
+    ul {
+        padding-left: 1.25rem;
+    }
+
+    li, h3 {
+        color: $bgColor;
+    }
 }
 
 #about-back-btn {
@@ -352,9 +397,13 @@ body {
     border-radius: 0.5rem;
     transition: all linear 0.2s;
 
+    @include breakpoint(flexgrid-lg){
+        left: 1rem;
+    }
+
     @include breakpoint(phablet) {
         top: unset;
-        bottom: 3rem;
+        bottom: 2rem;
         left: 50%;
         transform: translateX(-3.725rem);
     }
@@ -553,4 +602,10 @@ footer {
     width: 100%;
     height: 100%;
     z-index: 200;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
 }
