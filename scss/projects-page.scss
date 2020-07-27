@@ -1,0 +1,191 @@
+.project-page {
+    section {
+        position: relative;
+        margin: 3rem 0 0 0;
+    }
+
+    &.fixed-content-buffer {
+        flex-basis: 25%;
+        max-width: 25%;
+
+        @include breakpoint(flexgrid-lg) {
+            flex-basis: 20%;
+            max-width: 20%;
+        }
+    }
+    &.scrolling-content-container {
+        flex-basis: 75%;
+        max-width: 75%;
+
+        @include breakpoint(flexgrid-lg) {
+            flex-basis: 80%;
+            max-width: 80%;
+        }
+    }
+
+    &.scrolling-content {
+        @include breakpoint(flexgrid-lg){
+            padding-left: 0;
+        }
+    }
+
+    &.site-nav-container {
+        @include breakpoint(desktop){
+            left: 3rem;
+        }
+    
+        @include breakpoint(flexgrid-lg) {
+            left: 1rem;
+        }
+    }
+    
+    &.mobile-banner {
+        @include breakpoint(desktop) {
+            padding: 1rem 3rem;
+        }
+
+        @include breakpoint(flexgrid-lg) {
+            padding: 1rem;
+        }
+    }
+}
+
+.section-content {
+    margin-left: 10rem;
+    padding: 0.25rem 1rem 1rem 1rem;
+
+    @include breakpoint(flexgrid-lg){
+        margin-left: 0;
+        padding: 0.25rem 0 1rem 0;
+    }
+
+    p {
+        margin-top: 0;
+        line-height: 22px;
+    }
+}
+
+.project-header {
+    position: absolute;
+    margin-top: 0;
+    left: -2rem;
+    max-width: 10rem;
+
+    @include breakpoint(flexgrid-lg) {
+        font-size: 24px;
+        left: 0;
+        top: -2rem;
+        max-width: unset;
+
+        &#overview-header{
+            top: -2rem;
+        }
+    }
+}
+
+#overview {
+    margin-bottom: 1rem;
+}
+
+.overview-section {
+    border: solid $darkGrey 2px;
+    border-radius: 1rem;
+    background-color: $bgColor;
+    margin: 0 1rem 0 11rem;
+
+    h3 {
+        margin-bottom: 0.25rem;
+    }
+    p {
+        margin: 0 0 0.25rem 0;
+        line-height: 1rem;
+    }
+
+    @include breakpoint(flexgrid-lg){
+        margin: 0;
+    }
+}
+
+.progress-container {
+    position: fixed;
+    height: 25vh;
+    bottom: 10vh;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    transition: all linear 0.2s;
+
+    @include breakpoint(flexgrid-lg){
+        margin-left: 1rem;
+    }
+
+    @include breakpoint(phablet-transition){
+        margin-left: 1rem;
+    }
+}
+
+.progress-section {
+    position: relative;
+    margin-bottom: 0.25rem;
+    width: 16px;
+    background-color: $lightGrey;
+    z-index: 100;
+    transition: all linear 0.2s;
+
+    &.filled {
+        background-color: $primaryCol;
+
+        &.active {            
+            .progress-label {
+                left: 125%;
+                opacity: 1;
+                color: $primaryCol;
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: $accentCol;
+        .progress-label {
+            left: 125%;
+            opacity: 1;
+            color: $accentCol;
+        }
+    }
+}
+
+.progress-label {
+    position: absolute;
+    display: block;
+    font-weight: 600;
+    color: $lightGrey;
+    left: 0%;
+    top: 30%;
+    opacity: 0;
+    transition: all linear 0.2s;
+    z-index: 99;
+}
+
+.skip-to-bottom {
+    background: none;
+	color: inherit;
+    border: solid transparent 2px;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    margin: 0 auto;
+    max-width: 14rem;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+    transition: all linear 0.2s;
+    
+    &:hover, &:focus {
+        border: solid $accentCol 2px;
+    }
+
+    a {
+        color: $accentCol;
+        text-decoration: none;
+    }
+}

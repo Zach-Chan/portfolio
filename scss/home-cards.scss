@@ -1,0 +1,240 @@
+#experience .work-card {
+    height: 11.25rem;
+}
+
+.work-card {
+    display: block;
+    position: relative;
+    height: 16.25rem;
+    margin: 0.5rem;
+    border: solid $primaryCol 3px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all linear 0.2s;
+    padding: 14px;
+    overflow: hidden;
+
+    &a {
+        background-color: rgba($color: $bgColor, $alpha: 1.0);
+        // background-color: unset;
+    }
+
+    .card-title, .project-label, .role-block {
+        transition: all linear 0.2s;
+    }
+
+    .card-title {
+        font-weight: 600;
+        font-size: 18px;
+        color: $darkGrey;
+        opacity: 1;
+
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 1rem;
+    }
+
+    .project-label {
+        font-weight: 400;
+        font-size: 12px;
+        color: $bgColor;
+        padding: 0.5rem;
+        background-color: $darkGreyTrans;
+        position: absolute;
+        white-space: nowrap;
+        left: 100%;
+    }
+
+    .role-block {
+        opacity: 0;
+        visibility: hidden;
+        transition: all linear 0.2s;
+        position: absolute;
+        bottom: 2rem;
+        left: 0rem;
+    }
+
+    .role {
+        font-weight: 400;
+        font-size: 12px;
+        color: $bgColor;
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 18px;
+        color: $bgColor;
+        padding: 0;
+        margin: 0;
+    }
+
+    .background-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        background-color: rgba($color: $bgColor, $alpha: 1.0);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all ease 0.6s;
+    }
+
+    &:hover,
+    &:focus {
+        border: solid $primaryCol 6px;
+        padding: 11px;
+
+        .card-title {
+            opacity: 0;
+            visibility: hidden;
+            bottom: 0;
+        }
+
+        .project-label {
+            transform: translateX(-100%);
+        }
+
+        .role-block {
+            opacity: 1;
+            visibility: visible;
+            left: 1.5rem;
+        }
+
+        .background-image {
+            opacity: 1;
+            background-color: rgba($color: $primaryCol, $alpha: 1);
+        }
+    }
+    
+    // ------------------------
+    // PROJECT SPECIFIC STYLING
+    // ------------------------
+    &#project-concussion {
+        .background-image {
+            background-image: url(/images/project-concussion/concussion-mockup-landing-desktop-mobile.jpg);
+        }
+
+        &:hover {
+            border-color: $vchCol;
+            background-color: rgba($color: $vchCol, $alpha: 0.75);
+            .background-image {
+                width: 300%;
+                height: 300%;
+                left: -95%;
+                top: -95%;
+            }
+        }
+    }
+
+    &#project-reddit {
+        .background-image {
+            background-image: url(/images/project-reddit/reddit-mockup-landing-simple.jpg);
+        }
+
+        &:hover {
+            border-color: $redditCol;
+            background-color: rgba($color: $redditCol, $alpha: 0.75);
+            .background-image {
+                width: 310%;
+                height: 310%;
+                left: -72%;
+                top: -82%;
+            }
+        }
+    }
+
+    &#project-track-it {
+        .background-image {
+            background-image: url(/images/project-fitfirst/fitfirst-hero-light.jpg);
+        }
+
+        &:hover {
+            border-color: $trackitCol;
+            background-color: rgba($color: $trackitCol, $alpha: 0.75);
+            .background-image {
+                width: 200%;
+                height: 200%;
+                left: -94%;
+                top: -14%;
+            }
+        }
+    }
+
+    &#project-discovered {
+        .background-image {
+            background-image: url(/images/project-discovered/discovered-banner-1x.png);
+        }
+
+        &:hover {
+            border-color: $disCol;
+            background-color: rgba($color: $disCol, $alpha: 0.75);
+            .background-image {
+                width: 310%;
+                height: 310%;
+                left: -72%;
+                top: -82%;
+            }
+        }
+    }
+
+    // ---------------------------
+    // EXPERIENCE SPECIFIC STYLING
+    // ---------------------------
+    &#exp-vch {
+        .background-image {
+            background-image: url(/images/general/vch-logo.jpg);
+        }
+
+        &:hover {
+            border-color: $vchCol;
+            background-color: rgba($color: $vchCol, $alpha: 0.75);
+            .background-image {
+                width: 120%;
+                height: 120%;
+                left: -10%;
+                top: -15%;
+            }
+        }
+    }
+    &#exp-bb {
+        .background-image {
+            background-image: url(/images/general/bb-logo.jpg);
+            width: 85%;
+            height: 85%;
+            left: 10%;
+        }
+
+        &:hover {
+            border-color: $darkGrey;
+            background-color: rgba($color: $darkGrey, $alpha: 0.75);
+            .background-image {
+                width: 120%;
+                height: 120%;
+                left: -10%;
+                top: -20%;
+            }
+        }
+    }
+    &#exp-fss {
+        .background-image {
+            background-image: url(/images/general/fss-logo);
+        }
+
+        &:hover {
+            border-color: $fssCol;
+            background-color: rgba($color: $fssCol, $alpha: 0.75);
+            .background-image {
+                width: 110%;
+                height: 110%;
+                left: -5%;
+                top: -15%;
+            }
+        }
+    }
+}

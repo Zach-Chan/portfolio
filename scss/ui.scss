@@ -1,12 +1,432 @@
-body.test {
+body {
     background-color: $bgColor;
     font-family: "Lato", sans-serif;
-	font-size: 1rem;
-    margin: 0px; 
-    padding: 0;
-    //position: relative;
+    font-size: 1rem;
+    position: relative;
+    box-sizing: border-box;
 }
 
+.site-body {
+    margin: 0 auto !important;
+    padding: 0;
+    max-width: 1500px;
+    min-width: 400px;
+}
+
+// ---------------------
+// FIXED CONTENT STYLING
+// ---------------------
+
+.mobile-only {
+    display: none;
+
+    @include breakpoint(flexgrid-lg) {
+        display: block;
+    }
+}
+
+.mobile-banner {
+    position: fixed;
+    top: 0;
+    z-index: 400;
+    padding: 1rem 3rem;
+    width: 100vw;
+
+    @include breakpoint(desktop) {
+        padding: 1rem;
+    }
+
+    .site-nav {
+        padding: 0 0 0 1rem;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+        li {
+            display: inline;
+            padding: 0 0 0 1.5rem;
+        }
+    }
+}
+
+.fixed-content-container {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    padding-right: 6rem;
+
+    .col {
+        position: relative;
+    }
+
+    .col-5 {
+        z-index: 200;
+    }
+
+    @include breakpoint(flexgrid-lg) {
+        display: none;
+    }
+}
+
+.site-nav-container {
+    position: absolute;
+    top: 100px;
+    left: 3rem;
+
+    @include breakpoint(desktop) {
+        left: 1rem;
+    }
+
+    @include breakpoint(flexgrid-lg) {
+        top: 1rem;
+        right: 0;
+    }
+}
+
+.site-nav {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        padding: 0 0 1.5rem 0;
+        cursor: pointer;
+    }
+}
+
+.home-feature-container {
+    position: absolute;
+    left: 3rem;
+    bottom: 5rem;
+    min-width: 150px;
+    min-height: 100px;
+
+    @include breakpoint(desktop) {
+        left: 1rem;
+    }
+
+    @include breakpoint(flexgrid-lg) {
+        bottom: unset;
+        top: 1rem;
+        z-index: 390;
+    }
+}
+
+.home-feature {
+    h2 {
+        color: $darkGrey;
+        font-family: "Lato", sans-serif;
+        font-size: 24px;
+        display: inline-flex;
+        height: 2rem;
+        margin: 0 0 0.5rem 0;
+        white-space: nowrap;
+    }
+    p {
+        display: block;
+        word-wrap: normal;
+    }
+    .not-typewriter {
+        padding: 0.25rem 0;
+    }
+    .typewriter-container {
+        background-color: $darkGrey;
+        padding: 0.25rem 0.25rem;
+        margin-left: 0.5rem;
+        display: inline-flex;
+        height: 2rem;
+    }
+}
+
+.sub-nav {
+    position: fixed;
+    top: 100px;
+    z-index: 150;
+    color: $grey;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+    height: 10rem;
+
+    -webkit-flex-basis: 58.33333%;
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+        margin: 0;
+        padding: 0rem 0 1rem 0;
+    }
+    li {
+        display: inline-block;
+        overflow: hidden;
+        word-break: keep-all;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.fade-top,
+.fade-bottom {
+    position: fixed;
+    bottom: 100vh;
+    right: 0;
+    width: 70%;
+    height: 6rem;
+    z-index: 100;
+
+    &.full-span {
+        width: 100vw;
+    }
+
+    @include breakpoint(flexgrid-lg) {
+        width: 100vw;
+    }
+}
+
+.fade-top {
+    top: 0;
+    background-image: linear-gradient($bgColor 60%, rgba(0, 0, 0, 0));
+
+    @include breakpoint(flexgrid-lg) {
+        height: 10rem;
+    }
+}
+
+.fade-bottom {
+    bottom: 0vh;
+    background-image: linear-gradient(0deg, $bgColor 60%, rgba(0, 0, 0, 0));
+}
+
+// ---------------------
+// BACKGROUND DOT GRIDS
+// ---------------------
+
+.dots-primary,
+.dots-secondary {
+    display: block;
+    position: fixed;
+    z-index: -100;
+}
+
+.dots-primary {
+    top: 0;
+    right: 0;
+    width: 60vw;
+    height: 60vh;
+    background-image: url("/images/general/dot-grid-texture-200.png");
+    background-repeat: repeat;
+}
+
+.dots-secondary {
+    bottom: 0;
+    left: 0;
+    width: 25vw;
+    height: 30vh;
+    background-image: url("/images/general/dot-grid-texture-100.png");
+    background-repeat: repeat;
+}
+
+// ---------------------
+// ABOUT CONTENT STYLING
+// ---------------------
+
+.about-container {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $primaryCol;
+    z-index: 600;
+    visibility: visible;
+    opacity: 1;
+    clip-path: circle(100% at 50% 50%);
+    transition: clip-path 1s;
+
+    &.hidden {
+        opacity: 0;
+        transition: all linear 0.2s;
+    }
+
+    &.clipped {
+        clip-path: circle(0% at 0 0);
+    }
+}
+
+.about-content {
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+
+    .col {
+        position: relative;
+    }
+
+    h2 {
+        margin-bottom: 0;
+        opacity: 1;
+        transition: opacity ease 0.5s;
+    }
+
+    .img-container {
+        display: block;
+        width: 300px;
+        height: 300px;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        background-color: $grey;
+        margin: 0 1rem 0 auto;
+    }
+
+    #text-block .grid {
+        flex-direction: column;
+    }
+
+    @include breakpoint(flexgrid-lg) {
+        #img-block {
+            align-self: flex-end;
+        }
+
+        #text-block {
+            align-self: flex-start;
+
+            .grid {
+                flex-direction: row;
+            }
+        }
+
+        .img-container {
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: end;
+            margin: auto 0;
+        }
+        p {
+            flex-basis: 60%;
+        }
+    }
+    @include breakpoint(phablet-transition) {
+        h2 {
+            opacity: 0.3;
+        }
+    }
+}
+
+.bio-img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/images/self-portrait-lego-cropped-1x.png);
+}
+
+#about-back-btn {
+    display: inline-flex;
+    align-items: center;
+    border: solid $lightGrey 2px;
+    margin: 0;
+    width: 6.75rem;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    cursor: pointer;
+
+    padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+    border-radius: 0.5rem;
+    transition: all linear 0.2s;
+
+    @include breakpoint(phablet) {
+        top: unset;
+        bottom: 3rem;
+        left: 50vw;
+        transform: translateX(-3.725rem);
+    }
+
+    img {
+        height: 2.25rem;
+    }
+
+    .btn-text {
+        text-align: center;
+        padding: 0.25rem 0;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $accentCol;
+        opacity: 1;
+    }
+
+    &:active {
+        border-color: $lightGrey;
+        // transition: all linear 0.2s;
+        // opacity: 0;
+    }
+}
+
+// ---------------------
+// SCROLLABLE CONTENT STYLING
+// ---------------------
+
+footer {
+    height: 10vh;
+    width: 100%;
+    top: 100%;
+    justify-self: flex-end;
+    z-index: 100;
+    color: $primaryCol;
+
+    p {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.fixed-content-buffer {
+    // z-index: -1;
+}
+
+.scrolling-content-container {
+    min-height: 90vh;
+    width: 100%;
+    position: relative;
+    z-index: 50;
+}
+
+.scrolling-content {
+    min-height: 60vh;
+    padding: 10rem 3rem 40vh 0;
+    margin: 8;
+
+    @include breakpoint(desktop) {
+        padding: 10rem 1rem 40vh 0;
+    }
+
+    @include breakpoint(flexgrid-lg) {
+        padding: 7.75rem 1rem 40vh 1rem;
+    }
+}
+
+// ---------------------
+// PROJECT CARDS STYLING
+// ---------------------
 .project-card {
     position: relative;
     display: block;
@@ -19,7 +439,7 @@ body.test {
 
     transform-origin: 100% 50%;
     transform: rotateY(40deg);
-    transition: transform ease .3s;
+    transition: transform ease 0.3s;
 
     font-size: 2rem;
     font-weight: 800;
@@ -27,11 +447,110 @@ body.test {
 
     text-decoration: none;
 
-    &:hover, &:focus {
-        transform: rotateY(0deg); 
+    &:hover,
+    &:focus {
+        transform: rotateY(0deg);
     }
 
     h3 {
         margin: auto;
     }
+}
+
+// -----------------------------
+// MULTI-USE UI ELEMENTS STYLING
+// -----------------------------
+
+.hidden {
+    visibility: hidden;
+}
+
+.inline-cta {
+    color: $accentCol;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+
+    &:active {
+        background-color: $accentCol;
+        color: $darkGrey;
+    }
+}
+
+.gallery.custom-styled {
+    .images {
+        background-color: #FFF;
+        &>div {
+            background-size: contain;
+        }
+    }
+    .thumbs {
+        display: inline-flex;
+        justify-content: center;
+    }
+    
+}
+
+.drop-shadow {
+    box-shadow: 1px 1px 5px rgba(0,0,0,.4);
+}
+
+.img-container {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-top: 0;
+    position: relative;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+        background-size: cover;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        transform: scale(1);
+        transition: transform 0.5s ease;
+
+        // &:hover, &:focus {
+        //     cursor: pointer;
+        //     opacity: 0.6;
+        // }     
+    }
+
+    .uiImage {
+        min-width: 60px;
+        height: auto;
+    }
+
+    .mobile-img {
+        max-height: 34rem;
+        margin: 0 auto;
+    }
+}
+
+.img-caption {
+    text-align: center;
+    font-size: .8rem;
+    margin: auto;
+}
+
+.gallery iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 225;
+}
+
+.left, .right {
+    z-index: 200;
+}
+
+.lightbox-button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
 }

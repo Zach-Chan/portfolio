@@ -4,112 +4,117 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zach Chan - Project: Discovered</title>
+    <title>Zach Chan - MyGuide: Concussion</title>
 
     <!-- Load stylesheets -->
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/gallery.min.css">
+
     <!-- Load fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
 
     <!-- Set tab icon -->
     <link rel="icon" href="images/logo.png">
 </head>
 
-<body id="top">
+<body class="site-body grid grid-nogutter">
 
-    <div class="nav-container bg-colDark">
-        <nav id="navList" class="nav-container drop-shadow">
-            <a class="icon-container" href="index.html">
-                <img class="logo" src="images/logo-light.png" alt="Z in a circle personal logo of Zach Chan">
-            </a>
+    <!-- FIXED CONTENT MOBILE -->
+    <div class="mobile-banner project-page grid">
+        <h1 class="col small-site-title">zach chan</h1>
+        <div class="mobile-only site-nav col col-fixed">
             <ul id="navLinks" class="nav-list">
-                <li class="li-navItem"><a class="nav-btn" href="index.html#work">Work</a></li>
-                <li class="li-navItem"><a class="nav-btn" href="index.html#projects">School Projects</a></li>
-                <li class="li-navItem"><a class="nav-btn" href="index.html#about">About</a></li>
+                <li class="li-navItem"><a class="nav-btn" href="/work.html">Work</a></li>
+                <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
+                <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
             </ul>
-        </nav>
+        </div>
     </div>
 
-    <div class="all-content-wrapper col">
+    <!-- FIXED CONTENT -->
+    <div class="fixed-content-container site-body grid">
+        <div class="col col-3 col-lg">
+            <!-- NAVIGATION -->
+            <div class="site-nav-container project-page">
+                <nav id="navList" class="site-nav">
+                    <ul id="navLinks" class="nav-list">
+                        <li class="li-navItem"><a class="nav-btn" href="/work.html">Work</a></li>
+                        <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
+                        <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="col col-9 col-lg">
+
+        </div>
+    </div>
+
+    <!-- SCROLLING CONTENT -->
+    <div class="project-page fixed-content-buffer col col-lg">
+        <div class="progress-container">
+            <a href="#overview" class="progress-section col filled"><span class="progress-label">overview</span></a>
+            <a href="#problem" class="progress-section col"><span class="progress-label">problem</span></a>
+            <a href="#research" class="progress-section col"><span class="progress-label">research</span></a>
+            <a href="#wireframes" class="progress-section col"><span class="progress-label">wireframes</span></a>
+            <a href="#finished" class="progress-section col"><span class="progress-label">finished product</span></a>
+            <a href="#features" class="progress-section col"><span class="progress-label">key features</span></a>
+            <a href="#reflection" class="progress-section col"><span class="progress-label">reflection</span></a>
+        </div>
+    </div>
+
+    <div class="project-page scrolling-content-container col col-lg">
+        <div class="fade-top full-span"></div>
+        <div class="fade-bottom full-span"></div>
+
         <!-- PROCESS ANALYSIS SECTION // -->
-        <div id="bannerDiscovered" class="banner-container drop-shadow">
-            <div class="title-wrapper">
-                <h1>VCH Learning Technologies <br>Concussion</h1>
-            </div>
-        </div>
-        <section>
-            <!-- EMPHATIC IN BRIEF -->
-            <div class="spotlight-block bg-colDark padding-left-right flex-container center-content full-span">
-                <div class="flex-container flex-sixth bg-colDark">
-                    <p>
-                        In a 4 month long project, I co-designed and developed a web tool that helps guide concussion
-                        patients and their loved ones with learning about MTBI (Mild Traumatic Brain Injury) and how to
-                        manage the recovery process.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section id="overview">
-            <div class="padding-left-right flex-container">
-                <div class="flex-half flex-container">
-                    <div class="in-brief-section flex-container full-span">
-                        <h2>Proficiencies</h2>
-                        <a href="#userResearch" class="chip">Front-end web development</a>
-                        <a href="#userResearch" class="chip">Interfacing with clients</a>
+        <div class="scrolling-content project-page">
+            <h1 class="project-page">VCH Concussion Guide</h1>
 
+            <section id="overview">
+                <h2 id="overview-header" class="project-header">overview</h2>
+                <div class="section-content overview-section grid">
+                    <div class="col col-4">
+                        <h3>client & timeline</h3>
+                        <p>GF Strong Rehabilitation Centre</p>
+                        <p>2019.04-08</p>
                     </div>
-                    <div class="in-brief-section full-span">
-                        <h2>Tools</h2>
-                        <ul class="list-stylized">
-                            <li> Figma</li>
-                            <li>Craft CMS</li>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript jQuery</li>
-                        </ul>
+                    <div class="col col-8">
+                        <h3>scope</h3>
+                        <p>Public-facing online concussion recovery guide and backend dashboard for client edits.</p>
                     </div>
+                    <div class="col col-4">
+                        <h3>team</h3>
+                        <p>Myself - UX designer + web developer</p>
+                        <p>Sharon - instructional designer</p>
+                        <p>Michelle Chan - UX designer + multimedia designer</p>
+                    </div>
+                    <div class="col col-8">
+                        <h3>skills & tools</h3>
+                        <p>Wireframe sketching, research interviews, personas, use cases, Figma, Craft CMS, HTML5, CSS3,
+                            JS</p>
+                    </div>
+            </section>
 
-                    <div class="in-brief-section full-span">
-                        <h2>Role</h2>
-                        <p>Web Developer + UX Designer
-                        </p>
-                    </div>
-                    <div class="in-brief-section full-span">
-                        <h2>Team</h2>
-                        <ul class="list-stylized">
-                            <li>Sharon Hu</li>
-                            <li>Michelle Chan</li>
-                        </ul>
-                    </div>
+            <!-- SKIP BUTTON -->
+            <div class="section-content grid">
+                <div class="col col-middle">
+                    <button class="skip-to-bottom"><a href="#finished">skip to finished project</a></button>
                 </div>
             </div>
 
-        </section>
-
-        <div class="back-to-top">
-            
-        </div>
-
-        <section id="process_analysis">
-            <div class="flex-container content-wrapper padding-left-right">
-                <div class="full-span">
-                    <h2>Process</h2>
-                </div>
-                <div class="process-header full-span">
-                    <h3>The Client's Vision</h3>
-                </div>
-                <div class="full-span">
-                    <p>
-                        I was brought on board the project because of my multidisciplinary background as a designer and
-                        web developer. In such a small team, this was a huge advantage that helped us adapt to changes
-                        in client needs and pivots in direction. As a team, we met with our client: the clinical
-                        therapists at GF Strong Hospital in Vancouver BC. We discussed and sketched and created lots of
-                        ideas together to refine the direction of the project and get a stronger idea of what the
-                        problem area was and what avenues we had available for pursuing solutions.
-                    </p>
+            <section id="problem">
+                <h2 class="project-header">problem</h2>
+                <div class="section-content">
                     <p>
                         GF Strong provides workshops and personalized therapy for people diagnosed with MTBI and
                         strokes. Many people experience MTBI in the form of concussions from recreational activities,
@@ -120,91 +125,274 @@
                         one obstacle they want to overcome.
                     </p>
                 </div>
+            </section>
 
-                <div class="process-header full-span">
-                    <h3>Defining Scope</h3>
-                </div>
-                <div class="full-span">
+            <section id="research">
+                <h2 class="project-header">research</h2>
+                <div class="section-content">
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-concussion/concussion-design-pillars.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/concussion-design-pillars.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-concussion/concussion-persona-1.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/concussion-persona-1.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-concussion/concussion-persona-2.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/concussion-persona-2.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-concussion/concussion-persona-3.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/concussion-persona-3.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-concussion/concussion-persona-4.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/concussion-persona-4.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-concussion/concussion-persona-5.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/concussion-persona-5.jpg"></a>
+                            </div>
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </div>
+                        <div class="thumbs">
+                            <div class="active"
+                                style="background-image: url(images/project-concussion/concussion-design-pillars.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-concussion/concussion-persona-1.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-concussion/concussion-persona-2.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-concussion/concussion-persona-3.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-concussion/concussion-persona-4.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-concussion/concussion-persona-5.jpg)">
+                            </div>
+                        </div>
+                    </div>
                     <p>
-                        Making the app comfortable to use despite language barriers was a major area of focus for me.
-                        <span id="ideation" class="highlight-skill">I
-                            ideated through sketches to design an onboarding process to select a user's native language
-                            and
-                            providing clear interface elements to quickly swap between languages to use the app while
-                            also
-                            learning useful English words.</span>
+                        Through thorough research including participating in concussion workshop sessions and
+                        interviewing those in GF Strong’s therapy system, we defined 3 paramount design principles and 5
+                        personas that were a guiding resource for the project. The personas comprised of The Newly
+                        Concussed Person being introduced to the system, the concussed Person with Persistent Symptoms
+                        being helped by GF Strong, Care Providers who want to learn more, the Concussed Person Outside
+                        of the Client’s Jurisdiction, and finally the caring Relative Who Wants to Learn more to help
+                        someone they know who’s concussed.
                     </p>
-                </div>               
+                </div>
+            </section>
 
-                <div class="full-span">
-                    <h3>Desgin Pillars</h3>
-                </div>
-                <div class="full-span">
+            <section id="wireframes">
+                <h2 class="project-header">wireframes</h2>
+                <div class="section-content">
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-concussion/concussion-site-flow.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/concussion-site-flow.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-concussion/wireframes-full-site-flow.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/wireframes-full-site-flow.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-concussion/final-wireframes-collection.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/final-wireframes-collection.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-concussion/final-wireframes-collection-1.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/final-wireframes-collection-1.jpg"></a>
+                            </div>
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </div>
+                        <div class="thumbs">
+                            <div class="active"
+                                style="background-image: url(images/project-concussion/concussion-site-flow.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-concussion/wireframes-full-site-flow.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-concussion/final-wireframes-collection.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-concussion/final-wireframes-collection-1.jpg)">
+                            </div>
+                        </div>
+                    </div>
                     <p>
-                        We designed initial iterations of the app interface with Adobe Illustrator but completed
-                        designing in the UX program Flinto so that we could capture the animated responses we had
-                        designed and conduct usability testing with an interactive prototype. <span
-                            id="usabilityTesting" class="highlight-skill">I conducted informal
-                            speak aloud tests to gain qualitative feedback and find problem areas of the UI.</span>
+                        I worked with the multimedia designer to hammer out the site flow based on the client
+                        requirements and user needs we uncovered. I took part in initial ideation wireframing and then
+                        then provided feedback on the multimedia designer’s work as they iterated and eventually made
+                        the final high fidelity mockups for me to build the final website off of. We conducted user
+                        testing with the interactive wireframes and evolve the designs further based off of feedback.
                     </p>
                 </div>
+            </section>
 
-                <div class="full-span">
-                    <h3>Reducing Information Overload</h3>
-                </div>
-                <div class="full-span">
+            <section id="finished">
+                <h2 class="project-header">finished product</h2>
+                <div class="section-content">
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-concussion/concussion-mockup-landing-desktop-mobile.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/concussion-mockup-landing-desktop-mobile.jpg"></a>
+                            </div>
+                            <span class="left hidden"></span>
+                            <span class="right hidden"></span>
+                        </div>
+                        <div class="thumbs display-none">
+                        </div>
+                    </div>
+                    <p><a href="http://concussion.vch.ca/">Checkout the finished MyGuide: Concussion website!</a></p>
                     <p>
-                        We designed initial iterations of the app interface with Adobe Illustrator but completed
-                        designing in the UX program Flinto so that we could capture the animated responses we had
-                        designed and conduct usability testing with an interactive prototype. <span
-                            id="usabilityTesting" class="highlight-skill">I conducted informal
-                            speak aloud tests to gain qualitative feedback and find problem areas of the UI.</span>
+                        This project took a total of 4 months to complete and is now actively used by people with mild
+                        traumatic brain injury in the GF Strong recovery services as well as the general public. The
+                        site is a collection of brief instructional and educational readings that help people to
+                        understand more about concussions, why they’re having certain symptoms, and how they can make
+                        and stick to a recovery plan. Unlike normal academic or news sites, MyGuide: Concussion
+                        reimagines the information consumption experience to cater to cognitive and sensory strain that
+                        the target users might have.
                     </p>
                 </div>
+            </section>
 
-                <div class="full-span">
-                    <h3>Easing Sensory Strain</h3>
-                </div>
-                <div class="full-span">
+            <section id="features">
+                <h2 class="project-header">key features</h2>
+                <div class="section-content">
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-concussion/feature-filter.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/feature-filter.jpg"></a>
+                            </div>
+                            <div
+                                style="background-image: url(images/project-concussion/feature-curated-guide.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/feature-curated-guide.jpg"></a>
+                            </div>
+                            <div
+                                style="background-image: url(images/project-concussion/feature-dark-mode-1.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/feature-dark-mode-1.jpg"></a>
+                            </div>
+                            <div
+                                style="background-image: url(images/project-concussion/feature-dark-mode-1-1.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-concussion/feature-dark-mode-1-1.jpg"></a>
+                            </div>
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </div>
+                        <div class="thumbs">
+                            <div class="active"
+                                style="background-image: url(images/project-concussion/feature-filter.jpg)">
+                            </div>
+                            <div
+                                style="background-image: url(images/project-concussion/feature-curated-guide.jpg)">
+                            </div>
+                            <div
+                                style="background-image: url(images/project-concussion/feature-dark-mode-1.jpg)">
+                            </div>
+                            <div
+                                style="background-image: url(images/project-concussion/feature-dark-mode-1-1.jpg)">
+                            </div>
+                        </div>
+                    </div>
                     <p>
-                        We designed initial iterations of the app interface with Adobe Illustrator but completed
-                        designing in the UX program Flinto so that we could capture the animated responses we had
-                        designed and conduct usability testing with an interactive prototype. <span
-                            id="usabilityTesting" class="highlight-skill">I conducted informal
-                            speak aloud tests to gain qualitative feedback and find problem areas of the UI.</span>
+                        A key barrier many moderate to extreme concussion cases have is a sensitivity to light as well
+                        as increased fatigue and susceptibility to cognitive overload. Because of this, a strong focus
+                        was put towards reducing information overload.
+                    </p>
+                    <h4>Curated Guide</h4>
+                    <p>
+                        On the landing page we use a strong call-to-action to bring people into the curated MyGuide
+                        experience. This filters the articles that the user is presented with to only show ones
+                        pertinent to them based off of a short survey. This curated guide saves the progress users have
+                        made reading through all the articles and is sharable to get the same list across devices. In
+                        addition to this, in each reading the information is broken down into presentation-style slides
+                        to limit the amount of text on screen at once.
+                    </p>
+                    <h4>Dark Mode and Simple Illustrations</h4>
+                    <p>
+                        To address users’ sensitivity to visual stimuli we implemented a dark mode colour scheme that is
+                        triggered by a toggle in the menu. On a user’s first visit to the site this feature is also
+                        highlighted in onboarding. The onboarding as well as all of the visuals used throughout the site
+                        were designed with simplicity and a calming style in mind to communicate efficiently and
+                        continue minimizing overstimulus.
                     </p>
                 </div>
-                
-                <div class="full-span">
-                    <h2>Reflection</h2>
+            </section>
+
+            <section id="reflection">
+                <h2 class="project-header">reflection</h2>
+                <div class="section-content">
                     <p>
-                        Dis•Covered was a great opportunity for me to practice user-driven design through research and
-                        testing as well as experiment with unique, new designs but to also not become too attached to
-                        designs so that I can be more dynamic in my process and adapt to meet project requirements and
-                        real-world constraints.
+                        The VCH Concussion Guide was my first time building a site as large as this and a great
+                        introduction to the highly customizable content management system Craft CMS. I enjoyed working
+                        with team members and clients of very diverse backgrounds of expertise and I am proud of how I
+                        used my own proficiency in UX and web development to facilitate thorough research, design work,
+                        and validation through testing throughout the project timeline. This project was a great
+                        exhibition of accessible design in the real world and I loved working in the healthcare industry
+                        on a digital tool bringing a positive impact to people in the community.
                     </p>
+                </div>
+            </section>
+
+            <!-- CHECK OUT OTHER PROJECTS BUTTON -->
+            <div class="section-content grid">
+                <div class="col col-middle">
+                    <button class="skip-to-bottom"><a href="/project-reddit.html">Check out another project</a></button>
                 </div>
             </div>
-        </section>
-
-        <div id="topBtn">
-
         </div>
-
-        <footer>
-            <div class="full-span flex-container center-content">
-                <a href="#bannerDiscovered" class="footer-btn">back to top</a>
-                <a href="zach-chan-resume-public.pdf" class="footer-btn">resum&eacute;</a>
-                <a href="citations.html" class="footer-btn">citations</a>
-                <a href="https://github.com/Zach-Chan/portfolio" class="footer-btn">git repository</a>
-            </div>
-        </footer>
     </div>
 
+    <!-- ABOUT SECTION  -->
+    <div id="about-container" class="about-container clipped">
+        <div class="about-content grid">
+            <div id="img-block" class="col col-middle col-5 col-lg">
+                <div class="img-container">
+                    <div class="bio-img"></div>
+                </div>
+            </div>
+            <div id="text-block" class="col col-middle col-7 col-lg">
+                <div class="grid">
+                    <h2 class="col">hi!</h2>
+                    <p class="col">
+                        I’m a UX designer specializing in <span class="text-standout">web</span>, <span
+                            class="text-standout">mobile</span>, and <span class="text-standout">3D environments</span>.
+                        My background is in <span class="text-standout">user research</span> and <span
+                            class="text-standout">front-end web development</span> but I love to continuously learn and
+                        find inspiration in new technologies. I’m a visual thinker who loves collaborating and using my
+                        empathy to understand and succeed in new situations.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <button id="about-back-btn">
+            <img alt="Close about section" src="/images/icons/close-lightgrey.svg">
+            <span class="btn-text">CLOSE</span>
+        </button>
+    </div>
+
+    <footer class="col col-12 grid grid-nogutter">
+        <div class="col col-3 col-lg"></div>
+        <div class="col col-9 col-middle col-align-middle col-lg">
+            <p>&#0169; Zachary Chan <span id="year"></span></p>
+        </div>
+    </footer>
+
+    <!-- BACKGROUND DOTS -->
+    <div class="dots-primary"></div>
+    <div class="dots-secondary"></div>
+
     <!--SCRIPTS-->
-    <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+    <script src="js/gallery.js"></script>
+    <script type="text/javascript" src="js/project-page.js"></script>
+    <script src="js/fslightbox.js"></script>
+
 </body>
 
 </html>

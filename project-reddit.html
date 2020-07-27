@@ -4,250 +4,512 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zach Chan - Project: Discovered</title>
+    <title>Zach Chan - Reddit Evaluation</title>
 
     <!-- Load stylesheets -->
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/gallery.min.css">
+
     <!-- Load fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
 
     <!-- Set tab icon -->
     <link rel="icon" href="images/logo.png">
 </head>
 
-<body id="top">
+<body class="site-body grid grid-nogutter">
 
-    <div class="nav-container bg-colDark">
-        <nav id="navList" class="nav-container drop-shadow">
-            <a class="icon-container" href="index.html">
-                <img class="logo" src="images/logo-light.png" alt="Z in a circle personal logo of Zach Chan">
-            </a>
+    <!-- FIXED CONTENT MOBILE -->
+    <div class="mobile-banner project-page grid">
+        <h1 class="col small-site-title">zach chan</h1>
+        <div class="mobile-only site-nav col col-fixed">
             <ul id="navLinks" class="nav-list">
-                <li class="li-navItem"><a class="nav-btn" href="index.html#work">Work</a></li>
-                <li class="li-navItem"><a class="nav-btn" href="index.html#projects">School Projects</a></li>
-                <li class="li-navItem"><a class="nav-btn" href="index.html#about">About</a></li>
+                <li class="li-navItem"><a class="nav-btn" href="/work.html">Work</a></li>
+                <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
+                <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
             </ul>
-        </nav>
+        </div>
     </div>
 
-    <div class="all-content-wrapper col">
-        <!-- PROCESS ANALYSIS SECTION // -->
-        <div id="bannerReddit" class="banner-container drop-shadow">
-            <div class="title-wrapper">
-                <h1>Reddit <br>Ethical UX</h1>
+    <!-- FIXED CONTENT -->
+    <div class="fixed-content-container site-body grid">
+        <div class="col col-3 col-lg">
+            <!-- NAVIGATION -->
+            <div class="site-nav-container project-page">
+                <nav id="navList" class="site-nav">
+                    <ul id="navLinks" class="nav-list">
+                        <li class="li-navItem"><a class="nav-btn" href="/work.html">Work</a></li>
+                        <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
+                        <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        <section>
-            <!-- EMPHATIC IN BRIEF -->
-            <div class="spotlight-block bg-colDark padding-left-right flex-container center-content full-span">
-                <div class="flex-container flex-sixth bg-colDark">
-                    <p>
-                        In a 2 week process, my team and I conducted a usability evaluation of the major social and news
-                        aggregation website, Reddit but with a focus on assessing designing new user experiences that
-                        would
-                        improve the site’s ethical design practices.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section id="overview">
-            <div class="padding-left-right flex-container">
-                <div class="flex-half flex-container">
-                    <div class="in-brief-section flex-container full-span">
-                        <h2>Proficiencies</h2>
-                        <a href="#designEvaluation" class="chip">Design Evaluation</a>
-                        <a href="#ideation" class="chip">Ideation Sketching</a>
-                        <a href="#interfaceDesign" class="chip">Interface Design</a>
-                        <a href="#designSprinting" class="chip">Design Sprinting</a>
-                        <a href="#presenting" class="chip">Presenting</a>
-                    </div>
-                    <div class="in-brief-section full-span">
-                        <h2>Tools</h2>
-                        <ul class="list-stylized">
-                            <li>Figma</li>
-                        </ul>
-                    </div>
 
-                    <div class="in-brief-section full-span">
-                        <h2>Team</h2>
-                        <ul class="list-stylized">
-                            <li>Izzy Chan</li>
-                            <li>Sydney McLeod</li>
-                            <li>Mischa Price</li>
-                            <li>Jonathan Reade</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="col col-9 col-lg">
 
-        </section>
-
-        <section id="process_analysis">
-            <div class="flex-container content-wrapper padding-left-right">
-                <div class="full-span">
-                    <h2>Process</h2>
-                </div>
-                <div class="process-header full-span">
-                    <h3>Creating an Evaluation Scale</h3>
-                </div>
-                <div class="full-span">
-                    <p>
-                        In previous evaluation projects Nielson’s Heuristics were used to evaluate usability on a rating
-                        scale ranging from 0-5. However, it was clear that this would not be effective for evaluating
-                        ethical design because we had identified several common dimensions of ethical taboos and still
-                        required a severity scale.
-                    </p>
-
-                    <p>
-                        This prompted us to create a new scale that focuses on (A) User Wellbeing, (B) Societal Change,
-                        and (C) Inclusion/Accessibility. Each of these are rated with a severity ranking ranging from 1
-                        - 3, 3 being the most severe meaning that this digital experience has pronounced real-world
-                        affects. This allowed us to be quick and more in detailed with our assessment by rating things
-                        like lack of screen-reader optimization a C2.
-                    </p>
-                </div>
-                <div class="full-span">
-                    <div class="img-container">
-                        <h4 class="img-enlarge">View larger</h4>
-                        <img class="lightbox-trigger drop-shadow" src="images/project-discovered/"
-                            alt="Reddit Ethical Evaluation Scale">
-                        <p class="img-caption">Custom ethical evaluation scale</p>
-                    </div>
-                </div>
-
-                <div class="process-header full-span">
-                    <h3>Insights</h3>
-                </div>
-                <div class="full-span">
-                    <p>
-                        We identified 3 key insights:
-                    </p>
-                    <ol>
-                        <li>
-                            “The Abyss”: Reddit’s design easily stretches users’ time from minutes into hours.
-                        </li>
-                        <li>
-                            “Blank Slate”: Reddit’s focus is to share content online but lacks the tools to make
-                            this shared content accessible.
-                        </li>
-                        <li>
-                            “Bubbles and Bullshit”: subreddit communities are great places to interact with others
-                            with
-                            common interests but can also be breeding grounds for conspiracies, targeted hate, and
-                            disinformation.
-                        </li>
-                    </ol>
-                    <p>
-                        This lead us to focus on three main areas of improvement: Managing Use, Urging Inclusivity, and
-                        Bringing Balance. We created “How might we…?” questions to guide our approaches to these
-                        problems. With our focus areas and questions prompts, we all explored and rapidly sketched ideas
-                        to present to each other for critique and choose the design solutions to pursue further as a
-                        team.
-                    </p>
-                </div>
-                <div class="full-span">
-                    <div class="img-container full-span">
-                        <h2 class="img-enlarge">View larger</h2>
-                        <img class="lightbox-trigger uiImage drop-shadow" src="images/"
-                            alt="Language translation ideations sketches">
-                        <p class="img-caption">Evaluation insights image</p>
-                    </div>
-                </div>
-
-                <div class="full-span">
-                    <h3>Ideation</h3>
-                </div>
-                <div class="full-span">
-                    <p>
-                        In our ideation process we found lots of overlapping ideas and found several concepts with
-                        potential to tackle the problems we identified. After defining the concepts and each concept’s
-                        goals more clearly, we also created two rough personas, “The Struggling Student” and “The
-                        Introvert Office Redditor” to strengthen our empathy for the users that would be interacting
-                        with our UI designs.
-                    </p>
-                </div>
-                <div class="full-span">
-                    <div class="img-container full-span">
-                        <h2 class="img-enlarge">View larger</h2>
-                        <img class="lightbox-trigger uiImage drop-shadow" src="images/"
-                            alt="Image of ideation sketches">
-                        <p class="img-caption">One of the many ideation sketch dumps</p>
-                    </div>
-                </div>
-                <div class="full-span">
-                    <div class="img-container full-span">
-                        <h2 class="img-enlarge">View larger</h2>
-                        <img class="lightbox-trigger uiImage drop-shadow" src="images/"
-                            alt="Image of focusing in on specific ideation sketches">
-                        <p class="img-caption">Focusing in on good ideas and patterns for further refinement</p>
-                    </div>
-                </div>
-
-                <div class="full-span">
-                    <h3>Managing Use</h3>
-                    <p>
-                        In this area we asked “how might we encourage users to better moderate their time on Reddit? We
-                        designed a time tracker feature as well as a more in depth recount of user activity. These
-                        solutions aimed to limit users’ time on the site as well as inform users of how their time is
-                        spent. With the tools to reflect and the tools to set more limits or regimented time on the
-                        website, users can be more aware of how they spend their time on the site and have more control
-                        over how much time they spend there.
-                    </p>
-                </div>
-
-                <div class="full-span">
-                    <h3>Urging Inclusivity</h3>
-                    <p>
-                        For the final area of focus, we asked “how might we reduce the spread of misinformation and
-                        radical thought on the platform?” We designed a Fact Checker feature to help add distinguishing
-                        tags to posts to highlight reputable information as well as a concept we call the “Day-Maker
-                        Award” that recognizes and brings attention to the less-noticed kind actions done every day and
-                        encourages others to look for opportunities to make positive impacts in others’ lives as well.
-                    </p>
-                </div>
-
-                <div class="full-span">
-                    <h3>Bringing Balance</h3>
-                    <p>
-                        In this area we asked “how might we encourage users to better moderate their time on Reddit? We
-                        designed a time tracker feature as well as a more in depth recount of user activity. These
-                        solutions aimed to limit users’ time on the site as well as inform users of how their time is
-                        spent. With the tools to reflect and the tools to set more limits or regimented time on the
-                        website, users can be more aware of how they spend their time on the site and have more control
-                        over how much time they spend there.
-                    </p>
-                </div>
-
-                <div class="full-span">
-                    <h2>Reflection</h2>
-                    <p>
-                        Across several of our solutions we realized that Reddit affords lots of amazing, insightful
-                        discussion because of its anonymity but the anonymity of Reddit and lots of online platforms
-                        also can encourage destructive and toxic behaviour. Lessening that anonymity through methods
-                        like a stronger footprint of a users’ time on the site and stronger recognition for positive
-                        interactions could be ways to encourage more responsible usage.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <div class="full-span flex-container center-content">
-                <a href="#bannerDiscovered" class="footer-btn">back to top</a>
-                <a href="zach-chan-resume-public.pdf" class="footer-btn">resum&eacute;</a>
-                <a href="citations.html" class="footer-btn">citations</a>
-                <a href="https://github.com/Zach-Chan/portfolio" class="footer-btn">git repository</a>
-            </div>
-        </footer>
+        </div>
     </div>
 
+    <!-- SCROLLING CONTENT -->
+    <div class="project-page fixed-content-buffer col col-lg">
+        <div class="progress-container">
+            <a href="#overview" class="progress-section col filled"><span class="progress-label">overview</span></a>
+            <a href="#problem" class="progress-section col"><span class="progress-label">problem</span></a>
+            <a href="#evaluation" class="progress-section col"><span class="progress-label">usability
+                    evaluation</span></a>
+            <a href="#insight" class="progress-section col"><span class="progress-label">insight</span></a>
+            <a href="#ideation" class="progress-section col"><span class="progress-label">ideation</span></a>
+            <a href="#finished" class="progress-section col"><span class="progress-label">finished product</span></a>
+            <a href="#reflection" class="progress-section col"><span class="progress-label">reflection</span></a>
+        </div>
+    </div>
+
+    <div class="project-page scrolling-content-container col col-lg">
+        <div class="fade-top full-span"></div>
+        <div class="fade-bottom full-span"></div>
+
+        <!-- PROCESS ANALYSIS SECTION // -->
+        <div class="scrolling-content project-page">
+            <h1 class="project-page">Reddit Ethical Design Evaluation</h1>
+
+            <section id="overview">
+                <h2 id="overview-header" class="project-header">overview</h2>
+                <div class="section-content overview-section grid">
+                    <div class="col col-4">
+                        <h3>client & timeline</h3>
+                        <p>School project</p>
+                        <p>2019.04</p>
+                    </div>
+                    <div class="col col-8">
+                        <h3>scope</h3>
+                        <p> An ethical and usability evaluation of the news aggregation and social platform Reddit with
+                            feature proposals addressing assessment findings.</p>
+                    </div>
+                    <div class="col col-4">
+                        <h3>team members</h3>
+                        <p>Izzy Chan | Sydney McLeod</p>
+                        <p>Mischa Price | Jonathan Reade</p>
+                    </div>
+                    <div class="col col-8">
+                        <h3>skills & tools</h3>
+                        <p>usability testing, critical design evaluation, research interviews, personas, ideation, UI
+                            design, Figma</p>
+                    </div>
+            </section>
+
+            <!-- SKIP BUTTON -->
+            <div class="section-content grid">
+                <div class="col col-middle">
+                    <button class="skip-to-bottom"><a href="#finished">skip to finished project</a></button>
+                </div>
+            </div>
+
+            <section id="problem">
+                <h2 class="project-header">problem</h2>
+                <div class="section-content">
+                    <p>
+                        In a two week period with a team of 4 others I evaluated the website Reddit against Nielson’s 10
+                        heuristics and we devised a custom criteria inspired by Humane by Design and Tarot Cards of
+                        Tech. The goal of this project was to thoroughly evaluate Reddit’s design for both usability and
+                        ethicality, present our findings, and design solutions to improve its accessibility and
+                        user-friendliness.
+                    </p>
+                </div>
+            </section>
+
+            <section id="evaluation">
+                <h2 class="project-header">usability evaluation</h2>
+                <div class="section-content">
+                    <p>
+                        As in previous evaluation projects used Nielson’s Heuristics as the criteria that was evaluated
+                        on s severity scale of 0-5. But this alone would not be sufficient for an ethical design
+                        evaluation because our goal was to assess the humaneness of the design, not just usability.
+                    </p>
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-methodology-1.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-methodology-1.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-methodology-2.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-methodology-2.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-methodology-3.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-methodology-3.jpg"></a>
+                            </div>
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </div>
+                        <div class="thumbs">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-methodology-1.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-methodology-2.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-methodology-3.jpg)">
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Ethical evaluations help us step back and consider if what we are designing is truly keeping our
+                        users’ dignity and wellbeing in the center of our process. This prompted us to create a new
+                        scale that focuses on (A) User Wellbeing, (B) Societal Change, and (C) Inclusion/Accessibility.
+                        Each of these are rated with a severity ranking ranging from 1 - 3, 3 being the most severe
+                        meaning that this digital experience has pronounced real-world affects. This allowed us to be
+                        quick and more in detail with our assessment by rating things like a lack of screen-reader
+                        optimization a C2.
+                    </p>
+                </div>
+            </section>
+
+            <section id="insight">
+                <h2 class="project-header">insight</h2>
+                <div class="section-content">
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-insights.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-insights.jpg"></a>
+                            </div>
+                            <span class="left hidden"></span>
+                            <span class="right hidden"></span>
+                        </div>
+                        <div class="thumbs">
+                        </div>
+                    </div>
+                    <p>
+                        Through our evaluation we found three major themes of issues focused on theft of users’ time,
+                        inaccessible design to those who are impaired, and unmoderated opportunity to breed hate and
+                        toxic behaviour.
+                    </p>
+                </div>
+            </section>
+
+            <section id="ideation">
+                <h2 class="project-header">ideation</h2>
+                <div class="section-content">
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active" style="background-image: url(images/project-reddit/reddit-framing.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-framing.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-personas.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-personas.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-ideation.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-ideation.jpg"></a>
+                            </div>
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </div>
+                        <div class="thumbs">
+                            <div class="active" style="background-image: url(images/project-reddit/reddit-framing.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-personas.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-ideation.jpg)">
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        We reframed the problems we uncovered and used these new statements along with personas to
+                        ideate solutions that would evolve Reddit platform. The majority of ideas were in the form of
+                        new digital features to be integrated within the existing site experience.
+                    </p>
+                </div>
+            </section>
+
+            <section id="finished">
+                <h2 class="project-header">finished product</h2>
+                <div class="section-content">
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-proposals-mockups.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-proposals-mockups.jpg"></a>
+                            </div>
+                            <span class="left hidden"></span>
+                            <span class="right hidden"></span>
+                        </div>
+                        <div class="thumbs display-none">
+                        </div>
+                    </div>
+                    <p>
+                        The result of this critical evaluation was the design of 5 digital feature recommendations for
+                        the Reddit platform. These features fit under the three opportunity areas we focused on during
+                        the framing of our ideation phase. Several of our design proposals even independently became
+                        adopted by other major platforms and Reddit itself in the years following this project.
+                    </p>
+
+                    <h3>User Activity Information</h3>
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-proposal-user-activity.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-proposal-user-activity.jpg"></a>
+                            </div>
+                            <span class="left hidden"></span>
+                            <span class="right hidden"></span>
+                        </div>
+                        <div class="thumbs display-none">
+                        </div>
+                    </div>
+                    <p>
+                        The first feature summarizes user activity data on profile pages that would empower users to
+                        make more conscious use of their time on the platform by breaking down where and how they engage
+                        with Reddit’s numerous communities.
+                    </p>
+                    <p>
+                        Communicating users’ types of activity aims to make Reddit users more aware of their time usage
+                        as well as their content consumption habits.This creates the opportunity for users to know more
+                        about themselves, one another and the communities they’re a part of, while maintaining the
+                        valued anonymity of Reddit.
+                    </p>
+
+                    <h3>Time Management</h3>
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-proposal-time-manager.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-proposal-time-manager.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-proposal-time-manager-2.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-proposal-time-manager-2.jpg"></a>
+                            </div>
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </div>
+                        <div class="thumbs">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-proposal-time-manager.jpg)">
+                            </div>
+                            <div
+                                style="background-image: url(images/project-reddit/reddit-proposal-time-manager-2.jpg)">
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Reddit has a reputation for being a time waster with its design often leading users to wander
+                        aimlessly down different paths and end up still browsing at 3am. With that in mind, our second
+                        suggestion aims to make explicit the amount of time and content that a user consumes in each
+                        session, and gives tools to limit over use.
+                    </p>
+                    <p>
+                        This is executed in two concepts: a timer and page limiter which both put more power in the
+                        hands of the user to choose if they want help pulling themselves away from the platform.
+                        Additionally, the stats and list views give people quick access to their usage data to give a
+                        better picture of their digital wellbeing.
+                    </p>
+
+                    <h3>Inclusive Content</h3>
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-proposal-inclusive-content.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-proposal-inclusive-content.jpg"></a>
+                            </div>
+                            <span class="left hidden"></span>
+                            <span class="right hidden"></span>
+                        </div>
+                        <div class="thumbs display-none">
+                        </div>
+                    </div>
+                    <p>
+                        The third proposal encourages, through the use of trophies, redditors to upload content with
+                        alternative text and/or subtitles. This not only appeals to people with sensory disabilities,
+                        but also anticipates the varying environments users browse from such as noisy environments that
+                        impede some normal aspects of content consumption.
+                    </p>
+
+                    <h3>Misinformation Management</h3>
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-proposal-misinformation-management-1.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-proposal-misinformation-management-1.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-proposal-misinformation-management-2.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-proposal-misinformation-management-2.jpg"></a>
+                            </div>
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </div>
+                        <div class="thumbs">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-proposal-misinformation-management-1.jpg)">
+                            </div>
+                            <div
+                                style="background-image: url(images/project-reddit/reddit-proposal-misinformation-management-2.jpg)">
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Misinformation management is our proposal to clearly label the reputability of posts. When
+                        submitting content, posters can add additional links as citations that further support the
+                        information they are sharing or it can be added by moderators.
+                    </p>
+                    <p>
+                        With this addition, we aim to change the culture of information consumption to naturally include
+                        fact checking by making it even easier and more intuitive to get sources on information.
+                    </p>
+
+                    <h3>Day-Maker Award</h3>
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-proposal-day-maker-award.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-proposal-day-maker-award.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-proposal-day-maker-award-2.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-proposal-day-maker-award-2.jpg"></a>
+                            </div>
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </div>
+                        <div class="thumbs">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-proposal-day-maker-award.jpg)">
+                            </div>
+                            <div
+                                style="background-image: url(images/project-reddit/reddit-proposal-day-maker-award-2.jpg)">
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Our final proposal makes use of the existing Reddit “awards” feature but adds additional awards
+                        like the “Day-Maker” award. This lets users recognize others for outstanding, positive
+                        interactions. Unlike the “Silver”, “Gold”, and “Platinum” awards available at the time of this
+                        project, this new one is free to all users but limited to awarding it once per 30 days.
+                    </p>
+                    <p>
+                        A variety of free, more unique purposeful awards provides more special recognition that will be
+                        noticed in the community. This brings attention to the positive culture that is sometimes
+                        forgotten amongst the toxic rabble that tends to stand out more.
+                    </p>
+                </div>
+            </section>
+
+
+            <section id="reflection">
+                <h2 class="project-header">reflection</h2>
+                <div class="section-content">
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-reflection-realworld-1.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-reflection-realworld-1.jpg"></a>
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-reflection-realworld-2.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-reddit/reddit-reflection-realworld-2.jpg"></a>
+                            </div>
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </div>
+                        <div class="thumbs">
+                            <div class="active"
+                                style="background-image: url(images/project-reddit/reddit-reflection-realworld-1.jpg)">
+                            </div>
+                            <div style="background-image: url(images/project-reddit/reddit-reflection-realworld-2.jpg)">
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        This project was an extremely fun opportunity to practice very thorough critical design methods
+                        and focus on a growing niche of this field: ethical design. Our process involved understanding
+                        the brand’s visual language, values, and unique position to fully evaluate and discover
+                        realistic opportunities for new developments.
+                    </p>
+                    <p>
+                        It was also extremely humbling and gratifying to see our <a
+                            href="https://www.reddit.com/r/announcements/comments/chdx1h/introducing_community_awards/">awards
+                            proposal adopted by Reddit</a>
+                        and <a
+                            href="https://blog.twitter.com/en_us/topics/product/2020/updating-our-approach-to-misleading-information.html">fact-checker
+                            adopted by Twitter</a> in real life, showing that we were able to uncover the same
+                        opportunities as
+                        professionals actually working for these large companies. I am excited to use these
+                        methodologies to uncover new opportunities for improvement in future
+                        domains that I work in.
+                    </p>
+                </div>
+            </section>
+
+            <!-- CHECK OUT OTHER PROJECTS BUTTON -->
+            <div class="section-content grid">
+                <div class="col col-middle">
+                    <button class="skip-to-bottom"><a href="/project-track-it.html">Check out another project</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION  -->
+    <div id="about-container" class="about-container clipped">
+        <div class="about-content grid">
+            <div id="img-block" class="col col-middle col-5 col-lg">
+                <div class="img-container">
+                    <div class="bio-img"></div>
+                </div>
+            </div>
+            <div id="text-block" class="col col-middle col-7 col-lg">
+                <div class="grid">
+                    <h2 class="col">hi!</h2>
+                    <p class="col">
+                        I’m a UX designer specializing in <span class="text-standout">web</span>, <span
+                            class="text-standout">mobile</span>, and <span class="text-standout">3D environments</span>.
+                        My background is in <span class="text-standout">user research</span> and <span
+                            class="text-standout">front-end web development</span> but I love to continuously learn and
+                        find inspiration in new technologies. I’m a visual thinker who loves collaborating and using my
+                        empathy to understand and succeed in new situations.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <button id="about-back-btn">
+            <img alt="Close about section" src="/images/icons/close-lightgrey.svg">
+            <span class="btn-text">CLOSE</span>
+        </button>
+    </div>
+
+    <footer class="col col-12 grid grid-nogutter">
+        <div class="col col-3 col-lg"></div>
+        <div class="col col-9 col-middle col-align-middle col-lg">
+            <p>&#0169; Zachary Chan <span id="year"></span></p>
+        </div>
+    </footer>
+
+    <!-- BACKGROUND DOTS -->
+    <div class="dots-primary"></div>
+    <div class="dots-secondary"></div>
+
     <!--SCRIPTS-->
-    <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+    <script src="js/gallery.js"></script>
+    <script type="text/javascript" src="js/project-page.js"></script>
+    <script src="js/fslightbox.js"></script>
+
 </body>
 
 </html>

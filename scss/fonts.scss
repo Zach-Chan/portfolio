@@ -1,0 +1,119 @@
+body {
+    color: $darkGrey;
+    font-family: "Lato", sans-serif;
+	font-size: 1rem;
+    margin: 0px; 
+    padding: 0;
+}
+
+h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    color: $primaryCol;
+    margin: 0;
+    line-height: 66px;
+    transition: all linear 0.4s;
+
+    @include breakpoint(flexgrid-lg){
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    &.small-site-title {
+        font-size: 36px;
+        padding: 0;
+    }
+
+    &.project-page {
+        font-size: 56px;
+        @include breakpoint(flexgrid-lg){
+            font-size: 36px;
+            line-height: 36px;
+            margin-left: 0;
+        }
+    }
+}
+
+h2 {
+    font-family: "Proza Libre", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: $grey;
+    margin: 2rem 0 1rem 0;
+}
+
+h3 {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: $grey;
+}
+
+a.nav-btn {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $darkGrey;
+    text-decoration: none;
+    transition: color ease 0.1s;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        color: $accentCol;
+    }
+
+    &:active {
+        color: $primaryCol;
+    }
+
+    &.selected {
+        color: $primaryCol;
+    }
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    color: $darkGrey;
+
+    a {
+        color: $darkGrey;
+        text-decoration: underline;
+        transition: color linear 0.2s;
+
+        &:hover {
+            color: $accentCol;
+        }
+    }
+}
+
+#typewriter-text {
+    color: $bgColor;
+}
+// -------------------
+// ABOUT SECTION FONTS
+// -------------------
+
+.about-container {
+    h2 {
+        font-family: "Proza Libre", sans-serif;
+        font-size: 96px;
+        font-weight: 500;
+        color: $lightGrey;
+    }
+
+    p {
+        color: $lightGrey;
+    }
+}
+
+#about-back-btn {
+    font-size: 16px;
+    font-weight: 600;
+    color: $lightGrey;
+}
+
+.text-standout {
+    color: $accentCol;
+}

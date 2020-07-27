@@ -4,172 +4,194 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zach Chan - Project: Discovered</title>
+    <title>Zach Chan - Dis&sdot;covered</title>
 
     <!-- Load stylesheets -->
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/gallery.min.css">
+
     <!-- Load fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
 
     <!-- Set tab icon -->
     <link rel="icon" href="images/logo.png">
 </head>
 
-<body id="top">
+<body class="site-body grid grid-nogutter">
 
-    <div class="nav-container bg-colDark">
-        <nav id="navList" class="nav-container drop-shadow">
-            <a class="icon-container" href="index.html">
-                <img class="logo" src="images/logo-light.png" alt="Z in a circle personal logo of Zach Chan">
-            </a>
+    <!-- FIXED CONTENT MOBILE -->
+    <div class="mobile-banner project-page grid">
+        <h1 class="col small-site-title">zach chan</h1>
+        <div class="mobile-only site-nav col col-fixed">
             <ul id="navLinks" class="nav-list">
-                <li class="li-navItem"><a class="nav-btn" href="index.html#work">Work</a></li>
-                <li class="li-navItem"><a class="nav-btn" href="index.html#projects">School Projects</a></li>
-                <li class="li-navItem"><a class="nav-btn" href="index.html#about">About</a></li>
+                <li class="li-navItem"><a class="nav-btn" href="/work.html">Work</a></li>
+                <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
+                <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
             </ul>
-        </nav>
+        </div>
     </div>
 
-    <div class="all-content-wrapper col">
-        <!-- PROCESS ANALYSIS SECTION // -->
-        <div id="bannerDiscovered" class="banner-container drop-shadow">
-            <div class="title-wrapper">
-                <h1>Dis&sdot;covered</h1>
+    <!-- FIXED CONTENT -->
+    <div class="fixed-content-container site-body grid">
+        <div class="col col-3 col-lg">
+            <!-- NAVIGATION -->
+            <div class="site-nav-container project-page">
+                <nav id="navList" class="site-nav">
+                    <ul id="navLinks" class="nav-list">
+                        <li class="li-navItem"><a class="nav-btn" href="/work.html">Work</a></li>
+                        <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
+                        <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        <section>
-            <!-- EMPHATIC IN BRIEF -->
-            <div class="spotlight-block bg-colDark padding-left-right flex-container center-content full-span">
-                <div class="flex-container flex-sixth bg-colDark">
+
+        <div class="col col-9 col-lg">
+
+        </div>
+    </div>
+
+    <!-- SCROLLING CONTENT -->
+    <div class="project-page fixed-content-buffer col col-lg">
+        <div class="progress-container">
+            <a href="#overview" class="progress-section col filled"><span class="progress-label">overview</span></a>
+            <a href="#problem" class="progress-section col"><span class="progress-label">problem</span></a>
+            <a href="#research" class="progress-section col"><span class="progress-label">research</span></a>
+            <a href="#ideation" class="progress-section col"><span class="progress-label">ideation</span></a>
+            <a href="#testing" class="progress-section col"><span class="progress-label">usability testing</span></a>
+            <a href="#finished" class="progress-section col"><span class="progress-label">finished product</span></a>
+            <a href="#reflection" class="progress-section col"><span class="progress-label">reflection</span></a>
+        </div>
+    </div>
+
+    <div class="project-page scrolling-content-container col col-lg">
+        <div class="fade-top full-span"></div>
+        <div class="fade-bottom full-span"></div>
+
+        <!-- PROCESS ANALYSIS SECTION // -->
+        <div class="scrolling-content project-page">
+            <h1 class="project-page">Dis&sdot;covered</h1>
+
+            <section id="overview">
+                <h2 id="overview-header" class="project-header">overview</h2>
+                <div class="section-content overview-section grid">
+                    <div class="col col-4">
+                        <h3>client & timeline</h3>
+                        <p>School project</p>
+                        <p>2019.04</p>
+                    </div>
+                    <div class="col col-8">
+                        <h3>scope</h3>
+                        <p>Learn and put into practice the fundamentals of interface design through the design of a
+                            mobile application focused on a deliberate opportunity area found through research.</p>
+                    </div>
+                    <div class="col col-4">
+                        <h3>team members</h3>
+                        <p>Rupneet Atwal</p>
+                        <p>Vivian Leung</p>
+                        <p>Josephine Ryu</p>
+                    </div>
+                    <div class="col col-8">
+                        <h3>skills & tools</h3>
+                        <p>Flinto, Adobe Illustrator, research, usability testing, ideation sketching, UI design</p>
+                    </div>
+            </section>
+
+            <section id="problem">
+                <h2 class="project-header">problem</h2>
+                <div class="section-content">
                     <p>
-                        I conducted research and focused on designing and testing micro-interactions to increase
-                        information comprehension with regard to cultural differences like the right-to-left reading in
-                        Arabic.
+                        In light of the Syrian refugee crisis in 2017, we looked at how to help new immigrants to Canada
+                        grow accustomed to their new surroundings by making it easier to overcome language barriers and
+                        increase engagement with their community through public events and services.
                     </p>
                 </div>
-            </div>
-        </section>
-        <section id="overview">
-            <div class="padding-left-right flex-container">
-                <div class="flex-half flex-container">
-                    <div class="in-brief-section flex-container">
-                        <h2>Proficiencies</h2>
-                        <a href="#userResearch" class="chip">User Research</a>
-                        <a href="#ideation" class="chip">Ideation Sketching</a>
-                        <a href="#interfaceDesign" class="chip">Interface Design</a>
-                        <a href="#usabilityTesting" class="chip">Usability Testing</a>
-                    </div>
-                    <div class="in-brief-section">
-                        <h2>Tools</h2>
-                        <ul class="list-stylized">
-                            <li>Adobe Illustrator</li>
-                            <li>Flinto</li>
-                        </ul>
-                    </div>
+            </section>
 
-                    <div class="in-brief-section flex-quarter">
-                        <h2>Context</h2>
-                        <p>In an academic course we were tasked with researching an area with design opportunity to
-                            create a digital web or app service as a solution.</p>
-                    </div>
-                    <div class="in-brief-section flex-quarter">
-                        <h2>Problem</h2>
-                        <p>
-                            In light of the Syrian refugee crisis in 2017, we looked at how to help these newcomers to
-                            Canada and other immigrants grow accustomed to their new surroundings by making it easier
-                            to overcome language barriers to increase engagement with their community through public
-                            events and services.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="padding-left-right flex-container">
-                <div class="flex-third">
-                    <div class="img-container full-span">
-                        <h2 class="img-enlarge">View larger</h2>
-                        <img class="lightbox-trigger uiImage drop-shadow"
-                            src="images/project-discovered/discovered-full.gif" alt="Complete Final UI image">
-                        <p class="img-caption">Final Project Interface</p>
-                    </div>
-                </div>
-                <div class="flex-sixth">
-                    <p>
-                        The final result is an interactive wireframe of a mobile application I designed with 3 other
-                        team members to help refugees and new immigrants to Canada with adjusting to their new home and
-                        engaging with the community to combat the isolation that can often plague immigrants to any new
-                        country. Dis&sdot;covered provides information about nearby free community events, immigration
-                        and international services offices, conveniently has the ability to swap back and forth between
-                        English and other languages to help overcome language barriers.
-                    </p>
+            <!-- SKIP BUTTON -->
+            <div class="section-content grid">
+                <div class="col col-middle">
+                    <button class="skip-to-bottom"><a href="#finished">skip to finished project</a></button>
                 </div>
             </div>
 
-        </section>
-
-        <section id="process_analysis">
-            <div class="flex-container content-wrapper padding-left-right">
-                <div class="full-span">
-                    <h2>Process</h2>
-                </div>
-                <div class="process-header full-span">
-                    <h3>Research</h3>
-                </div>
-                <div class="full-span">
+            <section id="research">
+                <h2 class="project-header">research</h2>
+                <div class="section-content">
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active" style="background-image: url(images/project-discovered/JourneyMap.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-discovered/JourneyMap.jpg"></a>
+                            </div>
+                            <span class="left hidden"></span>
+                            <span class="right hidden"></span>
+                        </div>
+                        <div class="thumbs">
+                        </div>
+                    </div>
                     <p>
                         Initially, interest in this project was sparked from the news stories circulating at the time.
                         Research began with developing a full understanding of the domain of settling in a new country.
-                        <span id="userResearch" class="highlight-skill">I conducted extensive research to understand
-                            the goals and problems of the end users and we captured our findings in a persona and
-                            journey map.</span> We identified 2 key areas to help
-                        with a new immigrant or refugee's transition into living in Canada: handling the
-                        overwhelming number of legal work and becoming familiar with their community to be
-                        comfortable going out and making connections with others. As this was an academic project, we
-                        choose to design something to solve the latter issue as it seemed more likely to let us design
-                        something more visually interesting.
+                        I conducted extensive research to understand the goals and problems of the end users and we
+                        captured our findings in a persona and journey map. We identified 2 key areas to help with a new
+                        immigrant or refugee's transition into living in Canada: handling the overwhelming amount of
+                        legal work they would have to do and becoming familiar with their community to be comfortable
+                        going out and making connections with others. As this was an academic project, we chose to
+                        design something to solve the issue of integrating into a new community as it seemed more likely
+                        to let us design something more visually interesting.
                     </p>
                 </div>
-                <div class="full-span">
-                    <div class="img-container">
-                        <h4 class="img-enlarge">View larger</h4>
-                        <img class="lightbox-trigger drop-shadow" src="images/project-discovered/JourneyMap.jpg"
-                            alt="User journey map diagram">
-                        <p class="img-caption">Journey map of our persona, Rasha</p>
-                    </div>
-                </div>
+            </section>
 
-                <div class="process-header full-span">
-                    <h3>Language Barriers</h3>
-                </div>
-                <div class="flex-sixth">
-                    <div class="img-container full-span">
-                        <h2 class="img-enlarge">View larger</h2>
-                        <img class="lightbox-trigger uiImage drop-shadow"
-                            src="images/project-discovered/discovered-process-sketches-1.jpg"
-                            alt="Language translation ideations sketches">
-                        <p class="img-caption">Language translation ideation sketches</p>
+            <section id="ideation">
+                <h2 class="project-header">ideation</h2>
+                <div class="section-content">
+                    <!-- A GALLERY -->
+                    <div class="gallery custom-styled">
+                        <div class="images">
+                            <div class="active"
+                                style="background-image: url(images/project-discovered/discovered-process-sketches-1.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-discovered/discovered-process-sketches-1.jpg"></a>
+                            </div>
+                            <div
+                                style="background-image: url(images/project-discovered/discovered-process-sketches-2-1x.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-discovered/discovered-process-sketches-2-1x.jpg"></a>
+                            </div>
+                            <div
+                                style="background-image: url(images/project-discovered/discovered-process-sketches-3-1x.jpg)">
+                                <a class="lightbox-button" data-fslightbox href="images/project-discovered/discovered-process-sketches-3-1x.jpg"></a>
+                            </div>
+                            <span class="left"></span>
+                            <span class="right"></span>
+                        </div>
+                        <div class="thumbs">
+                            <div class="active"
+                                style="background-image: url(images/project-discovered/discovered-process-sketches-1.jpg)">
+                            </div>
+                            <div
+                                style="background-image: url(images/project-discovered/discovered-process-sketches-2-1x.jpg)">
+                            </div>
+                            <div
+                                style="background-image: url(images/project-discovered/discovered-process-sketches-3-1x.jpg)">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="flex-third">
+                    <h3>Language Barriers</h3>
                     <p>
-                        Making the app comfortable to use despite language barriers was a major area of focus for me. <span id="ideation" class="highlight-skill">I
+                        Making the app comfortable to use despite language barriers was a major area of focus for me. I
                         ideated through sketches to design an onboarding process to select a user's native language and
                         providing clear interface elements to quickly swap between languages to use the app while also
-                        learning useful English words.</span>
+                        learning useful English words.
                     </p>
-                </div>
-                <div class="flex-sixth">
-                    <div class="img-container full-span">
-                        <h2 class="img-enlarge">View larger</h2>
-                        <img class="lightbox-trigger uiImage drop-shadow"
-                            src="images/project-discovered/discovered-process-sketches-2-1x.jpg"
-                            alt="Swipe to swap languages ideation sketches">
-                        <p class="img-caption">Ideation sketches of a swipe to swap languages interaction</p>
-                    </div>
-                </div>
-                <div class="flex-third">
                     <p>
                         One of the more experimental ideas I came up with was to create a long press interaction on the
                         edge of the screen to trigger the language toggle UI and then let users swipe to the left if
@@ -178,89 +200,140 @@
                         proved to be too difficult to implement with the prototyping software we were using so this idea
                         was left behind.
                     </p>
-                </div>
-                <div class="flex-sixth">
-                    <div class="img-container full-span">
-                        <h2 class="img-enlarge">View larger</h2>
-                        <img class="lightbox-trigger uiImage drop-shadow"
-                            src="images/project-discovered/discovered-process-sketches-3-1x.jpg"
-                            alt="Miscellaneous other translation and UI interaction sketches">
-                        <p class="img-caption">Sketches of translation bubble feature and zooming in to reveal more map
-                            details</p>
-                    </div>
-                </div>
-                <div class="flex-third">
+                    <h3>Other Interaction Design</h3>
                     <p>
-                        Throughout the whole design process I ideated and <span id="interfaceDesign" class="highlight-skill">designed interactions like long pressing on
+                        Throughout the whole design process I ideated and designed interactions like long pressing on
                         event tags to provide translations in bubbles and managing the amount of information presented
-                        to users on the map view at different levels of zooming in.</span>
+                        to users on the map view at different levels of zooming in.
                     </p>
                 </div>
+            </section>
 
-                <div class="full-span">
-                    <h3>Usability Testing</h3>
-                </div>
-                <div class="full-span">
+            <section id="testing">
+                <h2 class="project-header">usability testing</h2>
+                <div class="section-content">
+                    <div class="grid">
+                        <div class="col img-container">
+                            <a class="lightbox-button" data-fslightbox href="images/project-discovered/discovered-translate.gif"></a>
+                            <img class="lightbox-trigger uiImage drop-shadow"
+                                src="images/project-discovered/discovered-translate.gif"
+                                alt="Animated gif of translation features">
+                                <p class="img-caption">Translation features</p>
+                        </div>
+                        <div class="col img-container">
+                            <a class="lightbox-button" data-fslightbox href="images/project-discovered/discovered-comments.gif"></a>
+                            <img class="lightbox-trigger uiImage drop-shadow"
+                                src="images/project-discovered/discovered-comments.gif"
+                                alt="Animated gif displaying comments section of activities">
+                                <p class="img-caption">Showcasing the comments section on events</p>
+                        </div>
+                        <div class="col img-container">
+                            <a class="lightbox-button" data-fslightbox href="images/project-discovered/discovered-directions.gif"></a>
+                            <img class="lightbox-trigger uiImage drop-shadow"
+                                src="images/project-discovered/discovered-directions.gif"
+                                alt="Animated gif of interactions to use the search and directions features">
+                                <p class="img-caption">User interactions to successfully search for directions</p>
+                        </div>
+                    </div>
                     <p>
                         We designed initial iterations of the app interface with Adobe Illustrator but completed
                         designing in the UX program Flinto so that we could capture the animated responses we had
-                        designed and conduct usability testing with an interactive prototype. <span id="usabilityTesting" class="highlight-skill">I conducted informal
-                        speak aloud tests to gain qualitative feedback and find problem areas of the UI.</span>
+                        designed and conduct usability testing with an interactive prototype. I conducted informal speak
+                        aloud tests to gain qualitative feedback and find problem areas of the UI.
                     </p>
                 </div>
-                <div class="flex-third">
-                    <div class="img-container full-span">
-                        <h2 class="img-enlarge">View larger</h2>
-                        <img class="lightbox-trigger uiImage drop-shadow"
-                            src="images/project-discovered/discovered-translate.gif"
-                            alt="Animated gif of translation features">
-                        <p class="img-caption">Translation features</p>
+            </section>
+
+            <section id="finished">
+                <h2 class="project-header">finished product</h2>
+                <div class="section-content">
+                    <!-- A GALLERY -->
+                    <div class="img-container grid grid-middle">
+                        <a class="lightbox-button" data-fslightbox href="images/project-discovered/discovered-full.gif"></a>
+                        <img class="uiImage mobile-img drop-shadow" src="images/project-discovered/discovered-full.gif">
                     </div>
-                </div>
-                <div class="flex-third">
-                    <div class="img-container full-span">
-                        <h2 class="img-enlarge">View larger</h2>
-                        <img class="lightbox-trigger uiImage drop-shadow"
-                            src="images/project-discovered/discovered-directions.gif"
-                            alt="Animated gif of interactions to use the search and directions features">
-                        <p class="img-caption">User interactions to successfully search for directions</p>
-                    </div>
-                </div>
-                <div class="flex-third">
-                    <div class="img-container full-span">
-                        <h2 class="img-enlarge">View larger</h2>
-                        <img class="lightbox-trigger uiImage drop-shadow"
-                            src="images/project-discovered/discovered-comments.gif"
-                            alt="Animated gif displaying comments section of activities">
-                        <p class="img-caption">Showcasing the comments section on events</p>
-                    </div>
-                </div>
-                <div class="full-span">
-                    <h3>Reflection</h3>
                     <p>
-                        Dis•Covered was a great opportunity for me to practice user-driven design through research and
+                        The final result is an interactive prototype of a mobile application I designed with my 3 team
+                        members to help refugees and new immigrants to Canada with adjusting to their new home and
+                        engaging with the community to combat the isolation that can often plague immigrants to any new
+                        country. Dis&sdot;covered provides information about nearby free community events, immigration
+                        and
+                        international services offices, conveniently has the ability to swap back and forth between
+                        English and other languages to help overcome language barriers.
+                    </p>
+                </div>
+            </section>
+
+            <section id="reflection">
+                <h2 class="project-header">reflection</h2>
+                <div class="section-content">
+                    <p>
+                        Dis&sdot;Covered was a great opportunity for me to practice user-driven design through research
+                        and
                         testing as well as experiment with unique, new designs but to also not become too attached to
                         designs so that I can be more dynamic in my process and adapt to meet project requirements and
                         real-world constraints.
                     </p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <footer>
-            <div class="full-span flex-container center-content">
-                <a href="#bannerDiscovered" class="footer-btn">back to top</a>
-                <a href="zach-chan-resume-public.pdf" class="footer-btn">resum&eacute;</a>
-                <a href="citations.html" class="footer-btn">citations</a>
-                <a href="https://github.com/Zach-Chan/portfolio" class="footer-btn">git repository</a>
+            <!-- CHECK OUT OTHER PROJECTS BUTTON -->
+            <div class="section-content grid">
+                <div class="col col-middle">
+                    <button class="skip-to-bottom"><a href="/project-concussion.html">Check out another project</a></button>
+                </div>
             </div>
-        </footer>
+        </div>
     </div>
 
+    <!-- ABOUT SECTION  -->
+    <div id="about-container" class="about-container clipped">
+        <div class="about-content grid">
+            <div id="img-block" class="col col-middle col-5 col-lg">
+                <div class="img-container">
+                    <div class="bio-img"></div>
+                </div>
+            </div>
+            <div id="text-block" class="col col-middle col-7 col-lg">
+                <div class="grid">
+                    <h2 class="col">hi!</h2>
+                    <p class="col">
+                        I’m a UX designer specializing in <span class="text-standout">web</span>, <span
+                            class="text-standout">mobile</span>, and <span class="text-standout">3D environments</span>.
+                        My background is in <span class="text-standout">user research</span> and <span
+                            class="text-standout">front-end web development</span> but I love to continuously learn and
+                        find inspiration in new technologies. I’m a visual thinker who loves collaborating and using my
+                        empathy to understand and succeed in new situations.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <button id="about-back-btn">
+            <img alt="Close about section" src="/images/icons/close-lightgrey.svg">
+            <span class="btn-text">CLOSE</span>
+        </button>
+    </div>
+
+    <footer class="col col-12 grid grid-nogutter">
+        <div class="col col-3 col-lg"></div>
+        <div class="col col-9 col-middle col-align-middle col-lg">
+            <p>&#0169; Zachary Chan <span id="year"></span></p>
+        </div>
+    </footer>
+
+    <!-- BACKGROUND DOTS -->
+    <div class="dots-primary"></div>
+    <div class="dots-secondary"></div>
+
     <!--SCRIPTS-->
-    <script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+    <script src="js/gallery.js"></script>
+    <script type="text/javascript" src="js/project-page.js"></script>
+    <script src="js/fslightbox.js"></script>
+
 </body>
 
 </html>
