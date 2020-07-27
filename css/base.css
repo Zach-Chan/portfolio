@@ -354,6 +354,12 @@ p {
     p a:hover {
       color: #F6844E; }
 
+li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #272727;
+  line-height: 22px; }
+
 #typewriter-text {
   color: #F8F8F8; }
 
