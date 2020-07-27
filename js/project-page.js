@@ -2,7 +2,7 @@ console.log("project page js running");
 
 // PROGRESS BAR
 var sections = document.querySelectorAll(".project-header");
-var progressThreshold = window.screen.height/2;
+var progressThreshold = window.screen.height / 2;
 var progressSections = document.querySelectorAll(".progress-section");
 
 //SMOOTH SCROLLING TO ANCHOR POINTS
@@ -19,11 +19,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 //FILL IN PROGRESS BAR AS PAGE IS SCROLLED
-window.addEventListener("scroll", function(){
-  for(var i=0; i<sections.length; i++){
+window.addEventListener("scroll", function () {
+  for (var i = 0; i < sections.length; i++) {
     var rect = sections[i].getBoundingClientRect();
-    if(rect.top <= progressThreshold) {
-      progressSections[i].classList.add('filled');
+    if (rect.top <= progressThreshold) {
+      if (i > 0) {
+        let prev = i - 1;
+        progressSections[prev].classList.remove('active');
+        progressSections[i].classList.add('filled');
+        progressSections[i].classList.add('active');
+      } else {
+        progressSections[i].classList.add('filled');
+        progressSections[i].classList.add('active');
+      }
     } else {
       progressSections[i].classList.remove('filled');
     }

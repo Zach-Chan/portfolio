@@ -1128,6 +1128,10 @@ footer {
   transition: all linear 0.2s; }
   .progress-section.filled {
     background-color: #006A72; }
+    .progress-section.filled.active .progress-label {
+      left: 125%;
+      opacity: 1;
+      color: #006A72; }
   .progress-section:hover {
     cursor: pointer;
     background-color: #F6844E; }

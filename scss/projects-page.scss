@@ -134,6 +134,14 @@
 
     &.filled {
         background-color: $primaryCol;
+
+        &.active {            
+            .progress-label {
+                left: 125%;
+                opacity: 1;
+                color: $primaryCol;
+            }
+        }
     }
 
     &:hover {
