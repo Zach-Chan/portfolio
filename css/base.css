@@ -563,6 +563,10 @@ body {
   background-image: -webkit-linear-gradient(top, #F8F8F8 60%, rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(top, #F8F8F8 60%, rgba(0, 0, 0, 0));
   background-image: linear-gradient(to bottom, #F8F8F8 60%, rgba(0, 0, 0, 0)); }
+  @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+    .fade-top {
+      background-color: #F8F8F8;
+      background-image: unset; } }
   @media (max-width: 744px) {
     .fade-top {
       height: 10rem; } }
@@ -573,6 +577,10 @@ body {
   background-image: -webkit-linear-gradient(bottom, #F8F8F8 60%, rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(bottom, #F8F8F8 60%, rgba(0, 0, 0, 0));
   background-image: linear-gradient(to top, #F8F8F8 60%, rgba(0, 0, 0, 0)); }
+  @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+    .fade-bottom {
+      background-color: #F8F8F8;
+      background-image: unset; } }
 
 .dots-primary,
 .dots-secondary {

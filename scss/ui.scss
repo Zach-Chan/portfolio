@@ -195,6 +195,10 @@ body {
 .fade-top {
     top: 0;
     background-image: linear-gradient(to bottom, $bgColor 60%, rgba(0, 0, 0, 0));
+    @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
+        background-color: $bgColor;
+        background-image: unset;
+    }
 
     @include breakpoint(flexgrid-lg) {
         height: 10rem;
@@ -204,6 +208,10 @@ body {
 .fade-bottom {
     bottom: 0vh;
     background-image: linear-gradient(to top, $bgColor 60%, rgba(0, 0, 0, 0));
+    @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
+        background-color: $bgColor;
+        background-image: unset;
+    }
 }
 
 // ---------------------
