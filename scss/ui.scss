@@ -177,7 +177,7 @@ body {
 .fade-top,
 .fade-bottom {
     position: fixed;
-    bottom: 100vh;
+    // bottom: 100vh;
     right: 0;
     width: 70%;
     height: 6rem;
@@ -194,7 +194,7 @@ body {
 
 .fade-top {
     top: 0;
-    background-image: linear-gradient($bgColor 60%, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to bottom, $bgColor 60%, rgba(0, 0, 0, 0));
 
     @include breakpoint(flexgrid-lg) {
         height: 10rem;
@@ -203,7 +203,7 @@ body {
 
 .fade-bottom {
     bottom: 0vh;
-    background-image: linear-gradient(0deg, $bgColor 60%, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to top, $bgColor 60%, rgba(0, 0, 0, 0));
 }
 
 // ---------------------
@@ -260,6 +260,15 @@ body {
 
     &.clipped {
         clip-path: circle(0% at 0 0);
+
+        .about-content {
+            @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
+                display: none;
+            }
+        }
+        .about-content, h2, h3, .img-container, #text-block, .extra-zach {
+            
+        }
     }
 }
 

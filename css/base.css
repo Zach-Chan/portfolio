@@ -545,7 +545,6 @@ body {
 .fade-top,
 .fade-bottom {
   position: fixed;
-  bottom: 100vh;
   right: 0;
   width: 70%;
   height: 6rem;
@@ -561,9 +560,9 @@ body {
 .fade-top {
   top: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #F8F8F8), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(#F8F8F8 60%, rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(#F8F8F8 60%, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(#F8F8F8 60%, rgba(0, 0, 0, 0)); }
+  background-image: -webkit-linear-gradient(top, #F8F8F8 60%, rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(top, #F8F8F8 60%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, #F8F8F8 60%, rgba(0, 0, 0, 0)); }
   @media (max-width: 744px) {
     .fade-top {
       height: 10rem; } }
@@ -573,7 +572,7 @@ body {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(60%, #F8F8F8), to(rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(bottom, #F8F8F8 60%, rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(bottom, #F8F8F8 60%, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(0deg, #F8F8F8 60%, rgba(0, 0, 0, 0)); }
+  background-image: linear-gradient(to top, #F8F8F8 60%, rgba(0, 0, 0, 0)); }
 
 .dots-primary,
 .dots-secondary {
@@ -623,6 +622,9 @@ body {
   .about-container.clipped {
     -webkit-clip-path: circle(0% at 0 0);
     clip-path: circle(0% at 0 0); }
+    @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+      .about-container.clipped .about-content {
+        display: none; } }
 
 .about-content {
   max-width: 900px;
