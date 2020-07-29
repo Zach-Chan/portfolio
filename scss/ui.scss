@@ -182,6 +182,7 @@ body {
     right: 0;
     width: 70%;
     z-index: 100;
+    height: 6rem;
 
     &.full-span {
         width: 100%;
@@ -197,17 +198,9 @@ body {
     background-image: url("/images/general/fade-top.png");
     background-repeat: repeat-x;
     background-size: contain;
-    // background-image: linear-gradient(to bottom, $bgColor 60%, rgba(0, 0, 0, 0));
-    // @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
-    //     background-color: $bgColor;
-    //     background-image: unset;
-    // }
 
     @include breakpoint(flexgrid-lg) {
         height: 8rem;
-        // @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
-        //     height: 6rem;
-        // }
     }
 }
 
@@ -215,11 +208,6 @@ body {
     bottom: 0vh;
     height: 2rem;
     background-image: linear-gradient(to top, $bgColor 60%, rgba(0, 0, 0, 0));
-    // @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
-    //     background-color: $bgColor;
-    //     background-image: unset;
-    //     height: 2rem;
-    // }
 }
 
 // ---------------------
