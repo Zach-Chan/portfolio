@@ -1,8 +1,8 @@
 body {
     color: $darkGrey;
     font-family: "Lato", sans-serif;
-	font-size: 1rem;
-    margin: 0px; 
+    font-size: 1rem;
+    margin: 0px;
     padding: 0;
 }
 
@@ -15,7 +15,7 @@ h1 {
     line-height: 66px;
     transition: all linear 0.4s;
 
-    @include breakpoint(flexgrid-lg){
+    @include breakpoint(flexgrid-lg) {
         font-size: 36px;
         line-height: 36px;
     }
@@ -27,10 +27,21 @@ h1 {
 
     &.project-page {
         font-size: 56px;
-        @include breakpoint(flexgrid-lg){
+        @include breakpoint(flexgrid-lg) {
             font-size: 36px;
             line-height: 36px;
             margin-left: 0;
+        }
+    }
+
+    a {
+        color: $primaryCol;
+        margin: 0;
+        text-decoration: none;
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-color: $accentCol;
         }
     }
 }
@@ -59,7 +70,8 @@ a.nav-btn {
     transition: color ease 0.1s;
     cursor: pointer;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         color: $accentCol;
     }
 

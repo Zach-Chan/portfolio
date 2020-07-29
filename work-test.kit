@@ -1,51 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zach Chan | Home</title>
+<!-- $pageSubtitle = Work Test -->
+<!-- @import "head.kit" -->
 
-    <!-- Load stylesheets -->
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/gallery.min.css" rel="stylesheet">
-    <!-- Load fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
-        rel="stylesheet">
-
-    <!-- Set tab icon -->
-    <link rel="icon" href="images/general/logo.png">
-</head>
 <body class="site-body grid grid-nogutter">
     <!-- FIXED CONTENT MOBILE -->
-    <div class="mobile-banner  grid">
-        <h1 class="col small-site-title"><a href="/">zach chan<a></h1>
-        <div class="mobile-only site-nav col col-fixed">
-            <ul id="navLinks" class="nav-list">
-                <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
-                <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
-            </ul>
-        </div>
-    </div>
+    <!-- @import "mobile-banner.kit" -->
+
     <!-- FIXED CONTENT -->
     <div class="fixed-content-container site-body grid">
         <div class="col col-5 col-lg">
             <!-- NAVIGATION -->
-            <div class="site-nav-container">
-    <nav id="navList" class="site-nav">
-        <ul id="navLinks" class="nav-list">
-            <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
-            <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
-        </ul>
-    </nav>
-</div>
+            <!-- @import "navigation.kit" -->
+
             <!-- HOME FEATURE -->
             <div class="home-feature-container">
                 <div class="home-feature">
@@ -74,14 +42,6 @@
     <div class="scrolling-content-container col col-7 col-lg">
 
         <!-- RIGHT SIDE FIXED ELEMENTS -->
-        <!-- <div class="sub-nav">
-            <ul class="grid grid-between">
-                <li class="col col-fixed"><a href="#projects-section"></a>Projects</li>
-                <li class="col col-fixed"><a href="#experience-section"></a>Experience</li>
-                <li class="col col-fixed"><a href="#other-section"></a>Other Work</li>
-                <li class="col col-fixed"><a href="#contact-section"></a>Contact</li>
-            </ul>
-        </div> -->
         <div class="fade-top"></div>
         <div class="fade-bottom"></div>
 
@@ -221,68 +181,14 @@
     </div>
 
     <!-- ABOUT SECTION  -->
-    <div id="about-container" class="about-container clipped">
-    <div class="about-content grid">
-        <div id="img-block" class="col col-middle col-5 col-lg">
-            <div class="img-container">
-                <div class="bio-img"></div>
-                <div class="overlay"></div>
-                <div class="extra-zach">
-                    <h3>extra zach!</h3>
-                    <ul>
-                        <li>Enjoys hiking and trying new sports</li>
-                        <li>Not-so-secret Dungeons & Dragons Geek</li>
-                        <li>A passion for drawing and animation</li>
-                        <li>Absolutely LOVES Lego</li>
-                        <li>Corgis melt my heart</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div id="text-block" class="col col-middle col-7 col-lg">
-            <div class="grid">
-                <h2 class="col">hi!</h2>
-                <div class="col about-text">
-                    <p>
-                        I’m a UX designer specializing in <span class="text-standout">web</span>, <span
-                            class="text-standout">mobile</span>, and <span class="text-standout">3D
-                            environments</span>.
-                        My background is in <span class="text-standout">user research</span> and <span
-                            class="text-standout">front-end web development</span> but I love to continuously learn
-                        and
-                        find inspiration in new technologies. I’m a visual thinker who loves collaborating and using
-                        my
-                        empathy to understand and succeed in new situations.
-                    </p>
-                    <p>
-                        Telling stories, creating worlds, and pushing innovative boundaries has been my passion
-                        since I
-                        could first give form to my imagination using Lego bricks at the ripe age of 5. Just like
-                        how
-                        plastic bricks pushed me to take my first creative steps, I strive to create inspiring
-                        results
-                        in all the work I do.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- @import "about.kit" -->
 
-    <button id="about-back-btn">
-        <img alt="Close about section" src="/images/icons/close-lightgrey.svg">
-        <span class="btn-text">CLOSE</span>
-    </button>
-</div>
     <!-- FOOTER -->
-    <footer class="col col-12 grid grid-nogutter">
-    <div class="col col-5 col-lg"></div>
-    <div class="col col-7 col-middle col-align-middle col-lg">
-        <p>&#0169; Zachary Chan <span id="year"></span></p>
-    </div>
-</footer>
+    <!-- @import "footer.kit" -->
+
     <!-- BACKGROUND DOTS -->
-    <div class="dots-primary"></div>
-<div class="dots-secondary"></div>
+    <!-- @import "background.kit" -->
+
     <!--SCRIPTS-->
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/typewriter.js"></script>
