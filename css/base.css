@@ -557,7 +557,9 @@ body {
   right: 0;
   width: 70%;
   z-index: 100;
-  height: 6rem; }
+  height: 6rem;
+  background-repeat: repeat-x;
+  background-size: contain; }
   .fade-top.full-span,
   .fade-bottom.full-span {
     width: 100%; }
@@ -568,9 +570,7 @@ body {
 
 .fade-top {
   top: 0;
-  background-image: url("/images/general/fade-top.png");
-  background-repeat: repeat-x;
-  background-size: contain; }
+  background-image: url("/images/general/fade-top.png"); }
   @media (max-width: 744px) {
     .fade-top {
       height: 8rem; } }
@@ -578,10 +578,7 @@ body {
 .fade-bottom {
   bottom: 0vh;
   height: 2rem;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(60%, #F8F8F8), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(bottom, #F8F8F8 60%, rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(bottom, #F8F8F8 60%, rgba(0, 0, 0, 0));
-  background-image: linear-gradient(to top, #F8F8F8 60%, rgba(0, 0, 0, 0)); }
+  background-image: url("/images/general/fade-bottom"); }
 
 .dots-primary,
 .dots-secondary {
@@ -618,11 +615,11 @@ body {
   opacity: 1;
   -webkit-clip-path: circle(100% at 50% 50%);
   clip-path: circle(100% at 50% 50%);
-  -webkit-transition: -webkit-clip-path 1s;
-  transition: -webkit-clip-path 1s;
-  -o-transition: clip-path 1s;
-  transition: clip-path 1s;
-  transition: clip-path 1s, -webkit-clip-path 1s; }
+  -webkit-transition: -webkit-clip-path 0.6s;
+  transition: -webkit-clip-path 0.6s;
+  -o-transition: clip-path 0.6s;
+  transition: clip-path 0.6s;
+  transition: clip-path 0.6s, -webkit-clip-path 0.6s; }
   .about-container.hidden {
     opacity: 0;
     -webkit-transition: all linear 0.2s;
@@ -798,14 +795,17 @@ footer {
 
 .scrolling-content {
   min-height: 60vh;
-  padding: 10rem 3rem 40vh 0;
+  padding: 10rem 3rem 30vh 0;
   margin: 8; }
   @media (max-width: 1080px) {
     .scrolling-content {
-      padding: 10rem 1rem 40vh 0; } }
+      padding: 10rem 1rem 30vh 0; } }
   @media (max-width: 744px) {
     .scrolling-content {
-      padding: 7.75rem 1rem 40vh 1rem; } }
+      padding: 7.75rem 1rem 30vh 1rem; } }
+  @media (max-width: 624px) {
+    .scrolling-content {
+      padding: 7.75rem 1rem 10vh 1rem; } }
 
 .project-card {
   position: relative;
