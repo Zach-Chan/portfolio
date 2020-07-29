@@ -4,11 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zach Chan | Concussion Guide</title>
+    <title>Zach Chan - MyGuide: Concussion</title>
 
     <!-- Load stylesheets -->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/gallery.min.css">
+
     <!-- Load fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
@@ -22,30 +24,35 @@
     <!-- Set tab icon -->
     <link rel="icon" href="images/logo.png">
 </head>
+
 <body class="site-body grid grid-nogutter">
 
     <!-- FIXED CONTENT MOBILE -->
-        <div class="mobile-banner project-page grid">
-        <h1 class="col small-site-title"><a href="/">zach chan<a></h1>
+    <div class="mobile-banner project-page grid">
+        <h1 class="col small-site-title">zach chan</h1>
         <div class="mobile-only site-nav col col-fixed">
             <ul id="navLinks" class="nav-list">
+                <li class="li-navItem"><a class="nav-btn" href="/work.html">Work</a></li>
                 <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
                 <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
             </ul>
         </div>
     </div>
+
     <!-- FIXED CONTENT -->
     <div class="fixed-content-container site-body grid">
         <div class="col col-3 col-lg">
             <!-- NAVIGATION -->
-            <div class="site-nav-container">
-    <nav id="navList" class="site-nav">
-        <ul id="navLinks" class="nav-list">
-            <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
-            <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
-        </ul>
-    </nav>
-</div>        </div>
+            <div class="site-nav-container project-page">
+                <nav id="navList" class="site-nav">
+                    <ul id="navLinks" class="nav-list">
+                        <li class="li-navItem"><a class="nav-btn" href="/work.html">Work</a></li>
+                        <li class="li-navItem"><a class="nav-btn about-btn" href="#">About</a></li>
+                        <li class="li-navItem"><a class="nav-btn" href="/zach-chan-resume-public.pdf">Resumé</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
 
         <div class="col col-9 col-lg">
 
@@ -76,22 +83,22 @@
             <section id="overview">
                 <h2 id="overview-header" class="project-header">overview</h2>
                 <div class="section-content overview-section grid">
-                    <div class="col col-4 col-lg">
+                    <div class="col col-4">
                         <h3>client & timeline</h3>
                         <p>GF Strong Rehabilitation Centre</p>
                         <p>2019.04-08</p>
                     </div>
-                    <div class="col col-8 col-lg">
+                    <div class="col col-8">
                         <h3>scope</h3>
                         <p>Public-facing online concussion recovery guide and backend dashboard for client edits.</p>
                     </div>
-                    <div class="col col-4 col-lg">
+                    <div class="col col-4">
                         <h3>team</h3>
                         <p>Myself - UX designer + web developer</p>
                         <p>Sharon - instructional designer</p>
                         <p>Michelle Chan - UX designer + multimedia designer</p>
                     </div>
-                    <div class="col col-8 col-lg">
+                    <div class="col col-8">
                         <h3>skills & tools</h3>
                         <p>Wireframe sketching, research interviews, personas, use cases, Figma, Craft CMS, HTML5, CSS3,
                             JS</p>
@@ -340,67 +347,69 @@
 
     <!-- ABOUT SECTION  -->
     <div id="about-container" class="about-container clipped">
-    <div class="about-content grid">
-        <div id="img-block" class="col col-middle col-5 col-lg">
-            <div class="img-container">
-                <div class="bio-img"></div>
-                <div class="overlay"></div>
-                <div class="extra-zach">
-                    <h3>extra zach!</h3>
-                    <ul>
-                        <li>Enjoys hiking and trying new sports</li>
-                        <li>Not-so-secret Dungeons & Dragons Geek</li>
-                        <li>A passion for drawing and animation</li>
-                        <li>Absolutely LOVES Lego</li>
-                        <li>Corgis melt my heart</li>
-                    </ul>
+        <div class="about-content grid">
+            <div id="img-block" class="col col-middle col-5 col-lg">
+                <div class="img-container">
+                    <div class="bio-img"></div>
+                    <div class="overlay"></div>
+                    <div class="extra-zach">
+                        <h3>extra zach!</h3>
+                        <ul>
+                            <li>Enjoys hiking and trying new sports</li>
+                            <li>Not-so-secret Dungeons & Dragons Geek</li>
+                            <li>A passion for drawing and animation</li>
+                            <li>Absolutely LOVES Lego</li>
+                            <li>Corgis melt my heart</li>
+                        </ul>
+                    </div>      
+                </div>
+            </div>
+            <div id="text-block" class="col col-middle col-7 col-lg">
+                <div class="grid">
+                    <h2 class="col">hi!</h2>
+                    <div class="col about-text">
+                        <p>
+                            I’m a UX designer specializing in <span class="text-standout">web</span>, <span
+                                class="text-standout">mobile</span>, and <span class="text-standout">3D
+                                environments</span>.
+                            My background is in <span class="text-standout">user research</span> and <span
+                                class="text-standout">front-end web development</span> but I love to continuously learn
+                            and
+                            find inspiration in new technologies. I’m a visual thinker who loves collaborating and using
+                            my
+                            empathy to understand and succeed in new situations.
+                        </p>
+                        <p>
+                            Telling stories, creating worlds, and pushing innovative boundaries has been my passion
+                            since I
+                            could first give form to my imagination using Lego bricks at the ripe age of 5. Just like
+                            how
+                            plastic bricks pushed me to take my first creative steps, I strive to create inspiring
+                            results
+                            in all the work I do.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="text-block" class="col col-middle col-7 col-lg">
-            <div class="grid">
-                <h2 class="col">hi!</h2>
-                <div class="col about-text">
-                    <p>
-                        I’m a UX designer specializing in <span class="text-standout">web</span>, <span
-                            class="text-standout">mobile</span>, and <span class="text-standout">3D
-                            environments</span>.
-                        My background is in <span class="text-standout">user research</span> and <span
-                            class="text-standout">front-end web development</span> but I love to continuously learn
-                        and
-                        find inspiration in new technologies. I’m a visual thinker who loves collaborating and using
-                        my
-                        empathy to understand and succeed in new situations.
-                    </p>
-                    <p>
-                        Telling stories, creating worlds, and pushing innovative boundaries has been my passion
-                        since I
-                        could first give form to my imagination using Lego bricks at the ripe age of 5. Just like
-                        how
-                        plastic bricks pushed me to take my first creative steps, I strive to create inspiring
-                        results
-                        in all the work I do.
-                    </p>
-                </div>
-            </div>
-        </div>
+
+        <button id="about-back-btn">
+            <img alt="Close about section" src="/images/icons/close-lightgrey.svg">
+            <span class="btn-text">CLOSE</span>
+        </button>
     </div>
 
-    <button id="about-back-btn">
-        <img alt="Close about section" src="/images/icons/close-lightgrey.svg">
-        <span class="btn-text">CLOSE</span>
-    </button>
-</div>
-    <!-- FOOTER -->
     <footer class="col col-12 grid grid-nogutter">
-    <div class="col col-5 col-lg"></div>
-    <div class="col col-7 col-middle col-align-middle col-lg">
-        <p>&#0169; Zachary Chan <span id="year"></span></p>
-    </div>
-</footer>
+        <div class="col col-3 col-lg"></div>
+        <div class="col col-9 col-middle col-align-middle col-lg">
+            <p>&#0169; Zachary Chan <span id="year"></span></p>
+        </div>
+    </footer>
+
     <!-- BACKGROUND DOTS -->
     <div class="dots-primary"></div>
-<div class="dots-secondary"></div>
+    <div class="dots-secondary"></div>
+
     <!--SCRIPTS-->
     <script type="text/javascript" src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
