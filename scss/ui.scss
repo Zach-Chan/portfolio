@@ -10,7 +10,7 @@ body {
     margin: 0 auto !important;
     padding: 0;
     max-width: 1500px;
-    min-width: 400px;
+    // min-width: 400px;
 }
 
 // ---------------------
@@ -31,6 +31,7 @@ body {
     z-index: 400;
     padding: 1rem 3rem;
     width: 100%;
+    min-width: 330px;
 
     @include breakpoint(desktop) {
         padding: 1rem;
@@ -180,7 +181,6 @@ body {
     // bottom: 100vh;
     right: 0;
     width: 70%;
-    height: 6rem;
     z-index: 100;
 
     &.full-span {
@@ -194,24 +194,32 @@ body {
 
 .fade-top {
     top: 0;
-    background-image: linear-gradient(to bottom, $bgColor 60%, rgba(0, 0, 0, 0));
-    @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
-        background-color: $bgColor;
-        background-image: unset;
-    }
+    background-image: url("/images/general/fade-top.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    // background-image: linear-gradient(to bottom, $bgColor 60%, rgba(0, 0, 0, 0));
+    // @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
+    //     background-color: $bgColor;
+    //     background-image: unset;
+    // }
 
     @include breakpoint(flexgrid-lg) {
-        height: 10rem;
+        height: 8rem;
+        // @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
+        //     height: 6rem;
+        // }
     }
 }
 
 .fade-bottom {
     bottom: 0vh;
+    height: 2rem;
     background-image: linear-gradient(to top, $bgColor 60%, rgba(0, 0, 0, 0));
-    @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
-        background-color: $bgColor;
-        background-image: unset;
-    }
+    // @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
+    //     background-color: $bgColor;
+    //     background-image: unset;
+    //     height: 2rem;
+    // }
 }
 
 // ---------------------
@@ -274,9 +282,6 @@ body {
                 display: none;
             }
         }
-        .about-content, h2, h3, .img-container, #text-block, .extra-zach {
-            
-        }
     }
 }
 
@@ -297,8 +302,8 @@ body {
 
     .img-container {
         display: block;
-        width: 300px;
-        height: 300px;
+        width: 18.75rem;
+        height: 18.75rem;
         border-radius: 0.5rem;
         overflow: hidden;
         background-color: $grey;
@@ -332,9 +337,19 @@ body {
         }
     }
 
+    @include breakpoint(flexgrid-sm){
+        #img-block {
+            display: none;
+        }
+        #text-block {
+            margin: auto;
+        }
+    }
+
     @include breakpoint(flexgrid-lg) {
         #img-block {
             align-self: flex-end;
+            padding-top: 0.5rem;
         }
 
         #text-block {
